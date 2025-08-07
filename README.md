@@ -1,6 +1,6 @@
 # explr-gpt
 
-「Exploring with ChatGPT」  
+### Exploring with ChatGPT  
 ChatGPTとの対話・思考・実験的探求を記録した静かなログです。
 
 ### 概要
