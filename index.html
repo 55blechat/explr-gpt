@@ -1,61 +1,118 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>explr-gpt</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            background-color: #fdfdfd;
-            padding: 2em;
-            max-width: 800px;
-            margin: auto;
-        }
-        h1 {
-            text-align: center;
-            color: #444;
-        }
-        .section {
-            margin: 2em 0;
-        }
-        .section h2 {
-            color: #2c3e50;
-        }
-        .section ul {
-            list-style: none;
-            padding-left: 1em;
-        }
-        .section li {
-            margin: 0.5em 0;
-        }
-        a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            margin-top: 4em;
-            font-size: 0.9em;
-            color: #888;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>explr-gpt</title>
+  <style>
+    :root{
+      --bg:#0b0e13;          /* ページ背景 */
+      --panel:#121723;       /* カード/パネル */
+      --muted:#98a2b3;       /* 説明文 */
+      --text:#e6e8ee;        /* 本文テキスト */
+      --link:#8ab4f8;        /* リンク色（既存の運用に合わせた色） */
+      --link-hover:#a6c6ff;
+      --accent:#3b82f6;      /* バッジやアクセント */
+      --badge-4o:#1e3a8a;    /* 4o期のバッジ背景 */
+      --badge-5:#065f46;     /* 5期のバッジ背景 */
+      --badge-4o-fg:#dbeafe;
+      --badge-5-fg:#d1fae5;
+      --ring: rgba(138,180,248,.25);
+    }
+    /* Reset-ish */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2235 0%, transparent 60%),
+                  radial-gradient(1000px 500px at 110% 10%, #11203a 0%, transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .wrap{max-width:960px;margin:auto;padding:40px 20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
+    .title{
+      font-size:clamp(22px, 4vw, 28px);
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .status{
+      display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+      color:var(--muted);font-size:.95rem
+    }
+    .badge{display:inline-block;padding:.2em .6em;border-radius:.65em;font-weight:600;font-size:.75rem;letter-spacing:.2px}
+    .badge.info{background:#1f2937;color:#cbd5e1}
+
+    .panel{
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)) , var(--panel);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:14px; padding:18px 18px 8px; box-shadow:0 6px 24px rgba(0,0,0,.35);
+    }
+    .panel h2{margin:0 0 6px;font-size:1.05rem;color:#cdd5ea;font-weight:700}
+    .panel p{margin:0 0 14px;color:var(--muted)}
+
+    /* Links */
+    a{color:var(--link);text-decoration:none}
+    a:hover{color:var(--link-hover)}
+
+    /* List of pages */
+    .pages{list-style:none;margin:10px 0 0;padding:0}
+    .page{display:flex;align-items:center;gap:12px;padding:14px 12px;border-radius:12px;transition:transform .12s ease, background-color .12s ease, box-shadow .12s ease;position:relative}
+    .page:hover{background:rgba(255,255,255,.03);box-shadow:0 0 0 6px var(--ring);transform:translateY(-1px)}
+    .page .name{font-weight:600;color:var(--text)}
+    .page .meta{color:var(--muted);font-size:.85rem;margin-left:auto;display:flex;gap:8px;align-items:center}
+    .chip{padding:.1em .5em;border-radius:.6em;border:1px solid rgba(255,255,255,.14);font-size:.7rem}
+    .chip.v4o{background:var(--badge-4o);color:var(--badge-4o-fg)}
+    .chip.v5{background:var(--badge-5);color:var(--badge-5-fg)}
+
+    /* Social / channel links */
+    .channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
+    .ch{display:flex;gap:10px;align-items:center;background:var(--panel);border:1px solid rgba(255,255,255,.06);padding:12px 14px;border-radius:12px}
+    .ch span{font-weight:600}
+
+    footer{margin-top:36px;color:#77809a;font-size:.9rem;text-align:center}
+    hr{border:none;border-top:1px solid rgba(255,255,255,.08);margin:22px 0}
+    .hint{font-size:.9rem;color:var(--muted)}
+  </style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <div class="title">Exploring with ChatGPT</div>
+      <div class="status"><span class="badge info">現在編集中</span><span class="hint">順次公開していきます</span></div>
+    </header>
 
-<h2>Exploring with ChatGPT</h2>
-<br>    
-<h4 id="現在編集中のため-順次公開していきます">現在編集中のため、順次公開していきます。 </h4>
-<h4 id="以下のページは現在公開中です">以下のページは現在公開中です。 </h4>
-<h4><a href="https://55blechat.github.io/explr-gpt/001-note%E3%81%AE%E8%A9%B1%E3%81%AF%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%95%E3%82%93%E3%81%8B%E3%82%89.html">001-noteの話はチャットさんから</a></h4>
-<br>    
+    <section class="panel">
+      <h2>公開中のページ</h2>
+      <p class="hint">新しいページを追加する場合は、下の <code>&lt;li class="page"&gt;</code> を複製してリンク先・バッジを編集してください。</p>
+      <ul class="pages">
+        <li class="page">
+          👉 <a class="name" href="https://55blechat.github.io/explr-gpt/001-note%E3%81%AE%E8%A9%B1%E3%81%AF%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%81%95%E3%82%93%E3%81%8B%E3%82%89.html">001 — noteの話はチャットさんから</a>
+          <div class="meta">
+            <span class="chip v4o" title="GPT-4o期">GPT‑4o期</span>
+          </div>
+        </li>
+        <!-- 例：追加行（GPT‑5期のバッジ）
+        <li class="page">
+          👉 <a class="name" href="URLを入れる">002 — タイトルを入れる</a>
+          <div class="meta"><span class="chip v5" title="GPT-5期">GPT‑5期</span></div>
+        </li>
+        -->
+      </ul>
+    </section>
 
-<footer>
-    © 2025 タケ｜ GitHub Pages にて公開
-</footer>
+    <section class="panel" style="margin-top:16px">
+      <h2>チャンネル / 外部リンク</h2>
+      <div class="channels">
+        <a class="ch" href="#" title="note">👉 <span>note</span><span class="hint">（チャンネルURLを入れてください）</span></a>
+        <a class="ch" href="#" title="YouTube">👉 <span>YouTube</span><span class="hint">（チャンネルURLを入れてください）</span></a>
+      </div>
+    </section>
 
+    <footer>© 2025 タケ ｜ GitHub Pages にて公開</footer>
+  </div>
 </body>
 </html>
