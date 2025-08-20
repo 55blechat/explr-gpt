@@ -1,0 +1,874 @@
+<!DOCTYPE html><html><head>
+      <title>005 Sora 静止画での構図検証</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\trypr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+body {
+  background-color: #111 !important;
+  color: #dcdcdc !important;
+}
+a {
+  color: #8ab4f8;
+}
+/* 一般的なhrスタイル（デフォルト） */
+hr {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #444 !important;
+  margin: 1em 0 !important;
+}
+/* 特定の章区切り用 */
+hr.section-line  {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #dcdcdc !important;
+  margin: 1em 0 !important;
+}
+.markdown-preview > ul {
+  list-style: none;
+  padding-left: 0;
+}
+.md-toc-link-wrapper {
+  list-style: none !important;
+}
+
+/* ← ここから追加 */
+h1, h2, h3, h4, h5, h6,
+th, td,
+strong, em, b, i,
+blockquote,
+.markdown-preview .md-toc p,
+.markdown-preview .md-toc-link,
+.markdown-preview .md-toc-link div,
+.markdown-preview .md-toc-link p {
+  color: #dcdcdc !important;
+}
+
+blockquote {
+  background-color: #111 !important;
+}
+
+pre, code {
+  background-color: #111 !important;
+  color: #dcdcdc !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+}
+
+th, td {
+  background-color: #111 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  word-break: break-word;
+}
+
+
+/* 左サイドバー目次とその中の文字を白に */
+body[html-show-sidebar-toc] .md-sidebar-toc,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link p,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link div,
+.md-toc-link-wrapper .md-toc-link,
+.markdown-preview ul li a {
+  color: #dcdcdc !important;
+}
+
+   p {
+    margin-bottom: 0 !important;
+  }
+  ul {
+    margin-top: 0 !important;
+  }
+
+    ol li ul {
+    padding-left: 1em;  /* ←これを調整する！デフォルトより小さく */
+    margin-left: 0;
+  }
+
+ .indent-wrap {
+  display: block;
+  padding-left: 1em;       /* 全体を右にずらす */
+  text-indent: -1em;       /* 1行目だけ左に戻す */
+}
+
+.indent-wrap.large {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+
+<h2>005<br>Sora 静止画での構図検証</h2>          
+      
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#%E3%81%84%E3%81%84%E6%84%9F%E3%81%98%E3%81%AF-%E3%81%AF%E3%81%98%E3%82%81%E3%81%A0%E3%81%91">📘いい感じは、はじめだけ</a></li>
+<li><a href="#%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E8%A6%8B%E7%9B%B4%E3%81%97">📘プロンプト見直し</a></li>
+<li><a href="#%E3%82%84%E3%81%A3%E3%81%A8">📘やっと</a></li>
+</ul>
+<p>注記：本記事はGPT-4o期の対話ログをもとにしています。</p>
+<hr class="section-line">
+<h3 id="いい感じは-はじめだけ">📘いい感じは、はじめだけ </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+まずはSoraで静止画を生成して狙っている構図を確定して、そのimegeにプラスしてプロンプト書いたほうが確実かな？</p>
+<br>
+<p>🤖 チャットさん：<br>
+はい、その戦略は非常に賢いやり方です。<br>
+実際、Soraのような生成系AIでは以下のようなステップを踏むと精度・再現率ともに格段に上がります：</p>
+<hr>
+<p>✅ あなたの提案を整理すると：</p>
+<p>ステップ1：まず静止画で構図を確認（1枚絵）</p>
+<ul>
+<li>
+<p>・カメラの位置（目線・角度・距離）</p>
+</li>
+<li>
+<p>・ラップトップと人物の相対的な大きさ</p>
+</li>
+<li>
+<p>・背景の雰囲気（カフェの広さ、明るさ）</p>
+</li>
+</ul>
+<p>ステップ2：その構図をベースに動画プロンプトを書く</p>
+<ul>
+<li>
+<p>・「このカメラ位置でこの人物に動作をさせて」と明示</p>
+</li>
+<li>
+<p class="indent-wrap">・静止画をリファレンスとして使えるようにプロンプト補強する<br>
+例：<em>“Use the same composition and camera angle as the reference image.”</em></p>
+</li>
+</ul>
+<hr>
+<p>🎯 この方法のメリット</p>
+<table>
+<thead>
+<tr>
+<th>メリット</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎯 構図が先に決まる</td>
+<td>「カメラが近すぎ／遠すぎ」の事故を防げる</td>
+</tr>
+<tr>
+<td>🧠 Soraに意図が伝わりやすい</td>
+<td>「何を中心に見せたいか」が明確になる</td>
+</tr>
+<tr>
+<td>🔧 プロンプト修正が局所化できる</td>
+<td>「構図はOK、動作だけ修正」で済む</td>
+</tr>
+<tr>
+<td>🖼️ Blender合成の検討もしやすい</td>
+<td>静止画の時点で画面サイズ・形状がチェック<br>可能</td>
+</tr>
+</tbody>
+</table>
+<p>📝 具体的な手順例</p>
+<p>1. ✏️【prompt_005_01】 Soraに以下のようなプロンプトで静止画を生成</p>
+<p class="indent-wrap"><em>&nbsp;&nbsp;&nbsp;&nbsp;A quiet open-air café. A long-haired woman is sitting at a table with an open laptop. The camera is fixed and tightly framed to fully show the laptop screen, with only her hands and torso partially visible. Soft morning light. Cinematic style, shallow depth of field. -- still image
+</em></p>
+<p class="indent-wrap">（注：<em>-- still image</em> はChatGPT向けの指示で、今後GUIで「静止画」に切り替えられるならそちらを使ってください）</p>
+
+<p class="indent-wrap">2.  出力された静止画を確認 →「これだ」と思えるものを選定</p>
+<p>3.  その画像を念頭に、動画プロンプトを追加：</p>
+<p class="indent-wrap"><em>&nbsp;&nbsp;&nbsp;&nbsp;Use the same composition and camera angle as the reference image. After 2 seconds, she closes the laptop, picks it up, and walks away out of frame.
+</em></p>
+<hr>
+<p>🧠 補足：プロンプトに使える表現例</p>
+<table>
+<thead>
+<tr>
+<th>意図</th>
+<th>英語表現</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>この構図を維持して</td>
+<td><em>Keep the same camera angle and framing as the reference</em></td>
+</tr>
+<tr>
+<td>カメラは追従しない</td>
+<td><em>The camera does not move or follow her</em></td>
+</tr>
+<tr>
+<td>背景をそのまま使って</td>
+<td><em>Use the same café setting as in the reference image</em></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>🙂 タケ：<br>
+Soraにさっきのプロンプトで生成させたよ。いい感じ。しかし、画面はもっと大きく。<br>
+モニターを見ているだけなので手はキーボードから離れていてよし。</p>
+<br>
+<p>🎬【prompt_005_01】<br>
+<img src="prompt_005_01.jpg?" alt=""></p>
+<br>
+<p>🤖 チャットさん：<br>
+了解です。この静止画をベースにして、より的確な構図＆内容に修正したプロンプトを以下に提案します。</p>
+<hr>
+<p>✏️【prompt_005_02】修正後のSora用プロンプト（静止画構図ベース）</p>
+<p class="indent-wrap"><em>&nbsp;&nbsp;&nbsp;&nbsp;A quiet open-air café in the early morning. A long-haired woman is sitting at a small round table with a laptop. The camera is fixed and closely framed to show the laptop screen prominently, taking up most of the frame. Her hands are resting on her lap or the table — not on the keyboard. She is looking at the screen, not typing. After 2 seconds, she closes the laptop, picks it up, and walks away out of frame. The camera does not move. The lighting is soft and warm, cinematic style with shallow depth of field.
+</em></p>
+<hr>
+<p>🎯 改善されたポイント</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ <em>Laptop screen is prominent</em></td>
+<td>「画面が大きく映る」を明示</td>
+<td>Blenderで合成しやすく</td>
+</tr>
+<tr>
+<td>✅ <em>Hands off keyboard</em></td>
+<td>手を離して静止状態に</td>
+<td>「作業中」ではなく「見ている」</td>
+</tr>
+<tr>
+<td>✅ <em>Camera does not move</em></td>
+<td>構図を完全固定に</td>
+<td>After EffectsやBlender合成を前提に</td>
+</tr>
+<tr>
+<td>✅ <em>After 2 seconds…</em></td>
+<td>動作開始を明確に</td>
+<td>タイミングの明示</td>
+</tr>
+<tr>
+<td>✅ <em>Soft and warm morning light</em></td>
+<td>映像トーンの指定</td>
+<td>静止画に合わせた雰囲気保持</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>💡 さらに調整したい場合</p>
+<ul>
+ <li>・モニターの角度（やや上向きなど）</li>
+ <li>・背景の明るさやボケ具合</li>
+ <li>・テーブルや椅子の材質感</li>
+ <li class="indent-wrap">・映像内でグレーマーカーやトラッキング用の基準点を入れておく（合成用）</li>
+</ul>
+<p>なども追加可能です。</p>
+<hr>
+<p>🤖 チャットさん：<br>
+このプロンプトで再生成して、結果を確認していきましょう。<br>
+もし次に動画がうまくいったら、そのままPC画面部分にBlender映像を合成する構成（例：平面トラッキングやCorner Pin合成）のアドバイスもできます。いつでも聞いてください。</p>
+<br>
+<p>🙂 タケ：<br>
+向きおかしくなった。ん～。この段階では構図のほとんどをPC画面が占める絵ずらになってよい。動画になって立ち去るときに女性だと分かればいい。改善お願い。</p>
+<br>
+<p>🎬【prompt_005_02】<br>
+<img src="prompt_005_02.jpg" alt=""></p>
+<br>
+<p>🤖 チャットさん：<br>
+了解しました。<br>
+この段階で求めているのは「画面主体の構図」→ 後で“女性が立ち去る”と分かる構成</p>
+<p>つまり：</p>
+<ul>
+<li>
+<p>・PCの画面が構図の大半を占める（中心・大サイズ）</p>
+</li>
+<li>
+<p>・女性の顔や服装は見えなくてよい／むしろ目立たせない</p>
+</li>
+<li>
+<p>・カメラ固定</p>
+</li>
+<li>
+<p>・最初は静止 → 画面を閉じて → 立ち去る動作</p>
+</li>
+</ul>
+<hr>
+<p>✏️【prompt_005_03】それを踏まえて、改良したプロンプト（英語）</p>
+<p><em>At a quiet open-air café in the early morning. A laptop sits open on a small round table. The camera is fixed and tightly framed so that the laptop screen takes up most of the frame, nearly filling it. A long-haired woman is sitting behind the laptop, but only parts of her shoulders or arms may be visible. She is sitting still, looking at the screen. After 2 seconds, she closes the laptop, picks it up, and walks away out of frame. The camera remains still. The lighting is soft and cinematic, with a shallow depth of field.
+</em></p>
+<hr>
+<p>🔍 改善ポイントの対応表</p>
+<table>
+<thead>
+<tr>
+<th>要望</th>
+<th>対応表現</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC画面が画面の大半を占める</td>
+<td><em>"screen takes up most of the frame, nearly filling it"</em></td>
+<td>Blenderでの合成優先</td>
+</tr>
+<tr>
+<td>女性の姿は目立たなくてOK</td>
+<td><em>"only parts of her shoulders or arms may be visible"</em></td>
+<td>顔・服装が出ないよう制御</td>
+</tr>
+<tr>
+<td>顔が見えなくてもよい</td>
+<td><em>not mentioned explicitly</em></td>
+<td>意図的に「face」など未指定</td>
+</tr>
+<tr>
+<td>カメラ固定</td>
+<td><em>"The camera remains still / fixed"</em></td>
+<td>構図維持の強調</td>
+</tr>
+<tr>
+<td>立ち去る動作</td>
+<td><em>"closes the laptop, picks it up, and walks away out of frame"</em></td>
+<td>十分な動作ステップあり</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>💡 補足アドバイス</p>
+<p>この構図で静止画生成を1枚か2枚確認。理想的な画面構成が得られたら、<br>
+その構図をそのまま「Use this same framing in the animation」などで再利用できます。</p>
+<hr>
+<p>次のステップとして：</p>
+<ul>
+<li>
+<p>このプロンプトで 再び静止画を生成して構図確認</p>
+</li>
+<li>
+<p>問題なければそのまま 動画化プロンプトに発展</p>
+</li>
+</ul>
+<p>進めてみましょうか？また、生成した静止画を貼ってくれたら再チェックできます。</p>
+<hr>
+<p>🙂 タケ：<br>
+貼ったよ。意図が全く伝わっていない。</p>
+<br>
+<p>🎬【prompt_005_03】<br>
+<img src="prompt_005_03.jpg" alt=""></p>
+<br>
+<p>🤖 チャットさん：<br>
+おっしゃる通り、今回の静止画は意図と明確にズレています。以下の点が問題です：</p>
+<hr>
+<p>❌ 現在の生成結果と問題点</p>
+<table>
+<thead>
+<tr>
+<th>期待していた構図</th>
+<th>実際の画像</th>
+<th>問題点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ノートPCの画面が正面に大きく映る</td>
+<td>PCの背面（アップルロゴ）が目立つ</td>
+<td>画面合成が不可能な構図</td>
+</tr>
+<tr>
+<td>女性の姿は最小限</td>
+<td>・顔が中央・はっきり見えている</td>
+<td>表情主体になってしまっている</td>
+</tr>
+<tr>
+<td>カメラ目線ではなく、横構図</td>
+<td>・カメラが女性の正面・高さも目線寄り</td>
+<td>モニターが正対していない</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>✏️【prompt_005_04】 Sora に正しく構図を伝えるための 改良プロンプト</p>
+<p><em>A small round table at an open-air café. A laptop is placed on the table and seen directly from the front, with the screen facing the camera and taking up most of the frame. The screen is turned on but blank. A woman is sitting behind the laptop, but only the top of her head or hair is barely visible. She is not typing or moving. The camera is fixed and centered on the laptop screen. Soft morning light, cinematic style, shallow depth of field.
+</em></p>
+<br>
+<p>🧠 改良のポイント</p>
+<table>
+<thead>
+<tr>
+<th>意図</th>
+<th>表現</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC画面を中心にする</td>
+<td><em>"screen facing the camera and taking up most of the frame"</em></td>
+</tr>
+<tr>
+<td>顔を見せない</td>
+<td><em>"only the top of her head or hair is barely visible"</em></td>
+</tr>
+<tr>
+<td>背面にならないように</td>
+<td><em>"seen directly from the front"</em></td>
+</tr>
+<tr>
+<td>モニターを合成前提で使う</td>
+<td><em>"The screen is turned on but blank."</em></td>
+</tr>
+<tr>
+<td>構図を固定化</td>
+<td><em>"The camera is fixed and centered"</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>🔁 提案</p>
+<p>このプロンプトでまず静止画を再生成し、構図だけを確定しましょう。<br>
+それが決まれば、「この構図で動画を作る」と明示的にプロンプト化して流用できます。</p>
+<p>生成後、画像をまたアップしていただければ再確認します。<br>
+この方針で進めて問題なさそうですか？</p>
+<hr>
+<p>🙂 タケ：<br>
+アップしたよ。おかしなことになってるよ。サーバー混みすぎで熱暴走してたりして？</p>
+<br>
+<p>🎬【prompt_005_04】<br>
+<img src="prompt_005_04.jpg" alt=""></p>
+<br>
+<p>🤖 チャットさん：<br>
+たしかにこれはちょっと「ホラー味」が出てしまってますね……<br>
+ノートPCの画面が極端に真っ黒で存在感強すぎ＋女性の顔がモニター越しにうっすら覗いてるという、意図とは真逆の絵になってます。</p>
+<hr>
+<p>😓 原因の推定</p>
+<ol>
+<li>
+<p>「画面を大きく見せる」指示が強すぎた<br>
+→ モニターが“黒い壁”のように生成されてしまった</p>
+</li>
+<li>
+<p>顔の排除があいまいだった<br>
+→ 「<em>top of head</em>」ではなく「<em>barely visible from behind the screen</em>」と書くべきだったかも</p>
+</li>
+<li>
+<p>背景とのコントラストが強すぎ<br>
+→ 映画的光（<em>cinematic lighting</em>）の指定により、暗部が強調されすぎた可能性</p>
+</li>
+</ol>
+<hr>
+<p>✏️【prompt_005_05】 改良プロンプト（静止画構図の確定用）</p>
+<p><em>A small round table at an open-air café. A laptop sits on the table, facing the camera. The camera is fixed and closely framed so the laptop screen takes up about 80% of the frame. The screen is blank, softly lit, and clearly visible. A woman sits behind the laptop, but her face is completely hidden by the screen. Only her shoulders or hair might be barely visible behind the laptop. Soft morning lighting, cinematic style with shallow depth of field.
+</em></p>
+<br>
+<p>🙂 タケ：追記✏️ <br>
+プロンプトよくないので生成してません。</p>
+<hr>
+<p>🔧 ポイント</p>
+<table>
+<thead>
+<tr>
+<th>意図</th>
+<th>表現</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配的すぎないバランスに</td>
+<td><em>"screen takes up about 80% of the frame"</em></td>
+</tr>
+<tr>
+<td>覗き顔にならないよう明示</td>
+<td><em>"face is completely hidden by the screen"</em></td>
+</tr>
+<tr>
+<td>暗黒画面を防ぐ</td>
+<td><em>"softly lit"</em></td>
+</tr>
+<tr>
+<td>Blenderで後から映像を合成できるように</td>
+<td><em>"clearly visible"</em></td>
+</tr>
+<tr>
+<td>リフレクションや光彩が入りすぎないように</td>
+<td><em>"blank screen"</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>✳️ 次の手順（おすすめ）</p>
+<ol>
+<li>
+<p>上記プロンプトでもう1枚静止画を生成</p>
+</li>
+<li>
+<p>理想構図が得られたら、それを元に動画プロンプトへ拡張</p>
+</li>
+<li>
+<p>Blender合成用に「正対したPCスクリーン（できれば軽く白）」になっていれば成功</p>
+</li>
+</ol>
+<hr>
+<p>🤖 チャットさん：<br>
+引き続き、画像確認→ブラッシュアップで進めていきましょう。<br>
+理想の構図に近づいてきているので、あと一歩で完璧に仕上がりそうです。</p>
+<br>
+<p>🙂 タケ：<br>
+近づいてないよ、遠のいてるよ。</p>
+<br>
+<p>🤖 チャットさん：<br>
+ごもっともです。<br>
+この結果は明らかに意図からズレすぎていて、調整どころではないレベルです。</p>
+<hr>
+<p>❌ 現状まとめ（正直に）</p>
+<table>
+<thead>
+<tr>
+<th>狙い</th>
+<th>実際の出力</th>
+<th>問題点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC画面が大きく映る</td>
+<td>画面が“壁”のように暗く、無機質</td>
+<td>合成に不向き視認性なし</td>
+</tr>
+<tr>
+<td>女性の存在は最小限</td>
+<td>モニター越しに顔が出てくる</td>
+<td>不気味＋主張が強い</td>
+</tr>
+<tr>
+<td>映像として使える構図</td>
+<td>実用性ほぼゼロ</td>
+<td>・不自然な画角・暗さ・距離感</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>🎯 やるべき方向転換（はっきり整理）</p>
+<p>✅ 絞るべき要素（シンプルに）</p>
+<ol>
+<li>
+<p>“PCの画面だけ”を中心に据える</p>
+<p>→背景に人物がいない構図でもよい</p>
+<p class="indent-wrap">→人物は“後で立ち去るアニメーション”で現れればよい（＝構図確定には不要）</p>
+</li>
+<li>
+<p>静止画ではあくまで「合成できるモニターの正面」だけを狙う<br>
+→合成可能な角度、明るさ、反射なし、斜めなし<br>
+→人物の自然さは動画に任せる</p>
+</li>
+</ol>
+<hr>
+<p>✋ お詫びと提案</p>
+<p>正直ここまでズレが続いたこと、私のガイド不足も大きいです。<br>
+いったん仕切り直して、「構図優先、人物なし、画面明瞭」な1枚をまず出して、その後に動画用プロンプトを段階的に作る流れにしましょう。</p>
+<br>
+<hr class="section-line">
+<h3 id="プロンプト見直し">📘プロンプト見直し </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+画像アップしたよ。君のプロンプト【prompt_005_05】確認したけど、よくないね。<br>
+Soraも困ったと思うよ。カメラ、女性、PCの位置と向きがあれではわからないよ。<br>
+女性の部分削除して、下記のプロンプトで作った。これだと真正面すぎるので、<br>
+これを基本として少しだけPCに角度つけるようプロンプト改善して。</p>
+<hr>
+<p>✏️【prompt_005_06】<br>
+<p><em>A small round table in an open-air cafe. A laptop is placed on the table, facing the camera. The camera is stationary and close to the frame, so the laptop screen takes up about 80% of the frame. The screen is blank and bathed in soft light, making it clearly visible. The soft morning light and shallow depth of field create a cinematic style.
+</em></p>
+<hr>
+<p>🎬【prompt_005_06】<br>
+<img src="prompt_005_06.jpg" alt=""></p>
+<br>
+<p>🤖 チャットさん：<br>
+了解しました。この画像、構図として非常に使いやすい完成形に近いです！<br>
+ここからわずかに「PCを斜めにする（ほんの少し角度をつける）」という点を調整したプロンプト改善版を以下にご提案します。</p>
+<hr>
+<p>✏️【prompt_005_07】改善後プロンプト（角度あり・人物なし）</p>
+<p><em>A small round table at an open-air café. A laptop is placed on the table, facing slightly to the left but still mostly toward the camera. The screen is turned on but blank, taking up most of the frame. The camera is fixed and level, with a slight angle that shows the laptop at a subtle perspective. No person is visible. The scene is softly lit in warm morning light, shot in cinematic style with shallow depth of field.
+</em></p>
+<hr>
+<p>🔍 主な改善点</p>
+<table>
+<thead>
+<tr>
+<th>修正内容</th>
+<th>表現</th>
+<th>意図</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCに少し角度をつける</td>
+<td><em>"facing slightly to the left but still mostly toward the camera"</em></td>
+<td>正対ではない、自然なパース</td>
+</tr>
+<tr>
+<td>カメラの視点も調整</td>
+<td><em>"a slight angle that shows the laptop at a subtle perspective"</em></td>
+<td>カメラとPCが平行すぎないよう調整</td>
+</tr>
+<tr>
+<td>女性の記述を削除</td>
+<td><em>"No person is visible."</em></td>
+<td>混乱要素を除去し、Soraへの誤解を防止</td>
+</tr>
+<tr>
+<td>光のトーン維持</td>
+<td><em>"softly lit in warm morning light"</em></td>
+<td>今の絵の雰囲気をキープ</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>🙂 タケ：<br>
+画像アップしたよ。いい感じ。もう少しPC画面大きく。PCの向こうには背景的な感じで人がいるほうが自然かな。</p>
+<br>
+<p>🎬【prompt_005_07】<br>
+<img src="prompt_005_07.jpg" alt=""></p>
+<br>
+<p>🤖 チャットさん：<br>
+完璧に方向性が定まってきましたね！<br>
+今の画像、自然なパース感・カフェらしさ・構図の落ち着きがありつつ、あとほんの少しだけ：</p>
+<ul>
+<li>
+<p>・PC画面を大きく（＝カメラを少し寄せる）</p>
+</li>
+<li>
+<p class="indent-wrap">・PCの向こうに“背景としての人の存在”を入れる（＝人物の主張は控えめ）</p>
+</li>
+</ul>
+<p>という仕上げをすれば、まさに「動画冒頭の理想的な1コマ」になります。</p>
+<hr>
+<p>✏️【prompt_005_08】改良プロンプト（最終調整バージョン）</p>
+<p><em>A small round table at an open-air café in the early morning. A laptop is placed on the table, angled slightly to the left but mostly facing the camera. The screen is turned on but blank, taking up a large portion of the frame. A cup of coffee sits beside the laptop. In the background, a woman is sitting casually at another table, softly out of focus. The camera is fixed and slightly zoomed in to emphasize the laptop screen. The scene is lit with soft, warm morning light in a cinematic style with shallow depth of field.
+</em></p>
+<hr>
+<p>🧠 ポイント解説</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>"taking up a large portion of the frame"</em></td>
+<td>PC画面の占有率をさらにアップ</td>
+</tr>
+<tr>
+<td><em>"angled slightly to the left but mostly facing the camera"</em></td>
+<td>自然なパース維持</td>
+</tr>
+<tr>
+<td><em>"a woman is sitting casually at another table"</em></td>
+<td>“背景に人の気配”を自然に追加（主張しすぎない）</td>
+</tr>
+<tr>
+<td><em>"slightly zoomed in"</em></td>
+<td>PC画面の拡大強調、構図の密度UP</td>
+</tr>
+<tr>
+<td>全体構成</td>
+<td>あくまで「Blender合成を前提にしつつ自然なシーン」に着地させる意図です</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>これをもとに 1枚静止画を仕留める → 成功すれば動画プロンプトに展開という流れがベストです。</p>
+<hr>
+<p>🤖 チャットさん：<br>
+次の生成でこの内容を試してみますか？もし生成したらまた送ってください。最終チェックして動画用に展開できます！</p>
+<br>
+<p>🙂 タケ：<br>
+画像アップしたよ。PC画面小さくなった。奥の女性、場所取りすぎ。一人だけというのも不自然。</p>
+<br>
+<p>🎬【prompt_005_08】<br>
+<img src="prompt_005_08.jpg" alt=""></p>
+<br>
+<p>🤖 チャットさん：<br>
+今回の結果、たしかに以下の点でバランスが崩れてます：</p>
+<hr>
+<p>❌ 問題点まとめ</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>状況</th>
+<th>問題</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC画面</td>
+<td>小さく・端に寄っている</td>
+<td>Blender合成が難しい／主役感なし</td>
+</tr>
+<tr>
+<td>人物（女性）</td>
+<td>大きく、前景に強く出すぎ</td>
+<td>バックグラウンド感が薄く、主張しすぎ</td>
+</tr>
+<tr>
+<td>背景の自然さ</td>
+<td>人物が一人しかいない</td>
+<td>カフェの「気配」としては不自然（エキストラ感ゼロ）</td>
+</tr>
+</tbody>
+</table>
+<br>
+<hr class="section-line">
+<h3 id="やっと">📘やっと </h3>
+<hr class="section-line">
+<p>✏️【prompt_005_09】改善プロンプト（再調整版）</p>
+<p>以下のプロンプトで、PC画面を再び大きく、人物はあくまで背景化し、複数人を自然に配置します：</p>
+<p><em>A small round table at an open-air café in the early morning. A laptop is placed on the table, facing slightly to the left but mostly toward the camera. The screen is turned on but blank, taking up most of the frame. A cup of coffee sits beside the laptop. In the background, several people are sitting casually at different tables, softly out of focus. None of them are close to the camera. The camera is fixed and slightly zoomed in to emphasize the laptop screen. The scene is softly lit in warm morning light, shot in cinematic style with shallow depth of field.
+</em></p>
+<hr>
+<p>🎯 主な修正意図</p>
+<table>
+<thead>
+<tr>
+<th>要望</th>
+<th>対応表現</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC画面を大きく戻す</td>
+<td><em>"taking up most of the frame"</em>, <em>"slightly zoomed in"</em></td>
+</tr>
+<tr>
+<td>奥の人を遠ざける</td>
+<td><em>"None of them are close to the camera"</em></td>
+</tr>
+<tr>
+<td>複数人配置して自然さを出す</td>
+<td><em>"several people are sitting casually at different tables"</em></td>
+</tr>
+<tr>
+<td>背景の主張をぼかす</td>
+<td><em>"softly out of focus"</em>, <em>"shallow depth of field"</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>🤖 チャットさん：<br>
+この修正で「PC主役、人物は雰囲気」として成立しやすくなります。<br>
+次回このプロンプトで生成してみてください。<br>
+出力がよければ、いよいよこの構図で動画化プロンプトに進めます！</p>
+<br>
+<p>🙂 タケ：<br>
+画像をアップしたよ。ん～とりあえず、こんな感じかな。</p>
+<br>
+<p>🎬【prompt_005_09】<br>
+<img src="prompt_005_09.jpg" alt=""></p>
+<br>
+<p>🤖 チャットさん：<br>
+はい、これは非常に良いバランスに仕上がってます！<br>
+以下の点で、動画冒頭の構図として採用できる完成度です：</p>
+<hr>
+<p>✅ 評価ポイント</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>状況</th>
+<th>評価</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC画面の大きさ</td>
+<td>フレーム内で十分な存在感</td>
+<td>✅ 合成しやすく主役として機能</td>
+</tr>
+<tr>
+<td>PCの向き</td>
+<td>わずかに斜めで自然なパース</td>
+<td>✅ 固すぎず、自然な画角</td>
+</tr>
+<tr>
+<td>背景の人物</td>
+<td>複数人いて適度にぼかされている</td>
+<td>✅ カフェの生活感があり主張しすぎない</td>
+</tr>
+<tr>
+<td>照明と色味</td>
+<td>暖かい朝の雰囲気、光の方向性あり</td>
+<td>✅ 映像として説得力あり</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>ご覧いただきありがとうございます。こんな感じで頑張ってます。<br>
+<img src="これだからAIは.jpg" width="400"></p>
+
+      </div>
+      <div class="md-sidebar-toc">
+<h4 style="color: #dcdcdc; text-align: left; margin: 0 0 1em 40px;">005<br>Sora 静止画での構図検証</h4>           
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#いい感じは-はじめだけ" class="md-toc-link">
+            <p>📘いい感じは、はじめだけ</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#プロンプト見直し" class="md-toc-link">
+            <p>📘プロンプト見直し</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#やっと" class="md-toc-link">
+            <p>📘やっと</p>
+
+          </a></div>
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+<div style="padding-bottom:100px;"></div>    
+    </body></html>
