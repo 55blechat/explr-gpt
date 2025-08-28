@@ -1,0 +1,769 @@
+<!DOCTYPE html><html><head>
+      <title>014 Sora／Vidu／Polloの“限界ライン”</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\trypr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.19\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+body {
+  background-color: #111 !important;
+  color: #dcdcdc !important;
+}
+a {
+  color: #8ab4f8;
+}
+/* 一般的なhrスタイル（デフォルト） */
+hr {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #444 !important;
+  margin: 1em 0 !important;
+}
+/* 特定の章区切り用 */
+hr.section-line  {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #dcdcdc !important;
+  margin: 1em 0 !important;
+}
+.markdown-preview > ul {
+  list-style: none;
+  padding-left: 0;
+}
+.md-toc-link-wrapper {
+  list-style: none !important;
+}
+
+/* ← ここから追加 */
+h1, h2, h3, h4, h5, h6,
+th, td,
+strong, em, b, i,
+blockquote,
+.markdown-preview .md-toc p,
+.markdown-preview .md-toc-link,
+.markdown-preview .md-toc-link div,
+.markdown-preview .md-toc-link p {
+  color: #dcdcdc !important;
+}
+
+blockquote {
+  background-color: #111 !important;
+}
+
+pre, code {
+  background-color: #1e1e1e !important;
+  color: #dcdcdc !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+}
+
+th, td {
+  background-color: #111 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  word-break: break-word;
+}
+
+
+/* 左サイドバー目次とその中の文字を白に */
+body[html-show-sidebar-toc] .md-sidebar-toc,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link p,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link div,
+.md-toc-link-wrapper .md-toc-link,
+.markdown-preview ul li a {
+  color: #dcdcdc !important;
+}
+
+   p {
+    margin-bottom: 0 !important;
+  }
+  ul {
+    margin-top: 0 !important;
+  }
+
+    ol li ul {
+    padding-left: 1em;  /* ←これを調整する！デフォルトより小さく */
+    margin-left: 0;
+  }
+
+.indent-wrap {
+  display: block;
+  padding-left: 1em;       /* 全体を右にずらす */
+  text-indent: -1em;       /* 1行目だけ左に戻す */
+}
+
+.indent-wrap.large {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+.indent-wrap.large2 {
+  padding-left: 1.8em;
+  text-indent: -1.8em;
+}
+
+.markdown-preview ol,
+.markdown-preview ol ol,
+.markdown-preview ul ol {
+  list-style-type: decimal !important;
+}
+
+/* 最上階のul（インデントもマーカーも消す） */
+ul {
+  list-style-type: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* ol の中だろうが ul の中だろうが全部黒丸+インデント */
+ul ul {
+  list-style-type: disc !important;
+  padding-left: 1.5em !important;
+  margin-left: 0 !important;
+}
+
+/* ▼ここからテスト用スタイル（スマホ幅確認用） */
+/* <div class="crossnote markdown-preview　test-narrow">⇒幅狭表示 */
+/* <div class="crossnote markdown-preview">⇒通常表示 */  
+.test-narrow {
+  width: 440px;
+  margin: 0 auto;
+  outline: 1px dashed red;
+}
+
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview">
+
+<h2>014<br>Sora／Vidu／Pollo の限界ライン</h2>         
+      
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#-%E7%94%BB%E5%83%8F%E7%94%9F%E6%88%90%E6%AF%94%E8%BC%83">📘 画像生成比較</a></li>
+<li><a href="#-%E7%94%BB%E8%A7%92%E3%81%AE%E8%AA%8D%E8%AD%98">📘 画角の認識</a></li>
+<li><a href="#-%E6%94%B9%E5%96%84%E3%82%92%E9%87%8D%E3%81%AD%E3%81%A6%E3%81%BF%E3%82%8B%E3%81%8C">📘 改善を重ねてみるが、、、</a></li>
+<li><a href="#-%E4%BB%8A%E5%BE%8C%E3%81%AE%E9%80%B2%E6%AD%A9%E3%81%AB%E6%9C%9F%E5%BE%85">📘 今後の進歩に期待</a></li>
+</ul>
+
+<p>注記：本記事はGPT-4o期の対話ログをもとにしています。</p>
+<hr class="section-line">
+<h3 id="-画像生成比較">📘 画像生成比較 </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+動画生成比較してみたよ。指示はこれ。<br>
+<em>An open cafe. A woman is looking at the screen of a tablet PC. The camera is filming from behind the woman, focusing on the tablet PC screen. In terms of the angle of view, the camera is behind the woman, so only a part of the woman is visible, but the entire tablet PC screen is visible. The tablet PC screen is zoomed in and gets bigger and bigger.</em></p>
+<br>
+<p>Sora君、惜しい！</p>
+<br>
+<p>Vidu<br>
+<p><video src="./014_Vidu.mp4" autoplay loop muted playsinline style="width: 100%; max-width: 640px;"></video></p>
+<br>
+<p>Pollo<br>
+<p><video src="./014_Pollo.mp4" autoplay loop muted playsinline style="width: 100%; max-width: 640px;"></video></p>
+<br>
+<p>Sora 1回目<br>
+<p><video src="./014_Sora_1st.mp4" autoplay loop muted playsinline style="width: 100%; max-width: 640px;"></video></p>
+<br>
+<p>🤖 チャットさん：<br>
+動画比較：基本情報</p>
+<table>
+<thead>
+<tr>
+<th>Video</th>
+<th>duration_sec</th>
+<th>fps</th>
+<th>resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vidu</td>
+<td>5.21</td>
+<td>24.0</td>
+<td>[1920, 1080]</td>
+</tr>
+<tr>
+<td>Pollo</td>
+<td>5.04</td>
+<td>24.0</td>
+<td>[864, 480]</td>
+</tr>
+<tr>
+<td>Sora</td>
+<td>5.0</td>
+<td>30.0</td>
+<td>[854, 480]</td>
+</tr>
+</tbody>
+</table>
+<p>3つの動画を比較した基本情報（再生時間、解像度、フレームレートなど）をまとめました。ご確認ください。</p>
+<hr>
+<p>🙂 タケ：<br>
+少し前にSoraでいろいろ検討したのおぼえているかな？</p>
+<br>
+<p>🤖 チャットさん：<br>
+もちろん覚えています！少し前にあなたは以下のような点について Sora（OpenAIの動画生成AI）を検討していました：</p>
+<ul>
+<li>
+<p>小物（テーブル上のアイテム）や手元の描写が苦手</p>
+<p class="indent-wrap">⇒そのため「テーブルと背景だけ」に絞ったプロンプトに変更して試していました。</p>
+</li>
+<li>
+<br>
+<p>手探り感や偶然性に頼る部分が多いことへの疑問や疲労感<br>
+<p class="indent-wrap">⇒「生成AIを本気で作品づくりに使おうとすると、落とし穴だらけの地雷原を歩くことになる」という印象を持っていたこと。</p>
+</li>
+<li>
+<br>
+<p>出力の再現性や品質が不安定<br>
+<p class="indent-wrap">⇒「とにかく小物に関することが苦手」「同じ画像が生成されることがある」なども話していました。</p>
+</li>
+</ul>
+<p>今回のプロンプト（カフェ、後ろから女性、タブレットPCの画面ズーム）に対して、「惜しい！」という感想が出たということは、前よりは改善してるけどまだ完璧ではなかった、という感じでしょうか？</p>
+<p>具体的に「惜しい」と思った点がどこか、教えてくれたら、他の動画（Vidu、Pollo）との比較も含めて深堀りできます。
+<br>たとえば：</p>
+<ul>
+<li>
+<p>タブレットの挙動がおかしかった？</p>
+</li>
+<li>
+<p>カメラ位置が違った？</p>
+</li>
+<li>
+<p>女性の姿が一貫してなかった？</p>
+</li>
+<li>
+<p>ズームがなかった？</p>
+</li>
+</ul>
+<p>どこが「あと少し」だったか、よかったら教えてください。</p>
+<hr>
+<p>🙂 タケ：<br>
+3社ともズームイン？ズームアップ？拡大が苦手みたいだね。惜しかったのも偶然みたい。<br>
+指示は以下のようにしたんだけどね。<br>
+<em>An open cafe. A woman is looking at the screen of a tablet PC. The camera is filming from behind the woman, focusing on the tablet PC screen. In terms of the angle of view, the camera is behind the woman, so only a part of her is visible, but the entire tablet PC screen is in view from the start. The tablet PC screen is a solid matte green. The tablet PC screen is zoomed in and becomes increasingly enlarged, until the frame of the angle of view and the green part match up.</em></p>
+<br>
+<p>Sora ２回目<br>
+<p><video src="./014_Sora_2nd.mp4" autoplay loop muted playsinline style="width: 100%; max-width: 640px;"></video></p>
+<br>
+<p>🤖 チャットさん：<br>
+新たにアップロードされた「Sora ２回目」も、前回の 「Sora 1回目」 出力と同様に：</p>
+<ul>
+<li>
+<p>解像度：854×480</p>
+</li>
+<li>
+<p>フレームレート：30fps</p>
+</li>
+<li>
+<p>長さ：5秒</p>
+</li>
+<li>
+<p>音声なし</p>
+</li>
+</ul>
+<p>となっており、見かけ上のスペックは同じです。ただ、ズームイン（または画面拡大）に関する表現力は、実際の映像を観察して判断する必要があります。</p>
+<p>ご指摘どおり、3社ともズームアップ（画面が大きくなる描写）が苦手で、Sora もたまたま「惜しい」動きが出たものの、意図的なズームではなさそう、という印象ですね。</p>
+<p>これは次のような技術的背景が考えられます：</p>
+<hr>
+<p>🔍 生成AIの「カメラズーム」指示が難しい理由</p>
+<ol>
+<li>
+<p>ズーム＝時間変化する視野制御が必要</p>
+<ul>
+<li>
+<p>「画面が大きくなる」には、視野角の縮小（ズームレンズの動き）または被写体へのカメラの前進が必要。</p>
+</li>
+<li>
+<p>テキストだけでその“時間軸の変化”を正確に伝えるのが難しい。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>拡大の対象が抽象的</p>
+<ul>
+<li>「タブレット画面の緑がフレームいっぱいに」という視覚ゴールは、生成AIにとって「映像構成の目標」として把握しにくい。</li>
+</ul>
+</li>
+<li>
+<p>プロンプト中の構造的な優先順位</p>
+<ul>
+<li>「カフェ」「女性」「タブレット」など静的な背景描写が強調され、時間変化（ズームイン）がおまけのように扱われてしまう傾向がある。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>🎯 対策例（試す価値がある工夫）</p>
+<ul>
+<li>
+<p>プロンプトの前半に「<em>The camera gradually zooms in...</em>」を置いて優先度を上げる。</p>
+</li>
+<li>
+<p>「<em>Over the course of 5 seconds, the tablet screen fills the frame.</em>」など時間制約と結果を明記。</p>
+</li>
+<li>
+<p>映像の文法に近い表現：</p>
+<p><em>A slow dolly shot begins behind a woman at a cafe. The camera pushes in until the green screen of the tablet completely fills the frame.</em>
+</p>
+</li>
+</ul>
+<hr>
+<p>さらに見てほしいのは：</p>
+<ul>
+<li>
+<p>誰が一番ズームに近い動きがあったか？</p>
+</li>
+<li>
+<p>その動きが「偶然」なのか「意図的」なのか？</p>
+</li>
+<li>
+<p>再現性があるか？</p>
+</li>
+</ul>
+<p>このあたり、映像内容を踏まえて一緒にレビューしていくこともできます。</p>
+<br>
+<hr class="section-line">
+<h3 id="-画角の認識">📘 画角の認識 </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+映像自体の16:9のカメラの画角のことをaiに認識させるにはどう表現したらいいの？くわえて、ズームアップ？、ズームイン？、クローズアップ？なんか専門用語があるの？</p>
+<br><p>🤖 チャットさん：<br>
+とても良い質問です。AIに「16:9の画角」や「ズームによる画面変化」を伝えるには、専門的かつ視覚的な文法に近い表現が効果的です。以下に具体的な表現方法と、ズーム関連の映像用語の使い分けをまとめました。</p>
+<hr>
+<p>🎥 1. 「16:9の画角」を明示する表現</p>
+<p>生成AIは「16:9」とだけ言っても正しく認識しないことがあります。代わりに構図とフレーミングに関する文脈で伝えると効果的です：</p>
+<p>✅ 有効な書き方の例：</p>
+<ul>
+<li>
+<p><em>"The scene is framed in a standard widescreen 16:9 aspect ratio."</em></p>
+</li>
+<li>
+<p><em>"The tablet screen gradually fills the entire 16:9 frame."</em></p>
+</li>
+<li>
+<p><em>"The final shot matches the tablet screen to the camera’s full widescreen composition."</em></p>
+</li>
+<li>
+<p><em>"The entire green tablet screen fits edge to edge within the cinematic frame."</em></p>
+</li>
+</ul>
+<p>※「<em>edge to edge</em>」「<em>fills the frame</em>」なども映像表現としてよく使われます。</p>
+<hr>
+<p>🔍 2. ズーム／クローズアップ／パンなどの用語の違い</p>
+<table>
+<thead>
+<tr>
+<th>用語</th>
+<th>意味</th>
+<th>英語での表現</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ズームイン</td>
+<td>カメラレンズの焦点距離を変えて被写体を拡大（実際に動かない）</td>
+<td><em>Zoom in on...</td>
+<td>静止位置からの拡大。自然で滑らかに見える</td>
+</tr>
+<tr>
+<td>ズームアウト</td>
+<td>ズームの逆。引いていく</td>
+<td><em>Zoom out from...</em></td>
+<td></td>
+</tr>
+<tr>
+<td>クローズアップ</td>
+<td>被写体に大写しで近づく。構図そのもの</td>
+<td><em>Close-up shot of...</em></td>
+<td>静止画に近い感覚（最初から大きいことも）</td>
+</tr>
+<tr>
+<td>ドリーイン</td>
+<td>カメラ自体が前進し被写体に近づく</td>
+<td><em>Dolly in / Push in</em></td>
+<td>遠近感が変わる。より映画的</td>
+</tr>
+<tr>
+<td>ドリーアウト</td>
+<td>カメラが後退</td>
+<td><em>Dolly out / Pull back</em></td>
+<td></td>
+</tr>
+<tr>
+<td>パン</td>
+<td>カメラが左右に首を振る</td>
+<td><em>Pan left/right</em></td>
+<td></td>
+</tr>
+<tr>
+<td>チルト</td>
+<td>上下に首を振る</td>
+<td><em>Tilt up/down</em></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>✏️ 3. あなたのプロンプトを映像表現寄りにする例</p>
+<p>元の文：</p>
+<p><em>The tablet PC screen is zoomed in and becomes increasingly enlarged, until the frame of the angle of view and the green part match up.</em></p>
+<br>
+<p>改善案：</p>
+<p><em>Over the course of the shot, the camera gradually zooms in on the tablet screen. The green screen fills the entire 16:9 frame, edge to edge, until nothing else is visible.</em></p>
+<br>
+<p>または：</p>
+<p><em>The scene starts with a medium shot of a woman from behind at a cafe. As the shot progresses, the camera performs a slow push-in, eventually framing the green tablet screen in full, perfectly aligned with the 16:9 cinematic frame.</em></p>
+
+<hr>
+<p>✅ まとめ：AIに正しく伝えるには…</p>
+<ul>
+<li>
+<p><em>"zoom in", "close-up", "fills the frame"</em> を目的に応じて使い分ける</p>
+</li>
+<li>
+<p><em>"16:9 frame", "edge to edge", "widescreen format"</em> で画角を明示</p>
+</li>
+<li>
+<p>「徐々に拡大」「ズームによって画面が変化」などは時間的表現（over the course of the shot）を入れると伝わりやすい</p>
+</li>
+</ul>
+<br>
+<hr class="section-line">
+<h3 id="-改善を重ねてみるが">📘 改善を重ねてみるが、、、 </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+<em>An open cafe. A woman is looking at the screen of a tablet PC. The scene starts with a medium shot of a woman from behind at a cafe. In terms of the angle of view, the camera is behind the woman, so only a part of her is visible, but the entire tablet PC screen is in view from the start. The tablet PC screen is a solid matte green. As the shot progresses, the camera performs a slow push-in, eventually framing the green tablet screen in full, perfectly aligned with the 16:9 cinematic frame.</em></p>
+<p>この指示で結果これ。全く反映されていない部分は何が起きてるの？<br>
+わからなければ無視みたいなこと？</p>
+<br>
+<p>Sora ３回目<br>
+<p><video src="./014_Sora_3rd.mp4" autoplay loop muted playsinline style="width: 100%; max-width: 640px;"></video></p>
+<br>
+<p>🤖 チャットさん：<br>
+動画スペック上は「Sora 2回目」　「Sora ３回目」など、すべて5秒・30fps・854x480・音声なしという仕様で一致していますが、プロンプトで強調した内容がまったく反映されていないという点に注目すると、以下のような理由が考えられます。</p>
+<hr>
+<p>🔍「指示が無視される／反映されない」理由とそのメカニズム</p>
+<p>1.複雑なシーン文法をAIが分解・処理できていない</p>
+<p class="indent-wrap">&nbsp;&nbsp;&nbsp;あなたの指示は非常に明確ですが、以下のように複数の意図が含まれています：</p>
+<p>&nbsp;&nbsp;&nbsp;▪ 場所（オープンカフェ）</p>
+<p>&nbsp;&nbsp;&nbsp;▪ アングル（後ろから）</p>
+<p>&nbsp;&nbsp;&nbsp;▪ 被写体の一部表示（女性は一部だけ見える）</p>
+<p>&nbsp;&nbsp;&nbsp;▪ タブレット全体の表示（開始時にフレーム内）</p>
+<p>&nbsp;&nbsp;&nbsp;▪ 色（マットグリーン）</p>
+<p>&nbsp;&nbsp;&nbsp;▪ カメラモーション（スロープッシュイン）</p>
+<p>&nbsp;&nbsp;&nbsp;▪ 最終構図（16:9に緑が一致）</p>
+<p class="indent-wrap">→これらすべてを正確に理解して組み合わせて処理するには、視覚文法の解釈力とシーケンス構築力が必要で、現状のSoraでもそこに限界があります。</p>
+<hr>
+
+<p>2.「複数条件があると、優先順位が勝手に変わる」傾向</p>
+
+<p class="indent-wrap large">&nbsp;&nbsp;&nbsp;▪「オープンカフェ」や「女性の背後」という要素が強く解釈され、「ズーム」や「緑が画面を埋める」は低優先で無視されやすい。</p>
+
+<p>理由：</p>
+
+<p>AIは映像的に「映え」るものを優先的に採用する傾向がある（風景や人物に重きを置く）</p>
+
+<hr>
+
+<p>3.時間変化（ズーム・拡大）を“構造”として認識できない</p>
+
+<p class="indent-wrap large">&nbsp;&nbsp;&nbsp;▪ AIにとって、1枚絵を生成し、そこから次のコマに進むというのは「連続した変化」ではなく、「場面切り替え」に近く扱われる。</p>
+
+<p class="indent-wrap large">&nbsp;&nbsp;&nbsp;▪ そのため「スロープッシュイン」など連続的・段階的な変化が実現しにくい。</p>
+
+<hr>
+
+<p>4.「マットグリーンのタブレット画面」という意図が曖昧に扱われる</p>
+
+<p class="indent-wrap large">&nbsp;&nbsp;&nbsp;▪ 緑の矩形が明確に「タブレット画面」として描写されているとは限らない。</p>
+
+<p class="indent-wrap large">&nbsp;&nbsp;&nbsp;▪ そもそも「スクリーンの色を指定する」指示は、まだ映像生成AIにとって精度の低い部分です（形より難しい）。</p>
+
+<hr>
+<p>🛠 対処法（完全ではないが改善しやすい方向）</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>工夫例（プロンプト強化）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>カメラアングルと構図</td>
+<td><em>“Camera is behind the woman. Only the upper part of her shoulders is visible.”</em></td>
+</tr>
+<tr>
+<td>ズーム</td>
+<td><em>“The camera performs a continuous slow push-in over 5 seconds.”</em></td>
+</tr>
+<tr>
+<td>構図のゴール</td>
+<td><em>“By the end, the green screen of the tablet fills the entire 16:9 frame, edge to edge.”</em></td>
+</tr>
+<tr>
+<td>タブレット画面の描写</td>
+<td><em>“The tablet screen is clearly visible, solid matte green, like a chroma key background.”</em></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>✅ まとめ：反映されない理由の本質</p>
+<ul>
+<li>
+<p>AIは複数条件を正しく“構造化”して捉えるのがまだ苦手</p>
+</li>
+<li>
+<p>重要な条件ほど冒頭に、繰り返して書くと反映されやすくなる</p>
+</li>
+<li>
+<p>ズームなどの連続的カメラ操作は「物理的な動き」ではなく、まだ「絵の切り替え」として処理されがち</p>
+</li>
+</ul>
+<hr>
+<p>🤖 チャットさん：<br>
+ご希望があれば、あなたのプロンプトを再構成した「よりAIに通じやすい最適化版」を提案します。試してみますか？</p>
+<br>
+<p>🙂 タケ：<br>
+してみて</p>
+<br>
+<p>🤖 チャットさん：<br>
+では、あなたの意図（カフェの中で、女性の背後からタブレット画面にズームインして、最終的に16:9画角を緑の画面が完全に埋め尽くす）を最大限に反映させるための、生成AI向けプロンプト最適化版（英語）を以下に提示します。</p>
+<hr>
+<p>✅ 最適化されたプロンプト（AIフレンドリー／視覚文法重視）</p>
+<p><em>An open-air cafe. A woman is seated at a table, looking at a tablet PC in her hands. 
+The scene begins with a medium shot from behind the woman. Only the upper part of her back and shoulders is visible. 
+The full screen of the tablet is clearly in view from the beginning. The tablet screen is a solid matte green, like a chroma key screen.
+<br>
+Over the course of the 5-second scene, the camera performs a slow and continuous push-in toward the tablet screen. 
+There are no sudden cuts or transitions—only one smooth camera motion. 
+By the end of the shot, the green tablet screen fills the entire 16:9 frame, perfectly edge to edge, and nothing else is visible.
+</em></p>
+<hr>
+<p>💡 ポイント解説</p>
+<table>
+<thead>
+<tr>
+<th>セクション</th>
+<th>意図</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>"An open-air cafe..."</em></td>
+<td>背景の明示</td>
+<td>「カフェ」だけでなく“外の雰囲気”を補強</td>
+</tr>
+<tr>
+<td><em>"medium shot from behind..."</em></td>
+<td>明確な構図指示</td>
+<td>カメラ位置と見える範囲を制限</td>
+</tr>
+<tr>
+<td><em>"the full screen of the tablet is clearly in view"</em></td>
+<td>初期状態の明確化</td>
+<td>開始時からタブレット全体が見えていると強調</td>
+</tr>
+<tr>
+<td><em>"a solid matte green, like a chroma key"</em></td>
+<td>色と質感のイメージ</td>
+<td>「緑の矩形」が伝わりにくいAIへの補足</td>
+</tr>
+<tr>
+<td><em>"the camera performs a slow and continuous push-in..."</em></td>
+<td>ズーム動作の明示</td>
+<td>AIが「滑らかな動き」として認識しやすくする</td>
+</tr>
+<tr>
+<td><em>"fills the entire 16:9 frame, perfectly edge to edge"</em></td>
+<td>ゴールの構図明示</td>
+<td>明確なビジュアル目標（緑画面の全フレーム占拠）</td>
+</tr>
+</tbody>
+</table>
+
+<br>
+<p>🤖 チャットさん：<br>
+<p>このプロンプトでSoraやVidu、Polloに再投入して試してみると、改善される可能性があります。必要なら、日本語訳付きも出します。試してみたら結果をぜひ教えてください。</p>
+<br>
+<p>🙂 タケ：<br>
+ダメだったね。<br>
+Vidu、Polloの無料の回数制限は使い切った。</p>
+<br>
+<p>Sora ４回目<br>
+<p><video src="./014_Sora_4th.mp4" autoplay loop muted playsinline style="width: 100%; max-width: 640px;"></video></p>
+<br>
+<p>🤖 チャットさん：<br>
+Sora ４回目も、スペック上は他と同じ：</p>
+<ul>
+<li>
+<p>5秒</p>
+</li>
+<li>
+<p>30fps</p>
+</li>
+<li>
+<p>解像度：854×480</p>
+</li>
+<li>
+<p>音声なし</p>
+</li>
+</ul>
+<p>…と完全に一致しています。</p>
+<p>しかし、プロンプトで強調した「ズーム」「緑の画面がフレーム全体を埋める」はやはり実現されていなかったということですね。</p>
+<hr>
+<p>😩 現状まとめ：なぜ“ダメだった”のか</p>
+<ul>
+<li>
+<p>ズーム＝静止画の連続では表現しづらい動き（AIが苦手）</p>
+</li>
+<li>
+<p>色（緑）＋構図（タブレットが画面を埋める）という「映像的構成要素」はAIが一貫性を保ちにくい</p>
+</li>
+<li>
+<p>プロンプトの再現性の限界：文字通りの意味より、「どこが映えるか」「何がAI的に処理しやすいか」で判断されている</p>
+</li>
+</ul>
+<hr>
+<p>🧭 次の一手：どうする？</p>
+<p>▶ A. 演出を諦めて映像編集で合成する</p>
+<ul>
+<li>
+<p>タブレットが映っているところまでの1シーンだけ作って、</p>
+</li>
+<li>
+<p>DaVinci ResolveやPremiereでクロップ＋拡大＋フェードでズーム表現を合成する。</p>
+</li>
+</ul>
+<p>▶ B. 2段階プロンプトで擬似的にズームに見せる</p>
+<ol>
+<li>
+<p>ショットA：</p>
+
+<p><em>Medium shot from behind the woman, showing the green screen of the tablet fully.</em></p>
+
+</li>
+<li>
+<p>ショットB（別プロンプト）：</p>
+<p><em>Close-up of the green tablet screen, filling the entire 16:9 frame.</em></p>
+
+</li>
+</ol>
+<p>→ 両方をつなげて「カットでズームしたように見せる」<br>
+※ これは今ある無料枠では難しいかもですが、有料プランで分割生成する手法です。</p>
+<hr>
+<p>🤖 評価：Sora／Vidu／Polloの“限界ライン”が見えた</p>
+<ul>
+<li>
+<p>3社ともアニメーション的カメラ操作（ズームやフォーカス）が極めて苦手</p>
+</li>
+<li>
+<p>現時点では、「構図」や「背景」の描写は比較的安定するが、時間軸にまたがる演出や正確な被写体のスケーリングは期待できない</p>
+</li>
+</ul>
+
+<p>もし再挑戦する場合、動画編集ソフト側で補完する方が早道かもしれません。</p>
+<br>
+<hr class="section-line">
+<h3 id="-今後の進歩に期待">📘 今後の進歩に期待 </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+以前やってだめっだたことを再確認しただけだった。本格的に使うのはまだ先だから、その間に進歩していることを期待します。</p>
+<br>
+<p>🤖 チャットさん：<br>
+まさにその通りだと思います。<br>
+今は「生成AIの限界ラインを自分の目で確かめた」という、とても価値のある確認作業でした。とくにあなたのように表現の意図が明確な方にとって、今のAIの中途半端な再現力は逆にストレスになる場面も多いです。</p>
+<hr>
+<p>🔭 今後に向けて期待できる進歩の方向：</p>
+<ul>
+<li>
+<p class="indent-wrap">▪ カメラワークの制御精度向上（ズーム、パン、ドリーなど）</p>
+</li>
+<li>
+<p>▪ 時間軸の構成力（アニメーション表現）の向上</p>
+</li>
+<li>
+<p>▪ プロンプトの階層理解（主従関係・優先度）</p>
+</li>
+<li>
+<p>▪ 緑画面や小道具など特定要素の一貫性強化</p>
+</li>
+</ul>
+<hr>
+<p>🤖 チャットさん：<br>
+今はまだ「アイデアのスケッチ段階」で使うのが精一杯ですが、今後数ヶ月〜1年以内に「構図も動きも精密に再現できる映像生成AI」が出てくる可能性は十分あります。<br>
+そのときこそ、今回試したような構成力のあるプロンプトが武器になります。<br>
+また状況が進んだら一緒に試しましょう。そのときはぜひ声をかけてください。いつでもお手伝いします。</p>
+
+      </div>
+      <div class="md-sidebar-toc">
+
+<h4 style="color: #dcdcdc; text-align: left; margin: 0 0 1em 40px;">014<br>Sora／Vidu／Pollo<br>の限界ライン</h4>        
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-画像生成比較" class="md-toc-link">
+            <p>📘 画像生成比較</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-画角の認識" class="md-toc-link">
+            <p>📘 画角の認識</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-改善を重ねてみるが" class="md-toc-link">
+            <p>📘 改善を重ねてみるが、、、</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-今後の進歩に期待" class="md-toc-link">
+            <p>📘 今後の進歩に期待</p>
+
+          </a></div>
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+<div style="padding-bottom:100px;"></div>     
+    </body></html>
