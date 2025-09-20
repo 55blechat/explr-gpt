@@ -1,0 +1,822 @@
+<!DOCTYPE html><html><head>
+      <title>037-Pythonで参照リンク削除、、、</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\trypr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.19\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#dcdcdc;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#dcdcdc}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#dcdcdc}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#dcdcdc}.token.attr-value,.token.regex,.token.string,.token.url{color:#dcdcdc}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#dcdcdc}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#dcdcdc}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#dcdcdc}.language-markup .token.tag .token.punctuation{color:#dcdcdc}.language-css .token.function,code.language-css{color:#dcdcdc}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#dcdcdc}.language-ruby .token.function{color:#dcdcdc}.language-markdown .token.url{color:#dcdcdc}.language-makefile .token.symbol{color:#dcdcdc}.language-makefile .token.variable{color:#dcdcdc}.language-makefile .token.builtin{color:#dcdcdc}.language-bash .token.keyword{color:#dcdcdc}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#dcdcdc;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+body {
+  background-color: #111 !important;
+  color: #dcdcdc !important;
+}
+a {
+  color: #8ab4f8;
+}
+/* 一般的なhrスタイル（デフォルト） */
+hr {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #444 !important;
+  margin: 1em 0 !important;
+}
+/* 特定の章区切り用 */
+hr.section-line  {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #dcdcdc !important;
+  margin: 1em 0 !important;
+}
+.markdown-preview > ul {
+  list-style: none;
+  padding-left: 0;
+}
+.md-toc-link-wrapper {
+  list-style: none !important;
+}
+
+/* ← ここから追加 */
+h1, h2, h3, h4, h5, h6,
+th, td,
+strong, em, b, i,
+blockquote,
+.markdown-preview .md-toc p,
+.markdown-preview .md-toc-link,
+.markdown-preview .md-toc-link div,
+.markdown-preview .md-toc-link p {
+  color: #dcdcdc !important;
+}
+
+blockquote {
+  background-color: #111 !important;
+}
+
+pre, code {
+  background-color: #112233 !important;
+  color: #dcdcdc !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important; 
+  font-size: 15px !important; 
+}
+
+th, td {
+  background-color: #111 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  word-break: break-word;
+}
+
+
+/* 左サイドバー目次とその中の文字を白に */
+body[html-show-sidebar-toc] .md-sidebar-toc,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link p,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link div,
+.md-toc-link-wrapper .md-toc-link,
+.markdown-preview ul li a {
+  color: #dcdcdc !important;
+}
+
+   p {
+    margin-bottom: 0 !important;
+  }
+  ul {
+    margin-top: 0 !important;
+  }
+
+    ol li ul {
+    padding-left: 1em;  /* ←これを調整する！デフォルトより小さく */
+    margin-left: 0;
+  }
+
+.indent-wrap {
+  display: block;
+  padding-left: 1em;       /* 全体を右にずらす */
+  text-indent: -1em;       /* 1行目だけ左に戻す */
+}
+
+.indent-wrap.large {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+.indent-wrap.large2 {
+  padding-left: 1.8em;
+  text-indent: -1.8em;
+}
+
+.highlight {
+  background-color: #112233 !important;
+}
+
+
+.markdown-preview ol,
+.markdown-preview ol ol,
+.markdown-preview ul ol {
+  list-style-type: decimal !important;
+}
+
+/* 最上階のul（インデントもマーカーも消す） */
+ul {
+  list-style-type: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* ol の中だろうが ul の中だろうが全部黒丸+インデント */
+ul ul {
+  list-style-type: disc !important;
+  padding-left: 1.5em !important;
+  margin-left: 0 !important;
+}
+
+/* ▼ここからテスト用スタイル（スマホ幅確認用） */
+/* <div class="crossnote markdown-preview　test-narrow">⇒幅狭表示 */
+/* <div class="crossnote markdown-preview">⇒通常表示 */  
+.test-narrow {
+  width: 440px;
+  margin: 0 auto;
+  outline: 1px dashed red;
+}
+
+
+
+/* 横スクは親だけに任せる */
+.hscroll{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* 不要ならOK：見た目の余白としては残しても可だが、
+     スクロール幅には効かないブラウザがある */
+  /* padding-right: 12px; */
+}
+
+/* 内側に“実体のある”余白を作る → これがスクロール幅に含まれる */
+.hscroll-inner{
+  display: inline-block;    /* 中身の横幅＝スクロール幅になる */
+  padding-right: 16px;      /* ★ 末尾の見えしろを確保（値はお好みで） */
+}
+
+/* テーブル本体はスクロールさせない */
+.hscroll > .hscroll-inner > table{
+  display: inline-table;
+  table-layout: auto;
+  border-collapse: separate; /* ★ 右端の罫線が潰れにくい */
+  border-spacing: 0;         /* collapseの代わりに間隔ゼロ */
+  width: max-content;
+  max-width: none;
+  overflow: visible;         /* 子にバーを出させない */
+}
+
+/* 右端の罫線を確実に見せたい場合（任意） */
+.hscroll > .hscroll-inner > table{
+  border-right: 1px solid #444; /* 罫線が背景に溶ける場合は色調整 */
+}
+
+/* セル内は適度に折り返す（必要なら列ごとに max-width） */
+.hscroll > .hscroll-inner > table th,
+.hscroll > .hscroll-inner > table td{
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  /* 例：長文列を読みやすくしたい場合 */
+  max-width: 200px; 
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+
+<h2>037<br>Pythonで参照リンク削除、、、</h2>           
+      
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#-python-%E4%B8%8D%E8%A6%81">📘 Python 不要？</a></li>
+<li><a href="#-python%E3%81%8C%E6%9C%80%E9%81%A9">📘 Pythonが最適？</a></li>
+<li><a href="#-python-%E3%82%84%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B">📘 Python やってみる</a></li>
+<li><a href="#-%E3%81%A9%E3%81%93%E3%81%AB%E7%94%9F%E6%88%90%E3%81%95%E3%82%8C%E3%82%8B">📘 どこに生成される？</a></li>
+<li><a href="#-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%82%92%E5%AE%9F%E8%A1%8C%E6%99%82%E3%81%AB%E5%85%A5%E5%8A%9B">📘 ファイル名を実行時に入力</a></li>
+</ul>
+<p>注記：本記事はGPT-4o期の対話ログをもとにしています。</p>
+<hr class="section-line">
+<h3 id="-python-不要">📘 Python 不要？ </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+Python　全くわからない</p>
+<br>
+<p>🤖 チャットさん：<br>
+OK！Pythonが全くわからなくても大丈夫です👍<br>
+君の目的はシンプル：</p>
+
+<p>ChatGPTのやりとりを保存したMarkdownファイルから、リンクを消して絵文字＋テキストだけ残す</p>
+
+<p>これを 「クリックでできる」 ようにしてみましょう。</p>
+<hr>
+<p>✅ Python不要でやる2つの方法（簡単順）</p>
+<p>🟢 方法①：VS Codeで「置換機能」を使う（超簡単）</p>
+<ol>
+<li>
+<p>VS Code で .md ファイルを開く</p>
+</li>
+<li>
+<p>Ctrl + H（検索と置換）を押す</p>
+</li>
+<li>
+<p>下記のように入力：</p>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="ruby" class="language-ruby ruby">検索する文字列（正規表現モードにチェック✅）：
+\<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">*</span><span class="token operator">?</span><span class="token punctuation">)</span>\<span class="token punctuation">]</span>\<span class="token punctuation">(</span><span class="token symbol">https?</span><span class="token operator">:</span>\<span class="token operator">/</span>\<span class="token operator">/</span><span class="token punctuation">[</span><span class="token operator">^</span>\<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">+</span>\<span class="token punctuation">)</span>
+
+置換後：
+$<span class="token number">1</span>
+</pre><ol start="4">
+<li>正規表現モード（.*ボタン）をONにして「すべて置換」</li>
+</ol>
+<p>🎉 これだけで [テキスト](リンク) が全部「テキスト」だけになります。</p>
+<hr>
+<p>🔵 方法②：Webで使えるMarkdown整形ツール（GUI）</p>
+<p>以下のようなWebアプリ型のMarkdown整形ツールでもリンク削除処理が可能です：</p>
+<p>🛠 候補ツール例（クリックで開ける）：</p>
+<ul>
+<li>
+<p><a href="https://regex101.com"style="color: #8ab4f8 !important;">https://regex101.com/（試験環境）</a></p>
+</li>
+<li>
+<p><a href="https://dillinger.io"style="color: #8ab4f8 !important;">https://dillinger.io/（オンラインMarkdownエディタ）</a></p>
+</li>
+<li>
+<p><a href="https://stackedit.io"style="color: #8ab4f8 !important;">https://stackedit.io/（Google連携可）</a></p>
+</li>
+</ul>
+<p>これらにMarkdownを貼り付けて、検索置換（正規表現）を使えばリンクを一括で削除できます。</p>
+<hr>
+<p>✨ 一番おすすめ：VS Code + Ctrl+H + 正規表現</p>
+<p>VS Codeをすでに使っているなら：</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl + H</td>
+<td>検索・置換</td>
+</tr>
+<tr>
+<td>入力</td>
+<td>\[(.*?)\]\(https?:\/\/[^\)]+\)</td>
+</tr>
+<tr>
+<td>置換</td>
+<td>$1</td>
+</tr>
+<tr>
+<td>オプション</td>
+<td>正規表現（.*）を有効にする</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>この操作だけで一瞬で整形できるし、Pythonも不要です。</p>
+<hr>
+<p>必要であれば、画面付きマニュアル（画像ステップ）も作れますよ！<br>
+試してみてうまくいかない箇所があれば、遠慮なく聞いてください😊</p>
+<br>
+<hr class="section-line">
+<h3 id="-pythonが最適">📘 Pythonが最適？ </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+今回の手順がPythonが最適ならPythonでやってみたいけど、難しいのかな？</p>
+<br>
+<p>🤖 チャットさん：<br>
+とても良い姿勢です👏<br>
+そして結論から言うと：</p>
+
+<p>✅ 今回の用途（Markdown整形）だけなら、Pythonは驚くほど簡単に使えます。</p>
+
+<hr>
+<p>✅ なぜ「Pythonが最適」なのか？</p>
+<ul>
+<li>
+<p class="indent-wrap">&nbsp;▪ Markdownファイルのようなテキスト処理に強い</p>
+</li>
+<li>
+<p class="indent-wrap">&nbsp;▪ ほんの数行で、手作業だと面倒な整形を自動化できる</p>
+</li>
+<li>
+<p class="indent-wrap">&nbsp;▪ 一度作ってしまえば、次からはダブルクリックで変換可能</p>
+</li>
+</ul>
+<hr>
+<p>🎯 つまり、君に向いている理由は：</p>
+<table>
+<thead>
+<tr>
+<th>不安</th>
+<th>解消ポイント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pythonやったことない</td>
+<td>今回やるのは「1つの.mdファイルを加工」するだけ。1ファイルで完結</td>
+</tr>
+<tr>
+<td>難しそう</td>
+<td>コピペ＋保存＋ダブルクリックで済む設計にします</td>
+</tr>
+<tr>
+<td>環境構築が面倒？</td>
+<td>Windowsなら3分、Macでも5分で済む（詳しくガイドします）</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>✅ 具体的にやること（ざっくり）</p>
+<ol>
+<li>
+<p>Pythonをインストール（クリック数回）</p>
+</li>
+<li>
+<p>テキストファイルをコピペして保存（コードは用意済）</p>
+</li>
+<li>
+<p>.md ファイルを同じフォルダに置く</p>
+</li>
+<li>
+<p>スクリプトをダブルクリック or 右クリックで実行</p>
+</li>
+</ol>
+<hr>
+<p>✅ 試してみたい方へ：次に案内すること</p>
+<p>以下をすぐ用意できます：</p>
+<ul>
+<li>
+<p>📦 【ステップ1】Pythonのインストール方法（画像付き or テキスト）</p>
+</li>
+<li>
+<p>📄 【ステップ2】スクリプトファイル（コピー用コードつき）</p>
+</li>
+<li>
+<p>🖱️ 【ステップ3】ダブルクリックで動かす方法</p>
+</li>
+</ul>
+<br>
+<hr class="section-line">
+<h3 id="-python-やってみる">📘 Python やってみる </h3>
+<hr class="section-line">
+<p>🤖 チャットさん：<br>
+どうでしょう？<br>
+「やってみる（Python入れて整形するところまで）」で進めてOKなら、<br>
+次に【Pythonインストール編】から始めましょうか？（WindowsかMacかも教えてください）</p>
+<br>
+<p>🙂 タケ：<br>
+Windowsです。お願いします</p>
+<br>
+<p>🤖 チャットさん：<br>
+了解しました！<br>
+ではここから、WindowsでPythonを使ってMarkdown整形を自動化する手順を、初心者でも迷わないように完全ガイドします👇</p>
+<hr>
+<p>🛠 ステップ①：Pythonをインストール</p>
+<p>🔹 手順</p>
+<ol>
+<li>
+<p>公式サイトにアクセス<br>
+👉 <a href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a></p>
+</li>
+<li>
+<p>黄色い「Download Python 3.12.x」などのボタンをクリック</p>
+</li>
+<li>
+<p>ダウンロードした .exe ファイルを実行</p>
+</li>
+<li>
+<p>✅ 一番下の「Add Python to PATH」にチェックを入れてから「Install Now」 をクリック！</p>
+</li>
+<li>
+<p>「Setup was successful」と表示されたらOK</p>
+</li>
+</ol>
+
+<p>💡 終わったら、Win + R → cmd → Enter<br>
+そのあと python --version と打って Python 3.x.x と出れば成功です</p>
+
+<hr>
+<p>🧾 ステップ②：整形スクリプトの準備</p>
+<p>以下をそのままメモ帳などにコピペして、<br>
+clean_md.py という名前で保存してください（拡張子は .py）</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><span class="token keyword keyword-import">import</span> re
+
+<span class="token keyword keyword-def">def</span> <span class="token function">simplify_markdown_with_emojis_only</span><span class="token punctuation">(</span>md_text<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">str</span><span class="token punctuation">:</span>
+    cleaned <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">r'\[(.*?)\]\(https?://[^\)]+\)'</span><span class="token punctuation">,</span> <span class="token string">r'\1'</span><span class="token punctuation">,</span> md_text<span class="token punctuation">)</span>
+    cleaned <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">r'\n{3,}'</span><span class="token punctuation">,</span> <span class="token string">'\n\n'</span><span class="token punctuation">,</span> cleaned<span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> cleaned
+
+input_path <span class="token operator">=</span> <span class="token string">"chatgpt_log.md"</span>
+output_path <span class="token operator">=</span> <span class="token string">"chatgpt_log_cleaned.md"</span>
+
+<span class="token keyword keyword-with">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>input_path<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> infile<span class="token punctuation">:</span>
+    original_md <span class="token operator">=</span> infile<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+cleaned_md <span class="token operator">=</span> simplify_markdown_with_emojis_only<span class="token punctuation">(</span>original_md<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-with">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>output_path<span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> outfile<span class="token punctuation">:</span>
+    outfile<span class="token punctuation">.</span>write<span class="token punctuation">(</span>cleaned_md<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"✅ 整形完了！ → </span><span class="token interpolation"><span class="token punctuation">{</span>output_path<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+</pre><hr>
+<p>📁 ステップ③：Markdownファイルと同じフォルダに置く</p>
+<ol>
+<li>
+<p>上で作った clean_md.py を保存</p>
+</li>
+<li>
+<p>同じフォルダに chatgpt_log.md（加工前のMarkdown）を入れる</p>
+</li>
+<li>
+<p>フォルダ内で Shift + 右クリック → PowerShell/コマンドプロンプトで開く</p>
+</li>
+<li>
+<p>次のコマンドで実行：</p>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash">python clean_md.py
+</pre><p>すると chatgpt_log_cleaned.md が生成されます 🎉</p>
+<hr>
+<p>✅ 次のステップ（お好みで）</p>
+<ul>
+<li>
+<p>🖱️ ダブルクリックで動かしたい → .bat ファイルを作成して自動起動に</p>
+</li>
+<li>
+<p>📂 複数ファイル対応したい → 一括処理スクリプトを作成可能</p>
+</li>
+<li>
+<p>🎨 出力フォーマットをさらに整えたい → テンプレ化して反映</p>
+</li>
+</ul>
+<hr>
+<p>🤖 チャットさん：<br>
+<p>ここまでやってみて、わからない・詰まった箇所があれば遠慮なく教えてください。<br>
+画面キャプチャ付きで補足もできますし、必要なら .zip でまとめたファイルをお渡しすることも可能です！</p>
+<br>
+<p>🙂 タケ：<br>
+すると chatgpt_log_cleaned.md が生成されます⇒どこに？</p>
+<br>
+<p>🤖 チャットさん：<br>
+良い質問です！🎯<br>
+chatgpt_log_cleaned.md は、スクリプト（clean_md.py）を実行したフォルダに生成されます。</p>
+<hr>
+<p>✅ 具体的にいうと：</p>
+<p>たとえば：</p>
+<ul>
+<li>C:\Users\&lt;username&gt;\Documents\chatgpt_logs\ というフォルダに<br>
+　- clean_md.py（スクリプト）<br>
+　- chatgpt_log.md（元のMarkdown）</li>
+</ul>
+<p>の2つを置いていて、</p>
+<p>そこで python clean_md.py を実行した場合：</p>
+<p>👉 出力ファイル chatgpt_log_cleaned.md も同じ場所：</p>
+<pre data-role="codeBlock" data-info="makefile" class="language-makefile makefile"><span class="token target symbol">C</span><span class="token punctuation">:</span>\Users\&lt;username&gt;\Documents\chatgpt_logs\chatgpt_log_cleaned.md
+</pre><p>に生成されます。</p>
+<hr>
+<p>✅ 見失ったときの対処法：</p>
+<ul>
+<li>
+<p class="indent-wrap">&nbsp;▪ スクリプトと .md ファイルを わかりやすいフォルダにまとめておく（例：デスクトップ）</p>
+</li>
+<li>
+<p class="indent-wrap">&nbsp;▪ スクリプト実行後、エクスプローラーで「更新日時が最新」のファイルを探す</p>
+</li>
+<li>
+<p class="indent-wrap">&nbsp;▪ print(...) 文を変更して出力先を明記することもできます：</p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"✅ 整形完了！ファイルはここ → </span><span class="token interpolation"><span class="token punctuation">{</span>output_path<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+</pre>
+<br>
+<hr class="section-line">
+<h3 id="-どこに生成される">📘 どこに生成される？ </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+ないよ。</p>
+<br>
+<p>🤖 チャットさん：<br>
+OK、落ち着いて一緒に確認していきましょう。<br>
+「実行しても chatgpt_log_cleaned.md が見当たらない」とのことなので、次のように順番にチェックしてみてください👇</p>
+<hr>
+<p>✅ まず確認：ファイル構成が正しいか</p>
+<p>あなたが操作しているフォルダに、次の2つのファイルがあることを確認してください：</p>
+<table>
+<thead>
+<tr>
+<th>ファイル名</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatgpt_log.md</td>
+<td>加工したい元のMarkdownファイル</td>
+</tr>
+<tr>
+<td>clean_md.py</td>
+<td>整形スクリプト（先ほどのPythonコード）</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>両方が同じフォルダにある必要があります。</p>
+
+<hr>
+<p>✅ 次に確認：正しい方法で実行したか？</p>
+<p>以下の手順で実行しましたか？</p>
+<ol>
+<li>
+<p>Shift + 右クリック → 「PowerShellウィンドウをここに開く」</p>
+</li>
+<li>
+<p>下のように入力：</p>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash">python clean_md.py
+</pre><p>実行すると、最後に次のようなメッセージが出るはずです：</p>
+<pre data-role="codeBlock" data-info="" class="language-text">✅ 整形完了！ → chatgpt_log_cleaned.md
+</pre><p>出ない場合は、エラーになっているかもしれません。</p>
+<hr>
+<p>🛠 出力ファイルの場所を明示的に変えてみよう</p>
+<p>ファイルがどこに出ているかわからないときのために、スクリプトの最後を下記のように書き換えてください：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><span class="token keyword keyword-import">import</span> os
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+ 最後に追加して確認表示
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"✅ 整形完了！ → </span><span class="token interpolation"><span class="token punctuation">{</span>output_path<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+</pre><p>これで 絶対パス（どこに保存されたか）を明確に表示 できます。</p>
+<hr>
+<p>🧪 トラブルチェック（これが起きてたら出力されません）</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>対処</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatgpt_log.md が存在しない</td>
+<td>ファイル名を確認（拡張子も含む）</td>
+</tr>
+<tr>
+<td>スクリプトを別フォルダで実行している</td>
+<td>.py と .md を同じフォルダに置いて再実行</td>
+</tr>
+<tr>
+<td>エラーが出てるけど見逃した</td>
+<td>もう一度 python clean_md.py を実行し、表示されるメッセージをすべて確認</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>🙋‍♂️ 最終手段：君のファイル構成を教えてくれれば…</p>
+<p>以下を教えてくれれば、より正確に案内できます：</p>
+<ol>
+<li>
+<p>clean_md.py と chatgpt_log.md を置いているフォルダ名（例：デスクトップ／書類など）</p>
+</li>
+<li>
+<p>実行方法（PowerShellでやった？ダブルクリック？）</p>
+</li>
+</ol>
+<hr>
+<p>🙂 タケ：<br>
+chatgpt_log.md　この名前にしないといけないの？</p>
+<br>
+<p>🤖 チャットさん：<br>
+👍 そこ、良いところに気づきました！</p>
+<hr>
+<p>✅ 結論：好きな名前でOKです！</p>
+<p>ただし…</p>
+
+<p>📌 スクリプトの中で使われているファイル名（input_path = "chatgpt_log.md"）に合わせる必要がある</p>
+
+<hr>
+<p>✅ 対処方法2つ</p>
+<hr>
+<p>🅰 方法①：ファイル名をスクリプトに合わせる</p>
+<p>手っ取り早くやるなら：</p>
+<ul>
+<li>
+<p class="indent-wrap">&nbsp;▪ 加工したい .md ファイルを chatgpt_log.md にリネームする</p>
+</li>
+<li>
+<p class="indent-wrap">&nbsp;▪ スクリプトはそのままでOK</p>
+</li>
+</ul>
+<hr>
+<p>🅱 方法②：スクリプトのファイル名を変える</p>
+<p>Markdownファイルの名前が my_chat.md などの場合、スクリプトをこう書き換えます：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python">input_path <span class="token operator">=</span> <span class="token string">"my_chat.md"</span>   ← 加工したいファイル名に変更
+output_path <span class="token operator">=</span> <span class="token string">"my_chat_cleaned.md"</span>   ← 出力ファイル名も自由に変更可能
+</pre><hr>
+<p>✅ さらに柔軟にしたいなら：</p>
+<p>ユーザーが実行時に指定できるように入力を受け取る方法もあります👇</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python">input_path <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"整形したいMarkdownファイルの名前を入力してください（例: myfile.md）: "</span><span class="token punctuation">)</span>
+output_path <span class="token operator">=</span> input_path<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">".md"</span><span class="token punctuation">,</span> <span class="token string">"_cleaned.md"</span><span class="token punctuation">)</span>
+</pre><p>すると、実行時にこう入力できます：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash">python clean_md.py
+整形したいMarkdownファイルの名前を入力してください（例: myfile.md）: testlog.md
+</pre><p>➡ testlog_cleaned.md が自動生成されます🎉</p>
+<hr>
+<p>✅ まとめ</p>
+<table>
+<thead>
+<tr>
+<th>やりたいこと</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>今すぐ動かしたい</td>
+<td>.md ファイル名を chatgpt_log.md にする</td>
+</tr>
+<tr>
+<td>柔軟にしたい</td>
+<td>スクリプトの input_path を好きな名前に変更</td>
+</tr>
+<tr>
+<td>毎回変えたい</td>
+<td>input() でファイル名をその場で入力できるようにする</td>
+</tr>
+</tbody>
+</table>
+<br>
+<hr class="section-line">
+<h3 id="-ファイル名を実行時に入力">📘 ファイル名を実行時に入力 </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+ユーザーが実行時に指定できるように入力を受け取る方法⇒これでお願いします。</p>
+<br>
+<p>🤖 チャットさん：<br>
+了解しました！<br>
+では、ユーザーがファイル名を実行時に自分で入力できるようにしたバージョンを以下にご用意します👇</p>
+<hr>
+<p>✅ コピペ用：ユーザー入力対応の整形スクリプト（clean_md.py）</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><span class="token keyword keyword-import">import</span> re
+<span class="token keyword keyword-import">import</span> os
+
+<span class="token keyword keyword-def">def</span> <span class="token function">simplify_markdown_with_emojis_only</span><span class="token punctuation">(</span>md_text<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">str</span><span class="token punctuation">:</span>
+    cleaned <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">r'\[(.*?)\]\(https?://[^\)]+\)'</span><span class="token punctuation">,</span> <span class="token string">r'\1'</span><span class="token punctuation">,</span> md_text<span class="token punctuation">)</span>
+    cleaned <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">r'\n{3,}'</span><span class="token punctuation">,</span> <span class="token string">'\n\n'</span><span class="token punctuation">,</span> cleaned<span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> cleaned
+
+ 実行時にユーザーからファイル名を聞く
+input_path <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"整形したいMarkdownファイルの名前を入力してください（例: chat.md）: "</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+ ファイル存在チェック
+<span class="token keyword keyword-if">if</span> <span class="token keyword keyword-not">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>input_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"⚠️ ファイルが見つかりません: </span><span class="token interpolation"><span class="token punctuation">{</span>input_path<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+    exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+ 出力ファイル名を自動生成（例<span class="token punctuation">:</span> chat_cleaned<span class="token punctuation">.</span>md）
+output_path <span class="token operator">=</span> input_path<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">".md"</span><span class="token punctuation">,</span> <span class="token string">"_cleaned.md"</span><span class="token punctuation">)</span>
+
+ ファイル読み込み・整形・保存
+<span class="token keyword keyword-with">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>input_path<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> infile<span class="token punctuation">:</span>
+    original_md <span class="token operator">=</span> infile<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+cleaned_md <span class="token operator">=</span> simplify_markdown_with_emojis_only<span class="token punctuation">(</span>original_md<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-with">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>output_path<span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> outfile<span class="token punctuation">:</span>
+    outfile<span class="token punctuation">.</span>write<span class="token punctuation">(</span>cleaned_md<span class="token punctuation">)</span>
+
+ 完了メッセージ
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"✅ 整形完了！ → </span><span class="token interpolation"><span class="token punctuation">{</span>output_path<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+</pre><hr>
+<p>💡 使い方（手順）</p>
+<ol>
+<li>
+<p>このコードをメモ帳などにコピペ → clean_md.py という名前で保存</p>
+</li>
+<li>
+<p>同じフォルダに整形したい .md ファイルを置く（例：test1.md）</p>
+</li>
+<li>
+<p>フォルダ内で Shift + 右クリック → PowerShellをここに開く</p>
+</li>
+<li>
+<p>実行：</p>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash">python clean_md.py
+</pre><ol start="5">
+<li>表示されたプロンプトにファイル名を入力：</li>
+</ol>
+<pre data-role="codeBlock" data-info="makefile" class="language-makefile makefile"><span class="token target symbol">整形したいMarkdownファイルの名前を入力してください（例</span><span class="token punctuation">:</span> chat.md）<span class="token punctuation">:</span>
+test1.md
+</pre><p>➡ test1_cleaned.md が同じフォルダに生成されます🎉</p>
+<hr>
+<p>✅ 補足</p>
+<ul>
+<li>
+<p class="indent-wrap">&nbsp;▪ 間違ったファイル名を入力すると警告が出て終了するようにしてあります</p>
+</li>
+<li>
+<p class="indent-wrap">&nbsp;▪ ファイル名の末尾が .md でないと正常に変換できません（拡張子忘れに注意）</p>
+</li>
+</ul>
+<br>
+<hr style="border: none !important; height: 5px !important; background-color: #dcdcdc !important;">
+
+<p>🙂 タケ：補足追記✏️<br>
+今後の対話記録には Python に関する記事も出てきますが、現在は使っていません。</p>
+
+<p>リンク削除だけでなく、</p>
+<ul>
+<li>
+<p class="indent-wrap">&nbsp;▪ You：⇒🙂 タケ：、ChatGPT：⇒🤖 チャットさん：のラベル変更</p>
+</li>
+<li>
+<p class="indent-wrap">&nbsp;▪ 文字サイズ、太字、行間などの体裁調整</p>
+</li>
+<li>
+<p class="indent-wrap">&nbsp;▪ スクリプト、画像、動画の扱い</p>
+</li>
+</ul>
+<p>なども含めると、Ctrl + H（検索と置換）＋ 最終的に HTML ファイルでのアナログ編集のほうが効率的で、目も行き届くと実感しました。<br>
+そのため、Python は使用していません。</p>
+
+      </div>
+      <div class="md-sidebar-toc">
+
+<h4 style="color: #dcdcdc; text-align: left; margin: 0 0 1em 40px;">037<br>Pythonで参照リンク削除、、、</h4>        
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-python-不要" class="md-toc-link">
+            <p>📘 Python 不要？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-pythonが最適" class="md-toc-link">
+            <p>📘 Pythonが最適？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-python-やってみる" class="md-toc-link">
+            <p>📘 Python やってみる</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-どこに生成される" class="md-toc-link">
+            <p>📘 どこに生成される？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-ファイル名を実行時に入力" class="md-toc-link">
+            <p>📘 ファイル名を実行時に入力</p>
+
+          </a></div>
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+<div style="padding-bottom:100px;"></div>    
+    </body></html>
