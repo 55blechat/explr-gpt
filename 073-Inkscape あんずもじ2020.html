@@ -1,0 +1,760 @@
+<!DOCTYPE html><html><head>
+      <title>073-Inkscape あんずもじ2020</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\trypr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.19\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:8px solid #47355e
+}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+body {
+  background-color: #111 !important;
+  color: #dcdcdc !important;
+}
+a {
+  color: #8ab4f8;
+}
+/* 一般的なhrスタイル（デフォルト） */
+hr {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #444 !important;
+  margin: 1em 0 !important;
+}
+/* 特定の章区切り用 */
+hr.section-line  {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #dcdcdc !important;
+  margin: 1em 0 !important;
+}
+.markdown-preview > ul {
+  list-style: none;
+  padding-left: 0;
+}
+.md-toc-link-wrapper {
+  list-style: none !important;
+}
+
+/* ← ここから追加 */
+h1, h2, h3, h4, h5, h6,
+th, td,
+strong, em, b, i,
+blockquote,
+.markdown-preview .md-toc p,
+.markdown-preview .md-toc-link,
+.markdown-preview .md-toc-link div,
+.markdown-preview .md-toc-link p {
+  color: #dcdcdc !important;
+}
+
+blockquote {
+  background-color: #112233 !important;
+}
+
+pre, code {
+  background-color: #112233 !important;
+  color: #dcdcdc !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important; 
+  font-size: 15px !important; 
+}
+
+th, td {
+  background-color: #111 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  word-break: break-word;
+}
+
+
+/* 左サイドバー目次とその中の文字を白に */
+body[html-show-sidebar-toc] .md-sidebar-toc,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link p,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link div,
+.md-toc-link-wrapper .md-toc-link,
+.markdown-preview ul li a {
+  color: #dcdcdc !important;
+}
+
+   p {
+    margin-bottom: 0 !important;
+  }
+  ul {
+    margin-top: 0 !important;
+  }
+
+    ol li ul {
+    padding-left: 1em;  /* ←これを調整する！デフォルトより小さく */
+    margin-left: 0;
+  }
+
+.indent-wrap {
+  display: block;
+  padding-left: 1em;       /* 全体を右にずらす */
+  text-indent: -1em;       /* 1行目だけ左に戻す */
+}
+
+.indent-wrap.large {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+.indent-wrap.large2 {
+  padding-left: 2.0em;
+  text-indent: -2.0em;
+}
+
+.highlight {
+  background-color: #112233 !important;
+}
+
+
+.markdown-preview ol,
+.markdown-preview ol ol,
+.markdown-preview ul ol {
+  list-style-type: decimal !important;
+}
+
+/* 最上階のul（インデントもマーカーも消す） */
+ul {
+  list-style-type: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* ol の中だろうが ul の中だろうが全部黒丸+インデント */
+ul ul {
+  list-style-type: disc !important;
+  padding-left: 1.5em !important;
+  margin-left: 0 !important;
+}
+
+/* ▼ここからテスト用スタイル（スマホ幅確認用） */
+/* <div class="crossnote markdown-preview　test-narrow">⇒幅狭表示 */
+/* <div class="crossnote markdown-preview">⇒通常表示 */  
+.test-narrow {
+  width: 440px;
+  margin: 0 auto;
+  outline: 1px dashed red;
+}
+
+
+
+/* 横スクは親だけに任せる */
+.hscroll{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* 不要ならOK：見た目の余白としては残しても可だが、
+     スクロール幅には効かないブラウザがある */
+  /* padding-right: 12px; */
+}
+
+/* 内側に“実体のある”余白を作る → これがスクロール幅に含まれる */
+.hscroll-inner{
+  display: inline-block;    /* 中身の横幅＝スクロール幅になる */
+  padding-right: 16px;      /* ★ 末尾の見えしろを確保（値はお好みで） */
+}
+
+/* テーブル本体はスクロールさせない */
+.hscroll > .hscroll-inner > table{
+  display: inline-table;
+  table-layout: auto;
+  border-collapse: separate; /* ★ 右端の罫線が潰れにくい */
+  border-spacing: 0;         /* collapseの代わりに間隔ゼロ */
+  width: max-content;
+  max-width: none;
+  overflow: visible;         /* 子にバーを出させない */
+}
+
+/* 右端の罫線を確実に見せたい場合（任意） */
+.hscroll > .hscroll-inner > table{
+  border-right: 1px solid #444; /* 罫線が背景に溶ける場合は色調整 */
+}
+
+/* セル内は適度に折り返す（必要なら列ごとに max-width） */
+.hscroll > .hscroll-inner > table th,
+.hscroll > .hscroll-inner > table td{
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  /* 例：長文列を読みやすくしたい場合 */
+  max-width: 200px; 
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+ <h2>073<br>Inkscape あんずもじ2020</h2>      
+      
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#-%E8%AA%8D%E7%9F%A5%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84">📘 認知されない</a></li>
+<li><a href="#-%E5%8E%9F%E5%9B%A0%E5%88%A4%E6%98%8E">📘 原因判明</a></li>
+<li><a href="#-%E6%96%87%E5%AD%97%E3%81%AE%E8%83%8C%E6%99%AF%E8%89%B2">📘 文字の背景色</a></li>
+<li><a href="#-%E7%B7%9A%E3%81%A8%E6%96%87%E5%AD%97%E3%81%AE%E9%87%8D%E3%81%AA%E3%82%8A">📘 線と文字の重なり</a></li>
+</ul>
+<p>注記：本記事はGPT-4o期の対話ログをもとにしています。</p>
+<hr class="section-line">   
+<h3 id="-認知されない">📘 認知されない </h3>
+<hr class="section-line">   
+
+<p>🙂 タケ：<br>
+PCにはあんずもじ2020がインストールできたのにinkscapeで認知されてないみたい。PCの再起動必要？</p>
+<br><p>🤖 チャットさん：<br>
+はい、その状況なら、PCの再起動でInkscapeがフォントを認識する可能性が高いです。</p>
+<hr>
+<p>✅ Inkscapeが新しいフォントを認識しないときの対処法</p>
+<p>1. 🌀 PC再起動がまず最優先</p>
+<ul><ul>
+<li>
+<p>フォント（例：あんずもじ2020）をインストールしても、Inkscapeは起動時にしかフォントリストを読み込まない</p>
+</li>
+<li>
+<p>→ PCを再起動 or Inkscapeを完全終了→再起動が必要です</p>
+</li>
+</ul></ul>
+<hr>
+<p>2. 🔎 フォントが正しくインストールされているか確認</p>
+<ul><ul>
+<li>
+<p>Windowsなら：</p>
+<ul>
+<li>
+<p>スタートメニューで「フォント」検索</p>
+</li>
+<li>
+<p>設定 → フォント 画面に「あんずもじ2020」が表示されていればOK</p>
+</li>
+</ul>
+</li>
+<li>
+<p>.ttf（TrueType Font）形式であればInkscapeでも問題なく扱えるはず</p>
+</li>
+</ul></ul>
+<hr>
+<p>3. 🔎 Inkscapeでのフォント検索時の注意点</p>
+<ul><ul>
+<li>
+<p>検索時に「moji」など一部しか入れないと出てこないこともある</p>
+</li>
+<li>
+<p>正式名称（例：AnzuMoji 2020 Regular）で探すとヒットしやすい</p>
+</li>
+</ul></ul>
+<hr>
+<p>4. 🛠️ それでも出てこない場合の対処</p>
+<table>
+<thead>
+<tr>
+<th>対処法</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inkscapeの設定リセット</td>
+<td>設定ファイルが壊れている可能性（<code>~/.config/inkscape</code>を初期化）</td>
+</tr>
+<tr>
+<td>別のフォントでテスト</td>
+<td>他に最近入れたフォントがInkscapeに出ているか確認</td>
+</tr>
+<tr>
+<td>Inkscape再インストール</td>
+<td>ごく稀にフォントライブラリとの連携に不具合が出ることがある</td>
+</tr>
+</tbody>
+</table><br>
+<p>🎯 まずやること</p>
+<p>✅ PCを再起動 → Inkscapeを起動し直して「フォント名で再検索」</p>
+<p>これでほぼ確実に表示されるはずです。<br>
+それでも出ないようであれば、次のステップを一緒に確認しましょう。</p>
+<hr>
+<p>🙂 タケ：<br>
+PCを再起動、だめだった。inkscapeインストールやり直し、ダメだった。ん～？？？</p>
+<br><p>🤖 チャットさん：<br>
+おっと、そこまでやってもInkscapeで「あんずもじ2020」が表示されないとなると、ちょっと根深いかもしれません。<br>
+でも大丈夫、よくあるケースを1つずつつぶしていきましょう。</p>
+<hr>
+<p>✅ まず確認させてほしいポイント（順にチェック！）</p>
+<p>1. 本当に「TrueTypeフォント（.ttf）」をインストールしましたか？</p>
+<ul><ul>
+<li>
+<p>Inkscapeは <code>.otf</code> より <code>.ttf</code> に強いです</p>
+</li>
+<li>
+<p>あんずもじの「2020」版でも <code>.ttf</code> が含まれていることを再確認してください</p>
+</li>
+</ul></ul>
+<blockquote>
+<p>📂 インストールしたフォントファイルの拡張子は？<br>
+→ 例：「AnzuMoji-2020.ttf」ならOK</p>
+</blockquote>
+<hr>
+<p>2. インストールしたフォントが「全ユーザー用」になっているか？</p>
+<p>Inkscapeはユーザー単位でインストールされたフォントを読み込めないことがあります</p>
+<p>📌 解決法：</p>
+<ol>
+<li>
+<p>一度フォントを削除</p>
+</li>
+<li>
+<p>フォントファイルを右クリック → 「すべてのユーザーに対してインストール」</p>
+</li>
+</ol>
+<blockquote>
+<p>※「インストール」だけでは足りない場合があります（特にWindows）</p>
+</blockquote>
+<hr>
+<p>3. フォント名がInkscape内で「日本語表記」になっていないか？</p>
+<p>フォント一覧で「あんず」「anzu」「moji」「2020」「regular」など、部分検索をいろいろ試してください<br>
+→ まれに「フォントファイル名」と「表示名」が一致していないことがあります</p>
+<hr>
+<p>4. Inkscapeのフォントキャッシュ破損の可能性</p>
+<ul><ul>
+<li>フォントキャッシュの再構築が必要な場合があります</li>
+</ul></ul>
+<p>🛠️ 対処方法（Windowsの場合）：</p>
+<ol>
+<li>
+<p><code>C:\Users\[ユーザー名]\AppData\Local\Microsoft\Windows\Fonts</code><br>
+→ ここに重複フォントや壊れたフォントがないか確認（削除）</p>
+</li>
+<li>
+<p>Inkscapeを一度セーフモードで起動（<code>--safe-mode</code> オプション）</p>
+</li>
+<li>
+<p>または以下のキャッシュ削除を実施：</p>
+<ul><ul>
+<li>
+<p><code>C:\Users\[ユーザー名]\AppData\Local\fontconfig</code> を削除</p>
+</li>
+<li>
+<p>PC再起動 → Inkscape再起動</p>
+</li>
+</ul></ul>
+</li>
+</ol>
+<hr>
+<p>🧪 最終手段（別ソフトでテスト）</p>
+<ol>
+<li>
+<p>メモ帳やWordで「あんずもじ2020」が選べるか確認</p>
+</li>
+<li>
+<p>Canvaなど別アプリでフォントの認識があるか試す（アップロード機能あり）</p>
+</li>
+</ol>
+<p>→ 他では見えるがInkscapeだけダメなら、Inkscapeの設定 or キャッシュに問題があると確定できます</p>
+<hr>
+<p>🎯 まとめ</p>
+<table>
+<thead>
+<tr>
+<th>優先順位</th>
+<th>やること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>.ttf</code>形式か確認</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「すべてのユーザーに対してインストール」で再インストール</td>
+</tr>
+<tr>
+<td>3</td>
+<td>フォント名の部分検索を工夫</td>
+</tr>
+<tr>
+<td>4</td>
+<td>フォントキャッシュ削除（上記手順）</td>
+</tr>
+<tr>
+<td>5</td>
+<td>他アプリで認識されてるか確認</td>
+</tr>
+</tbody>
+</table><br>
+<p>🤖 チャットさん：<br>
+このあたりで心当たりありますか？一緒に1つずつ確認していきましょう。</p>
+<br><p>🙂 タケ：<br>
+AP.ttf　ファイルこれだよ</p>
+<br><p>🤖 チャットさん：<br>
+ありがとう、受け取ったフォントファイル <code>AP.ttf</code> を確認しました。<br>
+これは「あんずもじ2020」ではなく、正式名称が <code>APJapanesefont</code> 系の別名が付いたフォントになっている可能性が高いです。</p>
+<hr>
+<p>✅ Inkscapeでこのフォントを見つける方法</p>
+<ol>
+<li>
+<p>Inkscapeを起動</p>
+</li>
+<li>
+<p>テキストツールで文字を入力</p>
+</li>
+<li>
+<p>上部のフォント選択欄に「<code>AP</code>」「<code>A P</code>」「<code>Japanese</code>」などを入力してみてください</p>
+</li>
+<li>
+<p>または 下にスクロールして、目視でそれっぽい名前を探す</p>
+</li>
+</ol>
+<blockquote>
+<p>Inkscapeでは、フォントファイル名（AP.ttf）と表示されるフォント名は一致しないことがあるため、<br>
+実際の「表示名」で探す必要があります。</p>
+</blockquote>
+<hr>
+<p>✅ 確実に見つける方法（Windowsなら）</p>
+<ol>
+<li>
+<p>フォントファイル（AP.ttf）をダブルクリック</p>
+</li>
+<li>
+<p>開いたウィンドウの左上に「フォント名」が表示されている（例：「APJapanesefont Regular」など）</p>
+</li>
+<li>
+<p>その名前でInkscape側のフォント一覧を検索</p>
+</li>
+</ol>
+<hr>
+<p>💡 補足：Inkscapeで表示されないとき</p>
+<ul><ul>
+<li>
+<p>上で紹介したように、「すべてのユーザーに対してインストール」していない場合、Inkscapeが読み取れないことがあります</p>
+</li>
+<li>
+<p>その場合は：</p>
+<ol>
+<li>
+<p>一度フォントをアンインストール</p>
+</li>
+<li>
+<p>再度 <code>.ttf</code> を右クリック → 「すべてのユーザーに対してインストール」を選ぶ</p>
+</li>
+<li>
+<p>PCを再起動 → Inkscape起動</p>
+</li>
+</ol>
+</li>
+</ul></ul>
+<br>
+<hr class="section-line">   
+<h3 id="-原因判明">📘 原因判明 </h3>
+<hr class="section-line">   
+<p>🙂 タケ：<br>
+わかったよ。あった。Inkscape内ではapricotjapanesefontってなってた！お騒がせしました。でも同じ間違いする人、いそう。</p>
+<p><br>🤖 チャットさん：<br>
+よかったー！ちゃんと表示されてたんですね、<code>apricotjapanesefont</code>＝あんずもじ で間違いなしです 🍑✍️</p>
+<hr>
+<p>✅ 小さな補足（同じ間違いを防ぐために）</p>
+<blockquote>
+<p>フォントファイル名「AP.ttf」<br>
+→ Inkscape内表示名「ApricotJapaneseFont」</p>
+</blockquote>
+<p>このズレが原因で、</p>
+<ul><ul>
+<li>
+<p>「インストールしたのに表示されない！？」</p>
+</li>
+<li>
+<p>「名前が全然違って気づけなかった…」</p>
+</li>
+</ul></ul>
+<p>という落とし穴にハマる人、本当に多いです。<br>
+Inkscapeは フォントの“内部名”を表示名に使うため、ファイル名では検索できないんですよね。</p>
+<hr>
+<p>🎯 こういうケースでは…</p>
+<ul><ul>
+<li>
+<p>フォントファイルをダブルクリックして“名前”を確認</p>
+</li>
+<li>
+<p>Inkscape内で「一部でも一致するキーワード（apricot / japan / font）」で検索</p>
+</li>
+<li>
+<p>それでも見つからなければ「すべてのユーザーに対してインストール」を疑う</p>
+</li>
+</ul></ul>
+<p>この3ステップが「Inkscapeあるある回避術」です💡</p>
+<hr>
+<p>🤖 チャットさん：<br>
+お騒がせなんてとんでもない！<br>
+むしろ、こうして整理されたことで他の人が同じ罠にハマらずに済む、大事な実例です👏<br>
+また何かあればいつでも聞いてくださいね。</p>
+<br>
+<hr class="section-line"> 
+<h3 id="-文字の背景色">📘 文字の背景色 </h3>
+<hr class="section-line"> 
+<p>🙂 タケ：<br>
+Inkscape 文字の背景色はどこで設定する？</p>
+<p><br>🤖 チャットさん：<br>
+Inkscapeでは、文字（テキスト）に直接「背景色」を設定する機能は標準では存在しません。<br>
+ですが、“それっぽく見せる方法”はあります。以下にわかりやすく説明します👇</p>
+<hr>
+<p>✅ 文字の背景色をつける方法（擬似的）</p>
+<p>方法①：文字の後ろに矩形（四角形）を配置する</p>
+<p>これが最も一般的で簡単です。</p>
+<p>🔧 手順：</p>
+<ol>
+<li>
+<p>テキストツールで文字を入力</p>
+</li>
+<li>
+<p>四角形ツール（<code>F4</code>キー）で文字の背後に合わせて矩形を描く</p>
+</li>
+<li>
+<p>矩形の塗り色を設定（背景色にしたい色）</p>
+</li>
+<li>
+<p>メニュー「オブジェクト → 配置」または右クリック → 「最背面に移動」</p>
+<ul><ul>
+<li>→ テキストの下に矩形がくるように</li>
+</ul></ul>
+</li>
+</ol>
+<p>💡ポイント</p>
+<ul><ul>
+<li>
+<p>テキストと矩形を選んで <code>Ctrl + G</code>（グループ化）すれば一体化して扱える</p>
+</li>
+<li>
+<p>角を丸めたいときは、矩形を選択してハンドルをドラッグ</p>
+</li>
+</ul></ul>
+<hr>
+<p>方法②：文字にハイライト風のパスを描く（上級）</p>
+<ul><ul>
+<li>
+<p>複数行テキストで一文字ずつ背景をつけたいときなどに有効</p>
+</li>
+<li>
+<p>パスやクローンを使った背景風演出が可能（凝った表現用）</p>
+</li>
+</ul></ul>
+<hr>
+<p>🎯 まとめ</p>
+<table>
+<thead>
+<tr>
+<th>やりたいこと</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>単純な背景をつけたい</td>
+<td>✅ 四角形を後ろに敷くのが一番簡単で確実</td>
+</tr>
+<tr>
+<td>複雑な装飾や自由な背景</td>
+<td>パスやエフェクトでカスタム演出（上級向け）</td>
+</tr>
+</tbody>
+</table><br>
+<p>Canvaのように「テキストボックスに背景色」みたいな機能はInkscapeにはないですが、<br>
+工夫すればかなり柔軟に演出できます！</p>
+<br>
+<hr class="section-line"> 
+<h3 id="-線と文字の重なり">📘 線と文字の重なり </h3>
+<hr class="section-line"> 
+<p>🙂 タケ：<br>
+ラインと文字が重なってて、そこは文字優先でライン途切れてほいいんだけど。</p>
+<p><br>🤖 チャットさん：<br>
+その「ラインと文字が重なっている部分だけ、線が途切れてほしい（文字が優先で見える）」という処理、<br>
+Inkscapeでは 「マスク」や「パスの差分（切り抜き）」 を使うことで実現できます。</p>
+<p>以下におすすめの2パターンを紹介します👇</p>
+<hr>
+<p>✅ 方法①：テキストを最前面に置いて線を分割して隠す（簡単・非破壊）</p>
+<p>🔧 手順（簡易版）</p>
+<ol>
+<li>
+<p>テキストを置く</p>
+</li>
+<li>
+<p>線（ライン）を選択して右クリック→複製（Ctrl+D）</p>
+</li>
+<li>
+<p>複製した線とテキストを選択</p>
+</li>
+<li>
+<p>メニュー「パス → 分割（Cut Path）」で切り抜き</p>
+</li>
+<li>
+<p>切り抜いた線の断片を削除 or 非表示にする</p>
+</li>
+<li>
+<p>テキストは最前面（<code>PageUp</code>キー）に移動しておく</p>
+</li>
+</ol>
+<blockquote>
+<p>💡 この方法は、「線に“空白”を作って文字をくっきり見せる」イメージ</p>
+</blockquote>
+<hr>
+<p>✅ 方法②：テキストの形で線を「くり抜く（差分）」</p>
+<p>※ 完全な切り抜きになるため、文字の下の線が実際に消える方式</p>
+<p>🔧 手順（破壊的・でも精密）</p>
+<ol>
+<li>
+<p>テキストをパスに変換（<code>パス → オブジェクトをパスへ（Shift+Ctrl+C）</code>）</p>
+</li>
+<li>
+<p>線を複製（Ctrl+D）</p>
+</li>
+<li>
+<p>複製した線とパス化したテキストを選択</p>
+</li>
+<li>
+<p>メニュー「パス → 差分（Ctrl+-）」を適用<br>
+　→ 文字の形でラインがくり抜かれる</p>
+</li>
+<li>
+<p>文字を前面に戻す（必要に応じて）</p>
+</li>
+</ol>
+<blockquote>
+<p>✅ 完成後の線は「穴が空いた状態」になります（再編集しにくいが見た目は完璧）</p>
+</blockquote>
+<hr>
+<p>📝 どちらがおすすめ？</p>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>あとから編集したい／とりあえず見せたい</td>
+<td>✅ 方法①（分割＆非表示）</td>
+</tr>
+<tr>
+<td>しっかり仕上げたい／印刷や書き出し用途</td>
+<td>✅ 方法②（差分でくり抜く）</td>
+</tr>
+</tbody>
+</table><br>
+<hr>
+<p>🙂 タケ：<br>
+方法①：文字の後ろに矩形（四角形）を配置するが良さそう。どうも</p>
+<p><br>🤖 チャットさん：<br>
+了解！<br>
+「文字の後ろに矩形を置いて背景っぽく見せる方法」は、Inkscapeでもっともシンプルで扱いやすい方法です ✍️🟨</p>
+<hr>
+<p>✅ おさらい：手順まとめ（背景色付きテキスト）</p>
+<ol>
+<li>
+<p>テキストツールで文字を入力</p>
+</li>
+<li>
+<p>四角形ツール（<code>F4</code>キー）で矩形を描く</p>
+</li>
+<li>
+<p>矩形を塗りたい色に設定</p>
+</li>
+<li>
+<p>矩形を最背面に移動（<code>PageDown</code>または右クリック → 最背面へ）</p>
+</li>
+<li>
+<p>テキストと矩形を両方選択して <code>Ctrl+G</code> でグループ化（ずれにくくなる）</p>
+</li>
+</ol>
+<hr>
+<p>💡 便利な調整ポイント</p>
+<table>
+<thead>
+<tr>
+<th>調整内容</th>
+<th>操作方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>背景を少し大きめにしたい</td>
+<td>矩形サイズを手動で広げる（テキストに合わせて調整）</td>
+</tr>
+<tr>
+<td>背景の角を丸めたい</td>
+<td>矩形を選んで、角のハンドルをドラッグ（画面上で直接）</td>
+</tr>
+<tr>
+<td>複数行の背景をまとめたい</td>
+<td>矩形サイズを行数に合わせて調整し、中央揃えにする</td>
+</tr>
+</tbody>
+</table><br>
+<p>🤖 チャットさん：<br>
+これだけでも、手書き風の図解やnote用画像で「読みやすさ＋ゆるさ」がぐっと上がります。<br>
+また何か加工で詰まったら、いつでも聞いてくださいね！</p>
+
+      </div>
+      <div class="md-sidebar-toc">
+        <h4 style="color: #dcdcdc; text-align: left; margin: 0 0 1em 40px;">073<br>Inkscape あんずもじ2020</h4>        
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-認知されない" class="md-toc-link">
+            <p>📘 認知されない</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-原因判明" class="md-toc-link">
+            <p>📘 原因判明</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-文字の背景色" class="md-toc-link">
+            <p>📘 文字の背景色</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-線と文字の重なり" class="md-toc-link">
+            <p>📘 線と文字の重なり</p>
+
+          </a></div>
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  <div style="padding-bottom:100px;"></div>  
+ 
+    </body></html>
