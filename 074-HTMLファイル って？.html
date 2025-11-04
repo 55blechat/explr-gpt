@@ -1,0 +1,564 @@
+<!DOCTYPE html><html><head>
+      <title>074-HTMLファイル って？</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\trypr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:8px solid #47355e
+}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+body {
+  background-color: #111 !important;
+  color: #dcdcdc !important;
+}
+a {
+  color: #8ab4f8;
+}
+/* 一般的なhrスタイル（デフォルト） */
+hr {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #444 !important;
+  margin: 1em 0 !important;
+}
+/* 特定の章区切り用 */
+hr.section-line  {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #dcdcdc !important;
+  margin: 1em 0 !important;
+}
+.markdown-preview > ul {
+  list-style: none;
+  padding-left: 0;
+}
+.md-toc-link-wrapper {
+  list-style: none !important;
+}
+
+/* ← ここから追加 */
+h1, h2, h3, h4, h5, h6,
+th, td,
+strong, em, b, i,
+blockquote,
+.markdown-preview .md-toc p,
+.markdown-preview .md-toc-link,
+.markdown-preview .md-toc-link div,
+.markdown-preview .md-toc-link p {
+  color: #dcdcdc !important;
+}
+
+blockquote {
+  background-color: #112233 !important;
+}
+
+pre, code {
+  background-color: #112233 !important;
+  color: #dcdcdc !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important; 
+  font-size: 15px !important; 
+}
+
+th, td {
+  background-color: #111 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  word-break: break-word;
+}
+
+
+/* 左サイドバー目次とその中の文字を白に */
+body[html-show-sidebar-toc] .md-sidebar-toc,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link p,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link div,
+.md-toc-link-wrapper .md-toc-link,
+.markdown-preview ul li a {
+  color: #dcdcdc !important;
+}
+
+   p {
+    margin-bottom: 0 !important;
+  }
+  ul {
+    margin-top: 0 !important;
+  }
+
+    ol li ul {
+    padding-left: 1em;  /* ←これを調整する！デフォルトより小さく */
+    margin-left: 0;
+  }
+
+.indent-wrap {
+  display: block;
+  padding-left: 1em;       /* 全体を右にずらす */
+  text-indent: -1em;       /* 1行目だけ左に戻す */
+}
+
+.indent-wrap.large {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+.indent-wrap.large2 {
+  padding-left: 2.0em;
+  text-indent: -2.0em;
+}
+
+.highlight {
+  background-color: #112233 !important;
+}
+
+
+.markdown-preview ol,
+.markdown-preview ol ol,
+.markdown-preview ul ol {
+  list-style-type: decimal !important;
+}
+
+/* 最上階のul（インデントもマーカーも消す） */
+ul {
+  list-style-type: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* ol の中だろうが ul の中だろうが全部黒丸+インデント */
+ul ul {
+  list-style-type: disc !important;
+  padding-left: 1.5em !important;
+  margin-left: 0 !important;
+}
+
+/* ▼ここからテスト用スタイル（スマホ幅確認用） */
+/* <div class="crossnote markdown-preview　test-narrow">⇒幅狭表示 */
+/* <div class="crossnote markdown-preview">⇒通常表示 */  
+.test-narrow {
+  width: 440px;
+  margin: 0 auto;
+  outline: 1px dashed red;
+}
+
+
+
+/* 横スクは親だけに任せる */
+.hscroll{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* 不要ならOK：見た目の余白としては残しても可だが、
+     スクロール幅には効かないブラウザがある */
+  /* padding-right: 12px; */
+}
+
+/* 内側に“実体のある”余白を作る → これがスクロール幅に含まれる */
+.hscroll-inner{
+  display: inline-block;    /* 中身の横幅＝スクロール幅になる */
+  padding-right: 16px;      /* ★ 末尾の見えしろを確保（値はお好みで） */
+}
+
+/* テーブル本体はスクロールさせない */
+.hscroll > .hscroll-inner > table{
+  display: inline-table;
+  table-layout: auto;
+  border-collapse: separate; /* ★ 右端の罫線が潰れにくい */
+  border-spacing: 0;         /* collapseの代わりに間隔ゼロ */
+  width: max-content;
+  max-width: none;
+  overflow: visible;         /* 子にバーを出させない */
+}
+
+/* 右端の罫線を確実に見せたい場合（任意） */
+.hscroll > .hscroll-inner > table{
+  border-right: 1px solid #444; /* 罫線が背景に溶ける場合は色調整 */
+}
+
+/* セル内は適度に折り返す（必要なら列ごとに max-width） */
+.hscroll > .hscroll-inner > table th,
+.hscroll > .hscroll-inner > table td{
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  /* 例：長文列を読みやすくしたい場合 */
+  max-width: 200px; 
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+ <h2>074<br>HTMLファイル って？</h2>         
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#-%E5%87%BA%E5%8A%9B%E7%B5%90%E6%9E%9C%E3%81%AF%E3%81%A9%E3%81%86%E4%BD%BF%E3%81%88%E3%82%8B">📘 出力結果はどう使える？</a></li>
+<li><a href="#-%E3%81%A9%E3%81%93%E3%81%AB%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89">📘 どこにアップロード？</a></li>
+</ul>
+<p>注記：本記事はGPT-4o期の対話ログをもとにしています。</p>
+<hr class="section-line">  
+<h3 id="-出力結果はどう使える">📘 出力結果はどう使える？ </h3>
+<hr class="section-line"> 
+<p>🙂 タケ：<br>
+HTMLファイルってその場に張り付ければいいだけなの？<br>
+どこかにリンクしなければならないもの？<br>
+ピンと来てない、教えて？</p>
+<hr>
+<p>✅ そもそも「.htmlファイル」って何？</p>
+<table>
+<thead>
+<tr>
+<th>ファイル名</th>
+<th>拡張子</th>
+<th>どう使う？</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>my_note.html</code></td>
+<td><code>.html</code></td>
+<td>ブラウザで開くと“Webページ”として見える</td>
+</tr>
+</tbody>
+</table><br>
+<p>→ つまり <code>.html</code> ファイルは 自分だけのミニWebページなんです。</p>
+<hr>
+<p>🧩 HTMLファイルを「貼る」ってどういう意味？</p>
+<p>実はこれは2通りあります👇</p>
+<hr>
+<p>🔗 方法①：「HTMLファイルへのリンクを貼る」</p>
+<p>💡最も現実的なやり方（noteでもできる）</p>
+<p>▼ やること：</p>
+<ul><ul>
+<li>
+<p>出力された <code>.html</code> ファイルを どこかにアップロード</p>
+<ul>
+<li>例：Google Drive、Notion、Dropbox、GitHub Pages、自分のサーバ etc.</li>
+</ul>
+</li>
+<li>
+<p>そのURLを noteやYouTube説明欄にリンクとして貼る</p>
+</li>
+</ul></ul>
+<p>✅ メリット：</p>
+<ul><ul>
+<li>
+<p>ブラウザでそのまま読める</p>
+</li>
+<li>
+<p>Table of Contents（目次）やCSSつきでキレイなまま表示できる</p>
+</li>
+</ul></ul>
+<p>❌ 注意点：</p>
+<ul><ul>
+<li>
+<p>noteやYouTubeでは .htmlファイルそのものを埋め込むことはできない</p>
+</li>
+<li>
+<p>必ず「どこかにアップロード → リンク共有」が必要</p>
+</li>
+</ul></ul>
+<hr>
+<p>🗂 方法②：「HTMLの中身をコピペしてnoteに貼る」</p>
+<p>これは注意が必要です。</p>
+<ul><ul>
+<li>
+<p><code>.html</code> の中身を開くと <code>&lt;div&gt;〜&lt;/div&gt;</code> や <code>&lt;style&gt;</code> タグが入ってる</p>
+</li>
+<li>
+<p>noteやブログに貼ってもタグが無効化されて表示されない場合が多い（特に無料ブログやnote）</p>
+</li>
+</ul></ul>
+<p>→ なので、「htmlの“内容”をそのままnoteに貼る」のは難しい or 崩れる可能性が高い</p>
+<hr>
+<p>✅ 実例：リンクの貼り方（noteの場合）</p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code>詳細は以下のHTMLでどうぞ  
+👉 <span class="token url">[<span class="token content">全文を読む（別ページ）</span>](<span class="token url">https://your-storage.com/my-note.html</span>)</span>
+</code></pre><p>noteでそのまま使えるMarkdown書式！</p>
+<hr>
+<p>✅ まとめ</p>
+<table>
+<thead>
+<tr>
+<th>疑問</th>
+<th>答え</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTMLはその場に貼れる？</td>
+<td>❌ 埋め込み不可、URLリンクを貼るのが正解</td>
+</tr>
+<tr>
+<td>Table of Contents付きHTMLの使い道は？</td>
+<td>✅ Webブラウザでの「詳細解説ページ」として最適</td>
+</tr>
+<tr>
+<td>公開素材にもできる？</td>
+<td>✅ 自分の“記録”にも“公開資料”にも使える超有能フォーマット！</td>
+</tr>
+</tbody>
+</table><br>
+<br>
+<hr class="section-line"> 
+<h3 id="-どこにアップロード">📘 どこにアップロード？ </h3>
+<hr class="section-line"> 
+<p>🙂 タケ：<br>
+HTMLって、どこにアップロードするのが簡単で一般的？</p>
+<br><p>🤖 チャットさん：<br>
+いい質問です！<br>
+「.htmlファイルをどこにアップロードするか？」は、目的と手軽さで選ぶのがポイントです。<br>
+以下に「簡単さ」＋「一般性」＋「無料」の3拍子そろった候補をまとめました👇</p>
+<hr>
+<p>✅ 一番簡単＆無料で始められる場所【おすすめ順】</p>
+<hr>
+<p>① Google ドライブ（共有リンク型）</p>
+<table>
+<thead>
+<tr>
+<th>特徴</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>操作の簡単さ</td>
+<td>⭐⭐⭐⭐（初心者向け）</td>
+</tr>
+<tr>
+<td>表示方法</td>
+<td>URLを共有すれば他の人が開いて読める（ただし“ダウンロード扱い”）</td>
+</tr>
+<tr>
+<td>注意点</td>
+<td><code>.html</code> をブラウザ上で開くのではなく「ダウンロード」になることも</td>
+</tr>
+</tbody>
+</table><br>
+<p>📌 こんな人に向いてる：</p>
+<p>→ とりあえず非公開で共有したい、自分だけor特定の人に見せたい</p>
+<hr>
+<p>② GitHub Pages（ちゃんと“Webページ”になる）</p>
+<table>
+<thead>
+<tr>
+<th>特徴</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>操作の難易度</td>
+<td>⭐⭐⭐（慣れれば超便利）</td>
+</tr>
+<tr>
+<td>表示方法</td>
+<td>URLをクリックするとそのままHTML表示される！（最高）</td>
+</tr>
+<tr>
+<td>利用料</td>
+<td>無料（アカウント作成だけ）</td>
+</tr>
+</tbody>
+</table><br>
+<p>📌 こんな人に向いてる：</p>
+<p>→ ちゃんとした公開Webページっぽく見せたい人<br>
+→ 自作ブログや作品集のようにまとめたい人</p>
+<p>👉 URL例：<code>https://yourusername.github.io/my-page.html</code></p>
+<hr>
+<p>③ Notion + Publicページ化</p>
+<table>
+<thead>
+<tr>
+<th>特徴</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>操作の簡単さ</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>表示方法</td>
+<td><code>.html</code> そのものではなく、Markdownベースで再構成</td>
+</tr>
+<tr>
+<td>備考</td>
+<td>書式を活かしたいなら <code>.html</code> をコピペではなく中身を貼り直す必要あり</td>
+</tr>
+</tbody>
+</table><br>
+<p>📌 こんな人に向いてる：</p>
+<p>→ 縦スク文章を綺麗に読ませたいけど、自前でサイト運営まではしたくない人</p>
+<hr>
+<p>④ はてなブログ・note・WordPress など外部ブログに貼る</p>
+<table>
+<thead>
+<tr>
+<th>特徴</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表示方法</td>
+<td><code>.html</code> の中身をコピペして再整形 or <code>.html</code> をアップロードしてリンク貼る</td>
+</tr>
+<tr>
+<td>備考</td>
+<td>noteでは<code>.html</code>ファイル自体は埋め込めない。リンクだけ貼る形式</td>
+</tr>
+</tbody>
+</table><br>
+<p>✅ まとめ：どれを選ぶ？</p>
+<table>
+<thead>
+<tr>
+<th>あなたの目的</th>
+<th>おすすめ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>共有だけしたい</td>
+<td>✅ Google ドライブ（手軽）</td>
+</tr>
+<tr>
+<td>公開して「ちゃんとWebっぽく」見せたい</td>
+<td>✅ GitHub Pages（無料で最強）</td>
+</tr>
+<tr>
+<td>Markdown整っていればよい</td>
+<td>✅ Notionやnoteへ手動コピペも可</td>
+</tr>
+</tbody>
+</table><br>
+<p>💡 もし迷うなら…</p>
+<blockquote>
+<p>🎯 「まずGoogle Driveで動作確認 → 気に入ったらGitHub Pagesへ昇格」<br>
+という2段階が一番安全で始めやすいです！</p>
+</blockquote>
+<br>
+<hr class="section-line"> 
+
+<p>🙂 タケ：<br>
+個人のGoogle Driveでいいの？リンクさかのっぼって侵入されない？</p>
+<br><p>🤖 チャットさん：<br>
+お、それとても重要な視点です！<br>
+結論から言うと：</p>
+<hr>
+<p>✅ Google Driveは「個人用アカウント」でも使えるけど、</p>
+<p>共有リンクの設定次第では“危険”にも“安全”にもなります。</p>
+<hr>
+<p>🎯 一番安全な使い方：</p>
+<blockquote>
+<p>「リンクを知っている人だけ閲覧可」に設定する（公開はしない）</p>
+</blockquote>
+<hr>
+<p>🔒 安全性の基礎：リンクの構造について</p>
+<p>Google Driveのリンクはこうなってます👇</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>https://drive.google.com/file/d/●●●超長いID●●●/view?usp<span class="token operator">=</span>sharing
+</code></pre><p>この「超長いID」は 推測不可能な文字列なので、リンクを公開しなければ他人には見えません。</p>
+<p>でもリンク設定をミスると、誰でもアクセスできる“公開ファイル”になる危険性もあります。</p>
+<hr>
+<p>✅ 安全に公開するための設定手順（PC版Google Drive）</p>
+<ol>
+<li>
+<p>Google Drive で <code>.html</code> ファイルをアップロード</p>
+</li>
+<li>
+<p>ファイルを右クリック → 「リンクを取得」</p>
+</li>
+<li>
+<p>リンクの共有設定を「リンクを知っている人のみ」にする</p>
+</li>
+</ol>
+<p>⛔ 避けるべき設定：</p>
+<ul><ul>
+<li>「インターネット上の全員が閲覧可」などにすると、リンクを貼ったnoteページからフォルダ構造を辿られる危険がある<br>
+（例：親フォルダが“公開”だと中身を全て見られる）</li>
+</ul></ul>
+<hr>
+<p>✅ もっと強固にしたい場合：</p>
+<ul><ul>
+<li>
+<p>ファイル単体を共有し、共有リンクに「閲覧権限のみ」をつける</p>
+</li>
+<li>
+<p>親フォルダを非公開に保ったまま、ファイル単体をシェアする（おすすめ）</p>
+</li>
+</ul></ul>
+<hr>
+<p>✅ さらに安全なのは：</p>
+<ul><ul>
+<li>
+<p>Google Driveの代わりに GitHub Pages や Dropbox（パブリックフォルダ） を使う</p>
+</li>
+<li>
+<p>→ これなら「他のファイルに影響せず、HTMLファイル単体をWebページとして公開」できます</p>
+</li>
+</ul></ul>
+<hr>
+<p>🎯 結論</p>
+<blockquote>
+<p>✅ Google Driveの「リンクを知っている人のみ閲覧可」で運用すれば、さかのぼって侵入されることはほぼない<br>
+❌ ただし「フォルダ全体を誤って公開」していると、構造を辿られて他のファイルが見える危険性あり</p>
+</blockquote>
+
+      </div>
+      <div class="md-sidebar-toc">
+        <h4 style="color: #dcdcdc; text-align: left; margin: 0 0 1em 40px;">074<br>HTMLファイル って？</h4>        
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-出力結果はどう使える" class="md-toc-link">
+            <p>📘 出力結果はどう使える？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-どこにアップロード" class="md-toc-link">
+            <p>📘 どこにアップロード？</p>
+
+          </a></div>
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+   <div style="padding-bottom:100px;"></div>  
+ 
+    </body></html>
