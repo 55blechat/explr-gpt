@@ -1,0 +1,2055 @@
+<!DOCTYPE html><html><head>
+      <title>091-GitHub Desktop</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\trypr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:8px solid #47355e
+}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+body {
+  background-color: #111 !important;
+  color: #dcdcdc !important;
+}
+a {
+  color: #8ab4f8;
+}
+/* 一般的なhrスタイル（デフォルト） */
+hr {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #444 !important;
+  margin: 1em 0 !important;
+}
+/* 特定の章区切り用 */
+hr.section-line  {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #dcdcdc !important;
+  margin: 1em 0 !important;
+}
+.markdown-preview > ul {
+  list-style: none;
+  padding-left: 0;
+}
+.md-toc-link-wrapper {
+  list-style: none !important;
+}
+
+/* ← ここから追加 */
+h1, h2, h3, h4, h5, h6,
+th, td,
+strong, em, b, i,
+blockquote,
+.markdown-preview .md-toc p,
+.markdown-preview .md-toc-link,
+.markdown-preview .md-toc-link div,
+.markdown-preview .md-toc-link p {
+  color: #dcdcdc !important;
+}
+
+blockquote {
+  background-color: #112233 !important;
+}
+
+pre, code {
+  background-color: #112233 !important;
+  color: #dcdcdc !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important; 
+  font-size: 15px !important; 
+}
+
+th, td {
+  background-color: #111 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  word-break: break-word;
+}
+
+
+/* 左サイドバー目次とその中の文字を白に */
+body[html-show-sidebar-toc] .md-sidebar-toc,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link p,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link div,
+.md-toc-link-wrapper .md-toc-link,
+.markdown-preview ul li a {
+  color: #dcdcdc !important;
+}
+
+   p {
+    margin-bottom: 0 !important;
+  }
+  ul {
+    margin-top: 0 !important;
+  }
+
+    ol li ul {
+    padding-left: 1em;  /* ←これを調整する！デフォルトより小さく */
+    margin-left: 0;
+  }
+
+.indent-wrap {
+  display: block;
+  padding-left: 1em;       /* 全体を右にずらす */
+  text-indent: -1em;       /* 1行目だけ左に戻す */
+}
+
+.indent-wrap.large {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+.indent-wrap.large2 {
+  padding-left: 2.0em;
+  text-indent: -2.0em;
+}
+
+.highlight {
+  background-color: #112233 !important;
+}
+
+
+.markdown-preview ol,
+.markdown-preview ol ol,
+.markdown-preview ul ol {
+  list-style-type: decimal !important;
+}
+
+/* 最上階のul（インデントもマーカーも消す） */
+ul {
+  list-style-type: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* ol の中だろうが ul の中だろうが全部黒丸+インデント */
+ul ul {
+  list-style-type: disc !important;
+  padding-left: 1.5em !important;
+  margin-left: 0 !important;
+}
+
+/* ▼ここからテスト用スタイル（スマホ幅確認用） */
+/* <div class="crossnote markdown-preview　test-narrow">⇒幅狭表示 */
+/* <div class="crossnote markdown-preview">⇒通常表示 */  
+.test-narrow {
+  width: 440px;
+  margin: 0 auto;
+  outline: 1px dashed red;
+}
+
+
+
+/* 横スクは親だけに任せる */
+.hscroll{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* 不要ならOK：見た目の余白としては残しても可だが、
+     スクロール幅には効かないブラウザがある */
+  /* padding-right: 12px; */
+}
+
+/* 内側に“実体のある”余白を作る → これがスクロール幅に含まれる */
+.hscroll-inner{
+  display: inline-block;    /* 中身の横幅＝スクロール幅になる */
+  padding-right: 16px;      /* ★ 末尾の見えしろを確保（値はお好みで） */
+}
+
+/* テーブル本体はスクロールさせない */
+.hscroll > .hscroll-inner > table{
+  display: inline-table;
+  table-layout: auto;
+  border-collapse: separate; /* ★ 右端の罫線が潰れにくい */
+  border-spacing: 0;         /* collapseの代わりに間隔ゼロ */
+  width: max-content;
+  max-width: none;
+  overflow: visible;         /* 子にバーを出させない */
+}
+
+/* 右端の罫線を確実に見せたい場合（任意） */
+.hscroll > .hscroll-inner > table{
+  border-right: 1px solid #444; /* 罫線が背景に溶ける場合は色調整 */
+}
+
+/* セル内は適度に折り返す（必要なら列ごとに max-width） */
+.hscroll > .hscroll-inner > table th,
+.hscroll > .hscroll-inner > table td{
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  /* 例：長文列を読みやすくしたい場合 */
+  max-width: 200px; 
+}
+
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      <h2>091<br>GitHub Desktop</h2>  
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#-%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E4%BB%95%E5%88%86%E3%81%91%E3%81%A7%E3%81%8D%E3%82%8B">📘 フォルダ仕分けできる？</a></li>
+<li><a href="#-%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E5%85%A8%E4%BD%93">📘 リポジトリ全体？</a></li>
+<li><a href="#-%E6%89%8B%E5%85%83%E3%81%AEpc%E3%81%AB-clone">📘 手元のPCに clone？</a></li>
+<li><a href="#-github-desktop-%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">📘 GitHub Desktop インストール</a></li>
+<li><a href="#-%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%AE%E7%A2%BA%E8%AA%8D">📘 リンクの確認</a></li>
+<li><a href="#-%E5%8F%8D%E5%BF%9C%E3%81%AA%E3%81%84%E3%82%88">📘 反応ないよ</a></li>
+<li><a href="#-push">📘 Push？</a></li>
+<li><a href="#-%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%88%E3%81%AE%E3%81%A4%E3%81%AA%E3%81%8E%E7%9B%B4%E3%81%97">📘 リンク先のつなぎ直し</a></li>
+<li><a href="#-%E6%AF%8E%E5%9B%9E-clone-%E5%BF%85%E8%A6%81">📘 毎回 clone 必要？</a></li>
+<li><a href="#-%E8%87%AA%E5%8B%95%E8%AA%8D%E8%AD%98">📘 自動認識</a></li>
+<li><a href="#-%E8%BF%BD%E5%8A%A0%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%AF">📘 追加ファイルマーク</a></li>
+<li><a href="#-%E5%89%8D%E6%8F%90%E3%81%A8%E3%81%AA%E3%82%8B%E8%A8%AD%E5%AE%9A">📘 前提となる設定</a></li>
+<li><a href="#-indexhtml-%E3%81%AE%E4%BF%AE%E6%AD%A3%E3%81%AF">📘 index.html の修正は？</a></li>
+</ul>
+<p>注記：本記事はGPT-5.1期の対話ログをもとにしています。</p>
+<hr class="section-line">
+<h3 id="-フォルダ仕分けできる">📘 フォルダ仕分けできる？ </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+GitHubのリポジトリにHTMLファイルとそれらが参照している画像、動画データがたくさんあって、整理したいんだけど、、、<br>
+リポジトリ内にフォルダ作って仕分けとかできないのかな？<br>
+仮にできたとしても参照リンクをつなぎ直すことになるのかな？</p>
+<br><p>🤖 チャットさん：<br>
+要点だけ端的にまとめます。</p>
+<hr>
+<p>✔️ リポジトリ内にフォルダ作成 → できます</p>
+<p>GitHub は普通のフォルダ構造を持てるので、<br>
+VS Code／GitHub Web どちらからでも フォルダ作成→ファイル移動 が可能。</p>
+<ul><ul>
+<li>
+<p><code>images/</code></p>
+</li>
+<li>
+<p><code>videos/</code></p>
+</li>
+<li>
+<p><code>html/</code></p>
+</li>
+<li>
+<p><code>assets/</code></p>
+</li>
+</ul></ul>
+<p>など、好きに整理できます。</p>
+<hr>
+<p>✔️ 問題はここ → ファイル移動すると 参照リンクは切れる</p>
+<p>HTML の参照パスが、</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>&lt;img src="image001.png"&gt;
+</code></pre><p>だったものが、<br>
+画像を <code>images/</code> に移動すると</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>&lt;img src="images/image001.png"&gt;
+</code></pre><p>と リンクを書き換える必要がある。</p>
+<p>つまり：</p>
+<p>✔️ フォルダ整理 ＝ 参照パス更新が必須</p>
+<p>（リンク張り替えなしに整理する方法はない）</p>
+<hr>
+<p>✔️ 対処方法（現実的な3つ）</p>
+<ol>
+<li>VS Code の一括置換（一番効率的）</li>
+</ol>
+<p>例：<br>
+<code>src="</code> を<br>
+<code>src="images/</code> に置き換える<br>
+など、「パスの規則性」があれば一瞬で整う。</p>
+<hr>
+<ol start="2">
+<li>相対パスに統一しておく</li>
+</ol>
+<p>例：HTML と同じ階層の asset フォルダにまとめる。</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>/index.html
+/assets/img001.png
+/assets/movie01.mp4
+</code></pre><p>相対パスならフォルダごと動かしても整理が楽。</p>
+<hr>
+<ol start="3">
+<li>今後のファイル配置ルールを決めて固定する</li>
+</ol>
+<p>今後は：</p>
+<ul><ul>
+<li>
+<p>画像 → <code>/img/</code></p>
+</li>
+<li>
+<p>動画 → <code>/video/</code></p>
+</li>
+<li>
+<p>HTML → <code>/</code> または <code>/html/</code></p>
+</li>
+</ul></ul>
+<p>というように「保存場所のルール」を決めると<br>
+後から崩れにくくなる。</p>
+<hr>
+<p>✔️ まとめ（最短版）</p>
+<ul><ul>
+<li>
+<p>GitHub リポジトリにフォルダ作る → できる</p>
+</li>
+<li>
+<p>ファイル移動するとパスが変わる → リンクは全部つなぎ直し必要</p>
+</li>
+<li>
+<p>VS Code 一括置換を使えば現実的に整理可能</p>
+</li>
+</ul></ul>
+<hr>
+<p>🙂 タケ：<br>
+jpg、png、mp4をごそっと別フォルダに移動したい。<br>
+今100近くHTMLファイルがあるけど、一つずつリンクつなぎ直すしかないんだよね？</p>
+<br><p>🤖 チャットさん：<br>
+要点だけ、最短で答えます。</p>
+<hr>
+<p>✔️ 結論</p>
+<p>そのままでは全部のHTMLのリンクをつなぎ直す必要がある。<br>
+ただし “一つずつ手で直す” 必要はない。<br>
+VS Code なら一括で自動修正できる。</p>
+<hr>
+<p>✔️ あなたの作業を最小にする現実的な解決法</p>
+<p>① 画像・動画をフォルダへ移動</p>
+<p>例）</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>/assets/img/
+/assets/mp4/
+</code></pre><hr>
+<p>② VS Code の「複数ファイル一括置換」でリンクを全部直す</p>
+<p>これが最強。</p>
+<p>▼ 例</p>
+<p>元のHTML（現状）：</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>&lt;img src="photo001.jpg"&gt;
+&lt;video src="movie10.mp4"&gt;
+</code></pre><p>移動後は：</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>&lt;img src="assets/img/photo001.jpg"&gt;
+&lt;video src="assets/mp4/movie10.mp4"&gt;
+</code></pre><p>▼ 操作</p>
+<ol>
+<li>
+<p>VS Code で「リポジトリ全体を開く」</p>
+</li>
+<li>
+<p><code>Ctrl + Shift + H</code>（フォルダ全体の一括置換）</p>
+</li>
+<li>
+<p>置換前：</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>src="
+</code></pre></li>
+<li>
+<p>置換後：</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>src="assets/img/
+</code></pre></li>
+</ol>
+<p>（mp4なら <code>assets/mp4/</code> に置換）</p>
+<p>※ファイル名は変わらないので、前にパスを差し込むだけ で成立する。</p>
+<p>✔️ これで 100 ファイルでも一瞬で完了。</p>
+<hr>
+<p>✔️ 一括置換が有効な理由</p>
+<p>あなたの HTML の構造は、画像・動画パスが</p>
+<ul><ul>
+<li>
+<p><code>&lt;img src="〇〇"&gt;</code></p>
+</li>
+<li>
+<p><code>&lt;video src="〇〇"&gt;</code></p>
+</li>
+</ul></ul>
+<p>で統一されているため、<br>
+前にパスを追加するだけで全ページ修正が成立する。</p>
+<p>つまり、手作業ゼロ で対応できる。</p>
+<hr>
+<p>✔️ 注意点（1つだけ）</p>
+<p>HTMLの中で すでに別のフォルダを指している場所 がある場合は置換範囲を少し調整する必要あり。</p>
+<p>でも、あなたの index.html／記事群を見る限り、ほぼフラット構造なので問題なし。</p>
+<hr>
+<p>✔️ まとめ</p>
+<ul><ul>
+<li>
+<p>フォルダ移動 → リンクつなぎ直しは必要</p>
+</li>
+<li>
+<p>でも100ページあっても手作業は不要</p>
+</li>
+<li>
+<p>VS Code の一括置換で 数秒で完了</p>
+</li>
+<li>
+<p>一番安全で確実な方法</p>
+</li>
+</ul></ul>
+<br>
+<hr class="section-line">
+<h3 id="-リポジトリ全体">📘 リポジトリ全体？ </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+VS Code で「リポジトリ全体を開く」？？？どうやるの？</p>
+<br><p>🤖 チャットさん：<br>
+端的に説明します。<br>
+「リポジトリ全体を開く」＝ GitHub から clone したフォルダ（または手元の作業フォルダ）を“丸ごと VS Code で開く”こと です。</p>
+<p>やり方は２通り。</p>
+<hr>
+<p>✔️ 方法①（最も簡単）</p>
+<p>エクスプローラーでフォルダを右クリック →「Code で開く」</p>
+<ol>
+<li>
+<p>Windows のエクスプローラーを開く</p>
+</li>
+<li>
+<p>GitHub から clone した（または作業中の）フォルダを探す<br>
+例：</p>
+<pre data-role="codeBlock" data-info="makefile" class="language-makefile makefile"><code><span class="token target symbol">C</span><span class="token punctuation">:</span>\Users\あなた\Documents\explr-gpt
+</code></pre></li>
+<li>
+<p>フォルダを右クリック →「Open with Code」／「Codeで開く」</p>
+</li>
+</ol>
+<p>➡ これでフォルダ全体（＝リポジトリ全体）が VS Code に読み込まれる。</p>
+<hr>
+<p>✔️ 方法②（VS Code から開く）</p>
+<ol>
+<li>
+<p>VS Code を起動</p>
+</li>
+<li>
+<p>左上の 「ファイル(File)」→「フォルダーを開く(Open Folder)」</p>
+</li>
+<li>
+<p>GitHub リポジトリのフォルダを選択<br>
+例：</p>
+<pre data-role="codeBlock" data-info="makefile" class="language-makefile makefile"><code><span class="token target symbol">C</span><span class="token punctuation">:</span>\Users\あなた\Documents\explr-gpt
+</code></pre></li>
+</ol>
+<p>➡ このフォルダ内の HTML／png／mp4 が全部 VS Code のサイドバーに見える状態になる。</p>
+<hr>
+<p>✔️ これができると何ができる？</p>
+<ul><ul>
+<li>
+<p><code>Ctrl + Shift + H</code> で フォルダ全体の一括置換</p>
+</li>
+<li>
+<p>assets/img フォルダ作成</p>
+</li>
+<li>
+<p>画像／動画ファイルの移動</p>
+</li>
+<li>
+<p>全リンクの自動修正</p>
+</li>
+</ul></ul>
+<p>これらが全部できるようになる。</p>
+<hr>
+<p>✔️ 注意</p>
+<p>GitHub 上で編集するのではなく、<br>
+手元のPCに clone（またはダウンロード）したフォルダを開く必要がある。</p>
+<br>
+<hr class="section-line">
+<h3 id="-手元のpcに-clone">📘 手元のPCに clone？ </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+VS Codeでネット上のGitHub リポジトリのフォルダを選択？？？←この作業のイメージがわかない。</p>
+<br><p>🤖 チャットさん：<br>
+大丈夫。この部分が一番つまずきやすいところなので、<br>
+“何をしている作業なのか” をイメージできるように、完全に噛み砕いて説明します。</p>
+<hr>
+<p>✔️ 結論（誤解ポイント）</p>
+<p>VS Code は「ネット上の GitHub フォルダを直接開くことはできません」。</p>
+<p>VS Code が開けるのは “あなたのPCにあるフォルダだけ”。</p>
+<p>だから、まず<br>
+👉 GitHub のリポジトリをあなたのPCにコピー（＝clone）する<br>
+必要があります。</p>
+<hr>
+<p>✔️ イメージ図</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code>GitHub（ネット上）
+      ↓ まず自分のPCにコピーする（clone）
+あなたのPCのフォルダ
+      ↓ そのフォルダを VS Code で開く
+VS Code が編集できる状態になる
+</code></pre><p>この流れです。</p>
+<hr>
+<p>✔️ 手順を超シンプルに（例付き）</p>
+<p>① GitHub のリポジトリページを開く</p>
+<p><a href="https://github.com/55blechat/explr-gpt">https://github.com/55blechat/explr-gpt</a><br>
+（例）</p>
+<hr>
+<p>② 緑の「Code」ボタンを押す</p>
+<p>するとこういう欄が出る：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>HTTPS  https://github.com/55blechat/explr-gpt.git
+</code></pre><hr>
+<p>③ 「Open with GitHub Desktop」を押す</p>
+<p>※ GitHub Desktop が無いなら、ダウンロードして入れるのが一番楽<br>
+（あなたの環境なら 3分で終わる）</p>
+<hr>
+<p>④ GitHub Desktop が立ち上がる → Clone ボタン</p>
+<p>これでリポジトリがまるごと<br>
+あなたのPC内にコピーされる。</p>
+<p>例：</p>
+<pre data-role="codeBlock" data-info="makefile" class="language-makefile makefile"><code><span class="token target symbol">C</span><span class="token punctuation">:</span>\Users\あなた\Documents\GitHub\explr-gpt\
+</code></pre><hr>
+<p>⑤ そのフォルダを VS Code で開く</p>
+<p>やり方は２つ。</p>
+<p>A：エクスプローラーでフォルダを右クリック →「Code で開く」</p>
+<p>これが一番簡単。</p>
+<p>B：VS Code で</p>
+<p>メニュー → File → Open Folder<br>
+からフォルダ選択。</p>
+<hr>
+<p>✔️ この状態が “リポジトリ全体を開く” という意味</p>
+<p>VS Code 左側に：</p>
+<ul><ul>
+<li>
+<p>100個の HTML</p>
+</li>
+<li>
+<p>jpg</p>
+</li>
+<li>
+<p>png</p>
+</li>
+<li>
+<p>mp4</p>
+</li>
+<li>
+<p>index.html</p>
+</li>
+</ul></ul>
+<p>全部が見える状態になる。</p>
+<p>→ ここではじめて“一括置換”や“フォルダ移動”ができる。</p>
+<hr>
+<p>✔️ 逆に言うと…</p>
+<p>今のあなたのイメージはこうかもしれない：</p>
+<p>❌ 「VS Code がネット上の GitHub フォルダを直接開く？」</p>
+<p>これは できない。<br>
+必ず ローカルにコピー（clone） が必要。</p>
+<hr>
+<p>✔️ もし GitHub Desktop が入っていなければ</p>
+<p>あなたのために<br>
+最短2分で clone → VS Code で開くセットアップ手順<br>
+を作るよ。</p>
+<p>GitHub Desktop がある？<br>
+それともまだ未インストール？</p>
+<hr>
+<p>🙂 タケ：<br>
+「Open with GitHub Desktop」ある</p>
+<br><p>🤖 チャットさん：<br>
+OK、それなら最短ルートでいけます。<br>
+あなたの環境なら 迷わずこの方法が最速・最ラク です。</p>
+<hr>
+<p>✔️ これからやること（超端的に）</p>
+<ol>
+<li>
+<p>Open with GitHub Desktop を押す</p>
+</li>
+<li>
+<p>GitHub Desktop が起動 → “Clone” を押す</p>
+</li>
+<li>
+<p>するとリポジトリが あなたのPC内にコピーされる</p>
+</li>
+<li>
+<p>GitHub Desktop の右上にある “Open in VS Code” を押す</p>
+</li>
+<li>
+<p>VS Code に リポジトリ全体が開かれた状態 になる</p>
+</li>
+</ol>
+<p>これで、</p>
+<ul><ul>
+<li>
+<p>フォルダ作成</p>
+</li>
+<li>
+<p>jpg/png/mp4 を移動</p>
+</li>
+<li>
+<p>一括置換<br>
+すべて可能。</p>
+</li>
+</ul></ul>
+<hr>
+<p>✔️ 具体的な流れ（画像無しで最大限わかりやすく）</p>
+<hr>
+<p>① GitHub のページにある</p>
+<p>「Open with GitHub Desktop」 をクリック</p>
+<hr>
+<p>② GitHub Desktop が開く</p>
+<p>自動でリポジトリ情報が表示される。</p>
+<p>画面右下あたりに<br>
+“Clone”<br>
+という青いボタンが出るので押す。</p>
+<hr>
+<p>③ clone が始まる（数秒〜数十秒）</p>
+<p>終わると、<br>
+あなたのPCにフォルダが作られる。</p>
+<p>例：</p>
+<pre data-role="codeBlock" data-info="makefile" class="language-makefile makefile"><code><span class="token target symbol">C</span><span class="token punctuation">:</span>\Users\あなた\Documents\GitHub\explr-gpt\
+</code></pre><hr>
+<p>④ GitHub Desktop の右上にある</p>
+<p>“Open in Visual Studio Code”<br>
+をクリック</p>
+<hr>
+<p>⑤ VS Code が開いて、左側に</p>
+<ul><ul>
+<li>
+<p>HTML</p>
+</li>
+<li>
+<p>画像</p>
+</li>
+<li>
+<p>mp4</p>
+</li>
+<li>
+<p>index</p>
+</li>
+<li>
+<p>すべてのファイル</p>
+</li>
+</ul></ul>
+<p>全部ズラッと見える状態になる。</p>
+<p>➡ これで 「リポジトリ全体を開いた状態」。</p>
+<hr>
+<p>✔️ ちなみにこの状態になると…</p>
+<p>✦ 100ファイルをまたぐ一括置換</p>
+<p><code>Ctrl + Shift + H</code></p>
+<p>✦ 画像／動画のフォルダ移動</p>
+<p>ドラッグ＆ドロップで一気に可能</p>
+<p>✦ 全HTMLがフォルダ構成に合わせて一括で修正できる</p>
+<p>✦ GitHub への更新（publish）は Desktop の「Commit → Push」だけでOK</p>
+<hr>
+<p>✔️ ここまでできたら</p>
+<p>あなたの望む「jpg/png/mp4 をごそっと移動してリンク整える」が<br>
+現実的にすぐできる状態 になる。</p>
+<br>
+<hr class="section-line">
+<h3 id="-github-desktop-インストール">📘 GitHub Desktop インストール </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+明日、じっくりやってみる。</p>
+<br><p>🤖 チャットさん：<br>
+了解。<br>
+落ち着いてやれば必ず整理できます。<br>
+明日また続きをやりたくなったら、いつでも言ってください。</p>
+<br><p>🙂 タケ：<br>
+昨日の続きで、cloneの前にまずGitHub Desktopをdownloadでは？</p>
+<br><p>🤖 チャットさん：<br>
+はい、その認識で正しいです。<br>
+GitHub Desktop をまだインストールしていない場合は、clone の前に “ダウンロード → インストール” が必要です。</p>
+<p>手順を端的にまとめます。</p>
+<hr>
+<p>✔️ 手順（最短）</p>
+<p>① GitHub Desktop をダウンロード</p>
+<p>👉 <a href="https://desktop.github.com/">https://desktop.github.com/</a></p>
+<p>「Download for Windows」 をクリック<br>
+→ インストーラーが落ちてくる</p>
+<hr>
+<p>② インストール</p>
+<p>落とした <code>.exe</code> を実行<br>
+→ Next を押して進めるだけでOK<br>
+（特別な設定は不要）</p>
+<hr>
+<p>③ 起動後、GitHub アカウントでログイン</p>
+<p><a href="http://GitHub.com">GitHub.com</a> のアカウントでログインする<br>
+（いつも使っているアカウント）</p>
+<hr>
+<p>④ GitHub のページへ戻って</p>
+<p>“Open with GitHub Desktop” を押す</p>
+<p>GitHub Desktop が開いて<br>
+Clone の確認画面 が出るので、<br>
+→ Clone ボタン を押す。</p>
+<hr>
+<p>⑤ Clone 完了後</p>
+<p>GitHub Desktop の右上に<br>
+“Open in VS Code”<br>
+が出るのでクリック。</p>
+<p>➡ リポジトリ全体が VS Code で開く状態になる。</p>
+<hr>
+<p>✔️ まとめ</p>
+<ul><ul>
+<li>
+<p>GitHub Desktop が未インストール → 先にダウンロードが必要</p>
+</li>
+<li>
+<p>インストールしたら “Open with GitHub Desktop” がそのまま使える</p>
+</li>
+<li>
+<p>clone → VS Code で開く まで一気にいける</p>
+</li>
+</ul></ul>
+<hr>
+<p>🤖 チャットさん：<br>
+必要なら、今日の作業の進め方（チェックリスト） も作れます。</p>
+<br><p>🙂 タケ：<br>
+作業の進め方（チェックリスト）つくって</p>
+<br><p>🤖 チャットさん：<br>
+実用的に、最短で整理が完了するためのチェックリスト を作りました。<br>
+今日これを順に進めれば OK です。</p>
+<hr>
+<p>✔️ 今日の作業チェックリスト（最短版）</p>
+<p>【A】準備</p>
+<p>□ GitHub Desktop をインストール<br>
+□ GitHub アカウントでログイン<br>
+□ VS Code が使える状態を確認</p>
+<hr>
+<p>【B】リポジトリの clone</p>
+<p>□ GitHub のページで “Open with GitHub Desktop” をクリック<br>
+□ GitHub Desktop が開く<br>
+□ Clone を押す<br>
+□ どこに保存されるかパスだけ確認<br>
+　（例：<code>C:\Users\あなた\Documents\GitHub\explr-gpt</code>）</p>
+<hr>
+<p>【C】VS Code でリポジトリを開く</p>
+<p>□ GitHub Desktop の右上の “Open in VS Code” をクリック<br>
+□ VS Code 左側に 全部のHTML/画像/mp4 が見える状態になる</p>
+<hr>
+<p>【D】フォルダ構成を作る（整理箱をつくる）</p>
+<p>リポジトリ内で以下フォルダを作成：</p>
+<p>□ <code>/assets/img/</code>（jpg / png 用）<br>
+□ <code>/assets/mp4/</code>（動画用）</p>
+<hr>
+<p>【E】ファイルを整理</p>
+<p>□ jpg / png を 一気に assets/img に移動<br>
+□ mp4 を 一気に assets/mp4 に移動<br>
+（VS Code 左側のエクスプローラーでドラッグ＆ドロップでOK）</p>
+<hr>
+<p>【F】参照リンクを一括修正</p>
+<p>VS Code で置換実行（<code>Ctrl+Shift+H</code>）：</p>
+<p>□ 置換前：</p>
+<pre data-role="codeBlock" data-info="ini" class="language-ini ini"><code><span class="token key attr-name">src</span><span class="token punctuation">=</span><span class="token value attr-value">"</span>
+</code></pre><p>□ 置換後（例）：</p>
+<pre data-role="codeBlock" data-info="ini" class="language-ini ini"><code><span class="token key attr-name">src</span><span class="token punctuation">=</span><span class="token value attr-value">"assets/img/</span>
+</code></pre><p>※ mp4 の場合は</p>
+<pre data-role="codeBlock" data-info="ini" class="language-ini ini"><code><span class="token key attr-name">src</span><span class="token punctuation">=</span><span class="token value attr-value">"assets/mp4/</span>
+</code></pre><p>□ 置換対象が HTML 全ファイル になっていることを確認<br>
+□ 置換実行</p>
+<hr>
+<p>【G】動作チェック</p>
+<p>□ index.html をブラウザで開く<br>
+□ 画像が表示されるか確認<br>
+□ 動画が再生されるか確認<br>
+□ すべてのページのリンクが生きているか確認<br>
+（必要なら 2〜3ページだけでOK）</p>
+<hr>
+<p>【H】GitHub へ反映</p>
+<p>GitHub Desktopで：</p>
+<p>□ 「Changes」に移動<br>
+□ 変更内容を確認<br>
+□ Commit メッセージを適当に入れる（例：<code>整理とリンク修正</code>）<br>
+□ Commit to main<br>
+□ Push origin（アップロード）</p>
+<hr>
+<p>【I】GitHub Pages 側の最終確認</p>
+<p>□ あなたの GitHub Pages（例：<code>https://55blechat.github.io/explr-gpt/</code>）を開く<br>
+□ 画像／動画が表示されるか確認<br>
+□ Broken link がないか確認</p>
+<hr>
+<p>✔️ これで完了</p>
+<p>必要な作業がすべて終わるチェックリスト になっています。<br>
+この通りに進めれば、リポジトリが完全に整理された状態になります。<br>
+進める途中で詰まったら、その項目だけ教えてください。すぐ修正します。</p>
+<p>🙂 タケ：<br>
+src="　これだとjpg、png、mp4全部対象になってる。<br>
+png、jpgの場合は置換前：img src=" で、置換後：img src="img assets/img/<br>
+mp4の場合は置換前：video src=" で、置換後：video src="video assets/mp4/ と入力すればいいの？</p>
+<br><p>🤖 チャットさん：<br>
+端的に整理します。<br>
+あなたの理解は 方向性は合ってるけど、置換文字列が少し違う ので、正しい形にしてまとめます。</p>
+<hr>
+<p>✔️ 正しい置換パターン（これで一発でOK）</p>
+<p>▼ ① JPG / PNG（画像）の場合</p>
+<p>置換前：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;img src="
+</code></pre><p>置換後：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;img src="assets/img/
+</code></pre><p>※ <code>img assets/img/</code> ではありません。<br>
+　<code>src="assets/img/</code> を入れるだけでOK。</p>
+<hr>
+<p>▼ ② MP4（動画）の場合</p>
+<p>置換前：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;video src="
+</code></pre><p>置換後：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;video src="assets/mp4/
+</code></pre><p>※ <code>video assets/mp4/</code> ではありません。<br>
+　<code>src="assets/mp4/</code> を差し込むだけ。</p>
+<hr>
+<p>✔️ なぜこれでよいのか？</p>
+<p>あなたの HTML はこうなっているはず：</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>&lt;img src="filename.jpg"&gt;
+&lt;video src="movie.mp4"&gt;
+</code></pre><p>置換でこう変わる：</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>&lt;img src="assets/img/filename.jpg"&gt;
+&lt;video src="assets/mp4/movie.mp4"&gt;
+</code></pre><p>＝ ファイル名はそのまま、生きたリンクのまま完成。</p>
+<hr>
+<p>✔️ 実際の VS Code での操作手順</p>
+<p>画像（jpg/png）用</p>
+<ol>
+<li>
+<p><code>Ctrl + Shift + H</code></p>
+</li>
+<li>
+<p>“検索”に：</p>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;img src="
+</code></pre><ol start="3">
+<li>“置換”に：</li>
+</ol>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;img src="assets/img/
+</code></pre><ol start="4">
+<li>「すべて置換」</li>
+</ol>
+<hr>
+<p>動画（mp4）用</p>
+<ol>
+<li>“検索”に：</li>
+</ol>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;video src="
+</code></pre><ol start="2">
+<li>“置換”に：</li>
+</ol>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;video src="assets/mp4/
+</code></pre><ol start="3">
+<li>「すべて置換」</li>
+</ol>
+<hr>
+<p>✔️ 置換後の HTML はこうなる</p>
+<p>Before:</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>&lt;img src="photo001.jpg"&gt;
+&lt;video src="sample01.mp4"&gt;
+</code></pre><p>After:</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>&lt;img src="assets/img/photo001.jpg"&gt;
+&lt;video src="assets/mp4/sample01.mp4"&gt;
+</code></pre><p>完璧。</p>
+<hr>
+<p>✔️ これで100ファイルでも一瞬で整理できます</p>
+<ul><ul>
+<li>
+<p>すべての jpg/png が <code>assets/img/</code> に</p>
+</li>
+<li>
+<p>すべての mp4 が <code>assets/mp4/</code> に</p>
+</li>
+<li>
+<p>リンクは完全に生きたまま</p>
+</li>
+</ul></ul>
+<hr>
+<p>🙂 タケ：<br>
+置換までできた。</p>
+<br><p>🤖 チャットさん：<br>
+よかった。<br>
+ここまで進んだなら、あと少しで完全整理が完了です。</p>
+<p>次のステップは一応これだけ確認すればOK👇</p>
+<hr>
+<p>✔️ 次に確認するポイント（最短）</p>
+<ol>
+<li>フォルダ構成</li>
+</ol>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>/assets/img/   ← jpg / png が入ってる
+/assets/mp4/   ← mp4 が入ってる
+</code></pre><ol start="2">
+<li>HTML のリンクが正しくつながっているか</li>
+</ol>
+<p>どれか1つだけ開いて、</p>
+<ul><ul>
+<li>
+<p>画像が表示される？</p>
+</li>
+<li>
+<p>動画が再生される？</p>
+</li>
+</ul></ul>
+<p>これで全ページほぼ確実にOK。</p>
+<hr>
+<p>✔️ 最後の GitHub 反映（忘れがち）</p>
+<p>GitHub Desktop に戻って：</p>
+<ol>
+<li>
+<p>「Changes」に大量の変更があるのを確認</p>
+</li>
+<li>
+<p>下にコメント入れる（例：<code>assetsに整理＆リンク修正</code>）</p>
+</li>
+<li>
+<p>Commit to main</p>
+</li>
+<li>
+<p>Push origin</p>
+</li>
+</ol>
+<p>これで GitHub Pages に反映されます。</p>
+<hr>
+<p>必要なら GitHub Pages 側の確認ポイントもまとめます。</p>
+<br>
+<hr class="section-line">
+<h3 id="-リンクの確認">📘 リンクの確認 </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+「HTML のリンクが正しくつながっているか？」の確認で、今の状態から index.html をブラウザで開くのはどうやるの？</p>
+<br><p>🤖 チャットさん：<br>
+端的に説明します。<br>
+ローカルで index.html をブラウザ表示する方法は2通りあります。</p>
+<hr>
+<p>✔️ 方法①：エクスプローラーからダブルクリック（最も簡単）</p>
+<ol>
+<li>
+<p>エクスプローラーで</p>
+<pre data-role="codeBlock" data-info="makefile" class="language-makefile makefile"><code><span class="token target symbol">C</span><span class="token punctuation">:</span>\Users\あなた\Documents\GitHub\explr-gpt\
+</code></pre><p>（clone したフォルダ）を開く</p>
+</li>
+<li>
+<p><code>index.html</code> を ダブルクリック</p>
+</li>
+</ol>
+<p>➡ 標準ブラウザで開く（Chrome / Edge など）<br>
+これでローカル版の表示を確認できます。</p>
+<hr>
+<p>✔️ 方法②：VS Code の右クリックで開く</p>
+<ol>
+<li>
+<p>VS Code 左側のエクスプローラーで <code>index.html</code> を右クリック</p>
+</li>
+<li>
+<p>「既定のブラウザーで開く」 「Open in Default Browser」 を選択<br>
+（拡張機能が入っていればメニューに出る）</p>
+</li>
+</ol>
+<p>➡ ブラウザで開く。</p>
+<p>※ もし「Open in browser」が出ない場合は<br>
+VS Code で <code>open in browser</code> という拡張を入れると一発で表示できます。</p>
+<hr>
+<p>✔️ 方法③：URL風にドラッグ＆ドロップ（意外と便利）</p>
+<ol>
+<li>
+<p>ブラウザを開く</p>
+</li>
+<li>
+<p><code>index.html</code> を ブラウザにドラッグ＆ドロップ</p>
+</li>
+</ol>
+<p>➡ これでもローカルで開ける。</p>
+<hr>
+<p>✔️ 開いたときのURLはこうなる</p>
+<pre data-role="codeBlock" data-info="perl" class="language-perl perl"><code>file<span class="token punctuation">:</span><span class="token operator">//</span><span class="token operator">/</span>C<span class="token punctuation">:</span><span class="token operator">/</span>Users<span class="token operator">/</span>あなた<span class="token operator">/</span>Documents<span class="token operator">/</span>GitHub<span class="token operator">/</span>explr<span class="token operator">-</span>gpt<span class="token operator">/</span>index<span class="token operator">.</span>html
+</code></pre><p>file:/// で表示されていればローカル版が正しく開けている証拠。</p>
+<hr>
+<p>✔️ これで何を確認すればいい？</p>
+<ul><ul>
+<li>
+<p>画像が表示されるか（assets/img/…）</p>
+</li>
+<li>
+<p>動画が再生されるか（assets/mp4/…）</p>
+</li>
+<li>
+<p>サムネが壊れていないか</p>
+</li>
+<li>
+<p>変な空白がないか</p>
+</li>
+</ul></ul>
+<p>ここをチェックすればOK。</p>
+<hr>
+<p>🙂 タケ：<br>
+リンク、確認できた。</p>
+<br><p>🤖 チャットさん：<br>
+よかった。<br>
+これでフォルダ整理 → リンク修正 → ローカル確認まで完了ですね。</p>
+<p>あとは GitHub Desktop で Commit → Push<br>
+だけすれば GitHub Pages 側も整理後の状態になります。</p>
+
+<br>
+<hr class="section-line">
+<h3 id="-反応ないよ">📘 反応ないよ </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+「assetsに整理＆リンク修正 」このコメントを入れるのは「summary(required)」それとも「Dscription」？</p>
+<br><p>🤖 チャットさん：<br>
+端的に説明します。</p>
+<hr>
+<p>✔️ 入れる場所は「Summary（required）」です。</p>
+<p>GitHub のコミットでは：</p>
+<ul><ul>
+<li>
+<p>Summary（required）＝必須のタイトル欄（ここに書く）</p>
+</li>
+<li>
+<p>Description ＝ 補足説明（任意・空欄OK）</p>
+</li>
+</ul></ul>
+<p>なので、</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>assetsに整理＆リンク修正
+</code></pre><p>は Summary に入力するのが正しい です。<br>
+Description は、必要なら詳細を書く場所ですが、 あなたの用途なら 空欄で問題なし。</p>
+<hr>
+<p>🙂 タケ：<br>
+コメント入れた。Commit to main　クリックしても反応なし？なんで？</p>
+<br><p>🤖 チャットさん：<br>
+「Commit to main を押しても反応しない」場合、<br>
+GitHub Desktop では よくある5つの原因 のどれかです。<br>
+まずは一番多い順にチェックしてください。</p>
+<hr>
+<p>✔️ 原因①：変更ファイルが1件も選択されていない</p>
+<p>コミットできるのは Changes にチェックが入ったファイルだけ。</p>
+<p>▼ 確認</p>
+<p>GitHub Desktop 左側の 「Changes」 に</p>
+<ul><ul>
+<li>
+<p>ファイル名が並んでいるか</p>
+</li>
+<li>
+<p>それぞれの チェックボックスがON になっているか</p>
+</li>
+</ul></ul>
+<p>を確認。</p>
+<p>▶ 対策</p>
+<p>全部チェックを入れるか<br>
+「Changes」の上のチェック1つで全部ONにできます。</p>
+<hr>
+<p>✔️ 原因②：Add / Commit の操作が “まだ反映されていない状態”</p>
+<p>GitHub Desktop はファイルが更新されても 一瞬、読み込みが遅れる ことがあります。</p>
+<p>▶ 対策</p>
+<ul><ul>
+<li>
+<p>GitHub Desktop を 一度閉じて再起動</p>
+</li>
+<li>
+<p>もう一度 Changes を確認</p>
+</li>
+<li>
+<p>チェックON → Commit</p>
+</li>
+</ul></ul>
+<hr>
+<p>✔️ 原因③：実は Summary が空欄扱いになっている</p>
+<p>見た目では文字が入っていても</p>
+<ul><ul>
+<li>
+<p>全角スペース</p>
+</li>
+<li>
+<p>改行だけ</p>
+</li>
+<li>
+<p>目に見えない文字</p>
+</li>
+</ul></ul>
+<p>これがあると 空欄判定 されます。</p>
+<p>▶ 対策</p>
+<p>Summary を削除して再入力：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>assetsに整理＆リンク修正
+</code></pre><hr>
+<p>✔️ 原因④：現在のブランチが “main” じゃない</p>
+<p>まれに GitHub Desktop が別ブランチになっていることがあります。</p>
+<p>▼ 画面左上のブランチ名を確認</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-Current">Current</span> repository: …
+<span class="token keyword keyword-Current">Current</span> branch: main
+</code></pre><p>これが</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code>main
+</code></pre><p>でなければ Commit できません。</p>
+<p>▶ 対策</p>
+<ul><ul>
+<li>
+<p>別ブランチ → main に切り替え</p>
+</li>
+<li>
+<p>その後 Commit</p>
+</li>
+</ul></ul>
+<hr>
+<p>✔️ 原因⑤：ファイルが “No changes” 扱いになっている</p>
+<p>VS Code 側で保存し忘れ、または GitHub Desktop が差分認識していない状態。</p>
+<p>▶ 対策</p>
+<ol>
+<li>
+<p>VS Code に戻って <code>Ctrl+S</code> で全て保存</p>
+</li>
+<li>
+<p>GitHub Desktop を再起動</p>
+</li>
+<li>
+<p>Changes が表示されるのを確認</p>
+</li>
+<li>
+<p>Commit</p>
+</li>
+</ol>
+<hr>
+<p>✔️ 最速チェック（1分でわかる）</p>
+<ol>
+<li>
+<p>GitHub Desktop → Changes がある？（一覧にファイルが表示？）</p>
+</li>
+<li>
+<p>全部チェック入ってる？</p>
+</li>
+<li>
+<p>Summary は ちゃんと文字？</p>
+</li>
+<li>
+<p>Current branch = main？</p>
+</li>
+<li>
+<p>GitHub Desktop を再起動してみる</p>
+</li>
+</ol>
+<hr>
+<p>🙂 タケ：<br>
+チェックが抜けてた。</p>
+<br><p>🤖 チャットさん：<br>
+それなら原因は完全にそこですね。<br>
+GitHub Desktop は チェックが付いたファイルだけをコミット対象 にする仕組みなので、チェック抜けだと反応しません。<br>
+無事進めてよかった。</p>
+<hr>
+<p>🙂 タケ：<br>
+無事完了しました。どうも。<br>
+ローカルの自宅PCでは同じフォルダに画像、動画データがいるけど、 今後GitHubへは画像、動画はフォルダ選んでアップロードだよね？リンクつなぎ直し？</p>
+<br><p>🤖 チャットさん：<br>
+要点だけ端的にまとめます。</p>
+<hr>
+<p>✔️ 結論</p>
+<p>今後、GitHub へ画像・動画をアップする時は<br>
+“assets/img/” や “assets/mp4/” のフォルダを選んでアップロードすればOK。</p>
+<p>リンクのつなぎ直しは不要。</p>
+<hr>
+<p>✔️ なぜリンク直し不要なのか？</p>
+<p>あなたはすでに HTML 内のパスを：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>assets/img/ファイル名.jpg
+assets/mp4/ファイル名.mp4
+</code></pre><p>という “固定パス” に統一済み。</p>
+<p>GitHub にアップロードする時も 同じフォルダ構造 を維持すれば、<br>
+HTML 側のリンクは一切変更する必要がない。</p>
+<hr>
+<p>✔️ 具体例</p>
+<p>▼ HTML に書いてある：</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>&lt;img src="assets/img/photo001.jpg"&gt;
+</code></pre><p>▼ やるべきアップロード先：</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code>explr-gpt/
+ └── assets/
+      └── img/
+           └── photo001.jpg   ← ここへアップロード
+</code></pre><p>➡ リンクはそのまま生きる。</p>
+<hr>
+<p>✔️ 将来の作業はたった2ステップ</p>
+<p>① ローカルで画像・動画を入れる場所</p>
+<ul><ul>
+<li>
+<p>画像 → <code>assets/img/</code></p>
+</li>
+<li>
+<p>動画 → <code>assets/mp4/</code></p>
+</li>
+</ul></ul>
+<p>② GitHub Desktop で Commit → Push</p>
+<p>これだけで完了。<br>
+HTML はいじらない。</p>
+<hr>
+<p>✔️ 注意点（軽く1つだけ）</p>
+<p>HTML の入るフォルダと assets の相対パスの関係 を変えないこと。</p>
+<p>今の構造：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>/index.html
+/assets/img/<span class="token punctuation">..</span>.
+/assets/mp4/<span class="token punctuation">..</span>.
+</code></pre><p>このまま続ければOK。</p>
+<hr>
+<p>✔️ まとめ</p>
+<ul><ul>
+<li>
+<p>今後は画像・動画を 決めたフォルダに置くだけ</p>
+</li>
+<li>
+<p>GitHub も同じフォルダにアップするだけ</p>
+</li>
+<li>
+<p>リンク修正はもう不要</p>
+</li>
+<li>
+<p>フォルダ構造を変えない限りずっと安定して使える</p>
+</li>
+</ul></ul>
+<br>
+<hr class="section-line">
+<h3 id="-push">📘 Push？ </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+今後は <code>https://github.com/</code> にアップロードではなく「GitHub Desktop で Commit → Push」ということ？</p>
+<br><p>🤖 チャットさん：<br>
+はい、その理解で 完全に正しい です。<br>
+今後は GitHub のWeb上に “直接アップロード” はもう不要 になります。</p>
+<hr>
+<p>✔️ 結論</p>
+<p>これからは：</p>
+<p>「ローカルで作業 → GitHub Desktop で Commit → Push」<br>
+＝ この流れだけでOK。</p>
+<p>Web版 GitHub の「Upload files」ボタンを使う必要はありません。</p>
+<hr>
+<p>✔️ なぜ今後は GitHub Desktop だけでよくなるのか？</p>
+<p>① リポジトリ全体が あなたのPCにclone済み（ローカルコピー）</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;→ PC内のフォルダが “本物のリポジトリと同期している”。</p>
+<p>② 画像・動画・HTML をローカルフォルダに置くだけで</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;→ GitHub Desktop が変更を自動で検出。</p>
+<p>③ Commit → Push すると</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;→ GitHub のオンライン側に一括反映される。</p>
+<p>④ GitHub Pages も自動で更新される</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;（あなたの場合は main ブランチ直公開。）</p>
+<hr>
+<p>✔️ 今後の作業は超シンプルになる</p>
+<p>▼ 例：新しい画像 photo100.jpg を追加したい</p>
+<p>1. ローカルのフォルダに入れる</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>assets/img/photo100.jpg
+</code></pre><p>2. 必要ならHTMLにこう書く</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>&lt;img src="assets/img/photo100.jpg"&gt;
+</code></pre><p>3. GitHub Desktop</p>
+<ul><ul>
+<li>
+<p>Changes に photo100.jpg が出る</p>
+</li>
+<li>
+<p>Commit → Push</p>
+</li>
+</ul></ul>
+<p>👉 これでGitHub側にもアップされ、リンクも全部生きたまま。</p>
+<hr>
+<p>✔️ 逆に Web からアップロードすると崩れる</p>
+<p>Webの「Upload files」を使うと：</p>
+<ul><ul>
+<li>
+<p>assets/img に入れたつもりが実は違う場所に入る</p>
+</li>
+<li>
+<p>フォルダ構造が狂う</p>
+</li>
+<li>
+<p>リンク切れが起きる</p>
+</li>
+<li>
+<p>ローカルとGitHubが食い違い始める（最悪のパターン）</p>
+</li>
+</ul></ul>
+<p>だから Webアップロードはもう使わない方が安全。</p>
+<hr>
+<p>✔️ まとめ</p>
+<table>
+<thead>
+<tr>
+<th>作業</th>
+<th>推奨？</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GitHub Web から Upload files</td>
+<td>❌ 使わない方がいい</td>
+</tr>
+<tr>
+<td>GitHub Desktop → Commit → Push</td>
+<td>◎ 正しい今後のやり方</td>
+</tr>
+<tr>
+<td>VS Code → ローカル編集</td>
+<td>◎ 今まで通り</td>
+</tr>
+<tr>
+<td>assets/ フォルダ運用</td>
+<td>◎ 超安定</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>🙂 タケ：<br>
+んじゃ、今後は画像、動画データはHTMLファイルと同じフォルダに入れるのではなく、HTMLファイルには&lt;img src="assets/img/photo100.jpg"&gt;みたいにリンク先書いて、データ自体はassets/imgやassets/mp4に入れるということ？</p>
+<br><p>🤖 チャットさん：<br>
+はい、その理解で 完全に正しい です。<br>
+要点だけ端的にまとめます。</p>
+<hr>
+<p>✔️ 今後の正しい運用</p>
+<p>① HTML ファイルと画像・動画を同じフォルダに置かない。</p>
+<p>② HTML 内ではこう書く：</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>&lt;img src="assets/img/photo100.jpg"&gt;
+&lt;video src="assets/mp4/movie01.mp4"&gt;
+</code></pre><p>③ 実データは：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>assets/img/   ← jpg・png
+assets/mp4/   ← mp4
+</code></pre><p>に置く（ローカル → GitHub Desktop → Commit → Push）。</p>
+<hr>
+<p>✔️ なぜこの方法が“正しい設計”なのか</p>
+<ul><ul>
+<li>
+<p>リポジトリが きれいに整理される</p>
+</li>
+<li>
+<p>画像や動画が散乱しない</p>
+</li>
+<li>
+<p>フォルダ構造が崩れにくい</p>
+</li>
+<li>
+<p>HTML 側のリンクが常に安定</p>
+</li>
+<li>
+<p>GitHub Pages でもローカルでも同じ動きになる</p>
+</li>
+</ul></ul>
+<hr>
+<p>✔️ まとめ</p>
+<ul><ul>
+<li>
+<p>データは assets/img・assets/mp4 に集約</p>
+</li>
+<li>
+<p>HTML は そこへのパスを書く</p>
+</li>
+<li>
+<p>Webアップロードは使わず、GitHub Desktop → Commit → Push</p>
+</li>
+</ul></ul>
+<p>これが今後のベスト運用です。</p>
+<p>🙂 タケ：<br>
+ん～、実際にやってみながら確認だね。</p>
+<br><p>🤖 チャットさん：<br>
+それが一番確実です。<br>
+実際に手を動かしながら確認すれば、構造や流れがすぐ体に入ります。<br>
+途中で「これ合ってる？」と思ったら、<br>
+スクショやフォルダ構造を軽く送ってくれれば即答します。<br>
+引き続きいつでもどうぞ。</p>
+<br>
+<hr class="section-line">
+<h3 id="-リンク先のつなぎ直し">📘 リンク先のつなぎ直し </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+GitHub Desktopで新しく追加したHTMLファイルのリンク先のつなぎ直しで「Ctrl + Shift + H」を使う場合の手順は？</p>
+<br><p>🤖 チャットさん：<br>
+端的に、新しく追加したHTMLファイルのリンク先を一括修正する手順だけまとめます。<br>
+（すでに assets/img・assets/mp4 に運用を統一済みの前提）</p>
+<hr>
+<p>✔️ 手順（VS Code の「Ctrl + Shift + H」＝フォルダ全体置換）</p>
+<p>① VS Code で「リポジトリ全体」を開く</p>
+<p>GitHub Desktop → Open in VS Code<br>
+（左側に HTML／assets フォルダが全部見えている状態）</p>
+<hr>
+<p>② 「Ctrl + Shift + H」押す</p>
+<p>→ VS Code 下部に 「検索と置換（フォルダ全体）」 ウィンドウが開く。</p>
+<hr>
+<p>③ 検索欄に「置換前のパターン」を入力</p>
+<p>画像用：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;img src="
+</code></pre><p>動画用：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;video src="
+</code></pre><hr>
+<p>④ 置換欄に「置換後のパターン」を入力</p>
+<p>画像用（jpg/png）：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;img src="assets/img/
+</code></pre><p>動画用（mp4）：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;video src="assets/mp4/
+</code></pre><hr>
+<p>⑤ 「検索」枠の右側で対象フォルダを確認</p>
+<p>● 左側のチェックボックス</p>
+<ul><ul>
+<li>
+<p>「すべてのファイル」</p>
+</li>
+<li>
+<p>または 「explr-gpt フォルダ」<br>
+になっていればOK。</p>
+</li>
+</ul></ul>
+<hr>
+<p>⑥ プレビューを確認する</p>
+<p>VS Code は “置換される行” を一覧表示してくれる。</p>
+<p>チェックするところ：</p>
+<ul><ul>
+<li>
+<p>新しく追加した HTML が対象に入っているか</p>
+</li>
+<li>
+<p>正しく <code>assets/img/</code> に差し込まれてるか</p>
+</li>
+</ul></ul>
+<hr>
+<p>⑦ 問題なければ「すべて置換」</p>
+<p>右上の 「Replace All（すべて置換）」 をクリック。</p>
+<hr>
+<p>⑧ HTML を1つ開いて動作確認</p>
+<p>例：</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>&lt;img src="assets/img/yourfile.jpg"&gt;
+&lt;video src="assets/mp4/yourmovie.mp4"&gt;
+</code></pre><p>正しくパスが入っていればOK。</p>
+<hr>
+<p>⑨ GitHub Desktop で Commit → Push</p>
+<p>まとめて反映される。</p>
+<hr>
+<p>✔️ 重要な注意点（1つだけ）</p>
+<p>❗ フォルダ構成を変えた後は 必ず置換作業が必要</p>
+<p>新しいHTMLファイルを追加した時は、</p>
+<ul><ul>
+<li>
+<p>ローカルの HTML は通常「ファイル名だけ」で参照される<br>
+例：</p>
+<pre data-role="codeBlock" data-info="php-template" class="language-php-template php-template"><code>&lt;img src="photo100.jpg"&gt;
+</code></pre></li>
+<li>
+<p>だから、置換で assets/img/ を差し込む必要がある</p>
+</li>
+</ul></ul>
+<hr>
+<p>✔️ 今日以降の運用（最短）</p>
+<p>HTMLファイル追加 →</p>
+<p>VS Code で開く →</p>
+<p>Ctrl + Shift + H →</p>
+<p><code>src="</code> を <code>src="assets/img/</code> や <code>src="assets/mp4/</code> に差し込む →</p>
+<p>Commit → Push</p>
+<p>これだけで完全に回る。</p>
+<hr>
+<p>必要なら、あなたのリポジトリ専用の置換テンプレ（コピペだけで使える） も作れます。</p>
+<br>
+<hr class="section-line">
+<h3 id="-毎回-clone-必要">📘 毎回 clone 必要？ </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+新ファイルのアップロードはGitHub Desktopからって言ってたけど、その前に毎回GitHubページで「Open with GitHub Desktop」を押して clone するのが必要なの？</p>
+<br><p>🤖 チャットさん：<br>
+結論から端的に。</p>
+<hr>
+<p>✔️ いいえ。毎回 clone する必要はありません。</p>
+<p>clone は 最初の1回だけ。</p>
+<hr>
+<p>✔️ 今後の正しい流れ（超重要）</p>
+<p>✅ 最初の一度だけ</p>
+<p>GitHub ページ → Open with GitHub Desktop<br>
+→ clone</p>
+<p>これで、あなたのPCに</p>
+<pre data-role="codeBlock" data-info="makefile" class="language-makefile makefile"><code><span class="token target symbol">C</span><span class="token punctuation">:</span>\Users\あなた\Documents\GitHub\explr-gpt\
+</code></pre><p>という ローカルリポジトリ が作られる。</p>
+<hr>
+<p>✅ 2回目以降は もう clone しない</p>
+<p>今後はずっと：</p>
+<ol>
+<li>
+<p>ローカルフォルダに新しいHTML／画像／動画を追加</p>
+</li>
+<li>
+<p>GitHub Desktop が自動で「Changes」として検出</p>
+</li>
+<li>
+<p>Commit to main</p>
+</li>
+<li>
+<p>Push origin</p>
+</li>
+</ol>
+<p>これでOK。</p>
+<hr>
+<p>✔️ なぜ clone は1回でいいのか？</p>
+<p>clone は</p>
+<blockquote>
+<p>ネット上のリポジトリをあなたのPCにコピーして同期する<br>
+ための「初期設定」。</p>
+</blockquote>
+<p>一度 clone すれば、<br>
+あなたのPCのフォルダは オンラインと双方向でつながっている状態 になるから、<br>
+以後は：</p>
+<ul><ul>
+<li>
+<p>ファイル追加</p>
+</li>
+<li>
+<p>フォルダ整理</p>
+</li>
+<li>
+<p>HTML修正</p>
+</li>
+</ul></ul>
+<p>全部 ローカルで行って → Commit → Push だけで反映される。</p>
+<hr>
+<p>✔️ 間違った理解（よくある）</p>
+<blockquote>
+<p>新しいファイル追加のたびに clone し直す？</p>
+</blockquote>
+<p>これは 完全に不要。</p>
+<p>clone し直すと<br>
+ローカルリポジトリが毎回リセットされてしまい逆に危険。</p>
+<hr>
+<p>✔️ まとめ</p>
+<ul><ul>
+<li>
+<p>clone は最初の1回だけ</p>
+</li>
+<li>
+<p>以後の作業はすべてローカルで行う</p>
+</li>
+<li>
+<p>GitHub Desktop<br>
+→ Commit<br>
+→ Push<br>
+でアップロード完了</p>
+</li>
+<li>
+<p>GitHub WebからUpload filesはもう使わない（食い違いの元）</p>
+</li>
+</ul></ul>
+<hr class="section-line">
+<h3 id="-自動認識">📘 自動認識 </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+GitHub Desktop では追加ファイル自動認識してるのに、VS Codeでは認識されないの？</p>
+<br><p>🤖 チャットさん：<br>
+思考時間: 18s</p>
+<p>いい質問です。結論からいうと：</p>
+<blockquote>
+<p>GitHub Desktop が見えている追加ファイルは、本来 VS Code でも見えるはず<br>
+なので、見えないときは「同じフォルダを開いていない」がほぼ原因です。</p>
+</blockquote>
+<hr>
+<p>✔️ 仕組みの違いを一言で</p>
+<ul><ul>
+<li>
+<p>GitHub Desktop<br>
+→ 「Git管理されているフォルダ」の中の変化を見ている</p>
+</li>
+<li>
+<p>VS Code<br>
+→ 「あなたが今開いているフォルダ」の中身だけを見ている</p>
+</li>
+</ul></ul>
+<p>どちらもローカルの同じフォルダを見ていれば、<br>
+追加したHTMLは両方に出ます。</p>
+<hr>
+<p>✔️ こうなっていないかチェック</p>
+<ol>
+<li>
+<p>VS Code で開いているフォルダが
+<code>explr-gpt</code> ではなく、<br>
+その中のサブフォルダや別フォルダになっている</p>
+<ul><ul>
+<li>例：<code>C:\Users\...\MD_TEST\</code> を開いたまま など</li>
+</ul></ul>
+</li>
+<li>
+<p>GitHub Desktop で clone したフォルダと、<br>
+VS Code で開いているフォルダのパスが違う</p>
+</li>
+</ol>
+<hr>
+<p>✔️ 一番確実な合わせ方</p>
+<ol>
+<li>
+<p>GitHub Desktop を開く</p>
+</li>
+<li>
+<p>上メニューの<br>
+<code>Repository → Open in Visual Studio Code</code> をクリック<br>
+👉 これで VS Code が「GitHub Desktop と同じフォルダ」で開く</p>
+</li>
+</ol>
+<p>これをやれば、<br>
+GitHub Desktop で Changes に出ている HTML は、<br>
+VS Code 左側のエクスプローラーにも必ず出てきます。</p>
+<hr>
+<p>✔️ それでも見えないときの最終手段</p>
+<p>VS Code で：</p>
+<ol>
+<li>
+<p><code>Ctrl + Shift + P</code></p>
+</li>
+<li>
+<p><code>Reload Window</code> と入力 → Enter</p>
+</li>
+</ol>
+<p>ウィンドウ再読み込みすると、ファイル一覧が更新されます。</p>
+<hr>
+<p>まとめると：</p>
+<ul><ul>
+<li>
+<p>GitHub Desktop が認識してる＝ローカルにはファイルがある</p>
+</li>
+<li>
+<p>VS Code で見えない＝別フォルダを開いている可能性大</p>
+</li>
+<li>
+<p>GitHub Desktop から「Open in VS Code」でそろえるのが確実</p>
+</li>
+</ul></ul>
+<p>この状態でまたわからない動きがあれば、<br>
+VS Code の左側のフォルダ名（パス）を教えてくれれば、そこから絞り込みます。</p>
+<br>
+<hr class="section-line">
+<h3 id="-追加ファイルマーク">📘 追加ファイルマーク </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+GitHub Desktop で Changes に出ている HTML は、VS Code 左側のエクスプローラーにも必ず出てきます。<br>
+⇒出てきているけど、GitHub Desktopのような追加されたマークみたいなものはないの？<br>
+追加ファイルが10個くらいあるのでファイル名のコピペでも面倒。<br>
+対象にしたい HTML だけチェックを入れる方法を詳しくお願い。</p>
+<br><p>🤖 チャットさん：<br>
+思考時間: 27s</p>
+<p>いいところに気づきました。<br>
+ちゃんと「追加ファイルだけ」に効かせたいですよね。</p>
+<hr>
+<p>1️⃣ VS Codeにも「追加ファイルマーク」はある？</p>
+<p>はい、あります。</p>
+<ul><ul>
+<li>
+<p>左のエクスプローラーで</p>
+<ul>
+<li>
+<p>U … 未追跡（新規ファイル）</p>
+</li>
+<li>
+<p>M … 変更あり<br>
+みたいなマークがファイル名の右に付きます（色も少し変わる）。</p>
+</li>
+</ul>
+</li>
+</ul></ul>
+<p>※ Git連携がONになっていれば自動で出ます。</p>
+<p>ただし GitHub Desktopみたいに一覧でチェックを付けるUIはない です。<br>
+（前に「チェック入れる」と言ったのは、VS Codeには無い挙動なので訂正させてください🙏）</p>
+<hr>
+<p>2️⃣ 「新しく追加したHTMLだけ」を一括置換する現実的なやり方</p>
+<p>全体の流れ</p>
+<ol>
+<li>
+<p>追加したHTMLだけをまとめて開く</p>
+</li>
+<li>
+<p>検索範囲を「開いているファイルだけ」に絞って一括置換</p>
+</li>
+</ol>
+<p>これなら、ファイル名を1個ずつ <code>files to include</code> に書かなくて済みます。</p>
+<hr>
+<p>🔹 手順A：追加HTMLだけをまとめて開く</p>
+<ol>
+<li>
+<p>VS Code 左のサイドバーで<br>
+ソース管理（Source Control）アイコン をクリック<br>
+（三本線＋●みたいなアイコン）</p>
+</li>
+<li>
+<p><code>CHANGES</code> のところに<br>
+新規 HTML（Uマーク付き）が並んでいるので</p>
+<ul><ul>
+<li>Ctrl を押しながらクリックして、対象のHTMLを全部選択</li>
+</ul></ul>
+</li>
+<li>
+<p>右クリック → 「Open Selected Files」（または似た名前）</p>
+</li>
+</ol>
+<p>👉 これで 追加HTMLだけがタブとして全部開いた状態 になります。</p>
+<hr>
+<p>🔹 手順B：開いているファイルだけを検索・置換</p>
+<ol>
+<li>
+<p><code>Ctrl + Shift + H</code> を押して「ファイルをまたぐ置換」を開く</p>
+</li>
+<li>
+<p>検索欄・置換欄にはいつものように入力</p>
+<p>例：画像リンクなら</p>
+<ul><ul>
+<li>
+<p>検索：<code>&lt;img src="</code></p>
+</li>
+<li>
+<p>置換：<code>&lt;img src="assets/img/</code></p>
+</li>
+</ul></ul>
+</li>
+<li>
+<p>置換パネルの右上あたりにある<br>
+「Open Editors だけを対象にするアイコン」（ファイルが3枚重なったようなマーク）<br>
+をクリックして ON にする</p>
+<p>→ 「開いているファイルだけ検索する」モードになります。</p>
+</li>
+<li>
+<p>その状態で Replace All（すべて置換） を実行</p>
+</li>
+</ol>
+<p>👉 こうすると、いまタブで開いている追加HTMLだけ が置換対象になります。</p>
+<hr>
+<p>3️⃣ まとめ</p>
+<ul><ul>
+<li>
+<p>VS Code でも「U / M」のGitマークで追加ファイルは分かる</p>
+</li>
+<li>
+<p>でも GitHub Desktop みたいなチェックボックスはない</p>
+</li>
+<li>
+<p>代わりに</p>
+<ol>
+<li>
+<p>追加HTMLだけまとめて開く</p>
+</li>
+<li>
+<p>「開いているファイルだけ検索」のモードで <code>Ctrl+Shift+H</code><br>
+という2ステップで、新規HTMLだけ一括置換 ができる</p>
+</li>
+</ol>
+</li>
+</ul></ul>
+<hr class="section-line">
+<h3 id="-前提となる設定">📘 前提となる設定 </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+VS Code のソース管理で「Windows用のGitのダウンロード」ってあるけど？</p>
+<br><p>🤖 チャットさん：<br>
+結論から端的に。</p>
+<hr>
+<p>✔️ それ、まだ “Git 本体” が PC に入っていないサインです。</p>
+<p>VS Code のソース管理パネルに<br>
+「Windows 用の Git をダウンロード」<br>
+と出るのは、</p>
+<ul><ul>
+<li>
+<p>GitHub Desktop は入っている</p>
+</li>
+<li>
+<p>でも Git（本体） は未インストール</p>
+</li>
+<li>
+<p>VS Code は Git 本体が必要なので警告を出す</p>
+</li>
+</ul></ul>
+<p>という状態。</p>
+<hr>
+<p>✔️ GitHub Desktop と Git 本体は別物</p>
+<ul><ul>
+<li>
+<p>GitHub Desktop → GUIツール（操作画面）</p>
+</li>
+<li>
+<p>Git（本体） → コマンドラインの Git（VS Code はこれを使う）</p>
+</li>
+</ul></ul>
+<p>GitHub Desktop があっても、<br>
+VS Code は Git 本体が無いと連携機能が使えない。</p>
+<hr>
+<p>✔️ 対処（最短）</p>
+<p>以下から Git（本体）をダウンロードして実行するだけ：</p>
+<p>👉 <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+<p>インストーラーを起動して、<br>
+全部そのまま「Next」「Next」だけでOK。</p>
+<p>設定変更は不要です。</p>
+<hr>
+<p>✔️ インストール後</p>
+<p>VS Code を再起動すると：</p>
+<ul><ul>
+<li>
+<p>ソース管理が使える</p>
+</li>
+<li>
+<p>追加／変更ファイルに U / M のマークが付く</p>
+</li>
+<li>
+<p>一括置換の範囲指定で “Git 管理ファイルだけ” をフィルターできる<br>
+などが正常に動きます。</p>
+</li>
+</ul></ul>
+<hr>
+<p>✔️ まとめ</p>
+<ul><ul>
+<li>
+<p>「Windows用 Git のダウンロード」は Git本体が未インストールのサイン</p>
+</li>
+<li>
+<p>GitHub Desktopとは別物</p>
+</li>
+<li>
+<p>Git をインストールすれば VS Code のソース管理が正常化する</p>
+</li>
+</ul></ul>
+<hr>
+<p>🤖 チャットさん：<br>
+入れてしまえばその後は何も操作不要なので、<br>
+安心してインストールしてOKです。</p>
+<br><p>🙂 タケ：<br>
+こっちはド素人なんだから、そもそもの前提となる設定から教えてくれないと、そりゃできないよね。</p>
+<br><p>🤖 チャットさん：<br>
+たしかに、今までの流れは<br>
+「Gitが既に入っていて、VS Code と GitHub Desktop が正しく連携している前提」<br>
+で説明してしまっていました。</p>
+<p>その前提が抜けていたら、できないのは当然です。<br>
+あなたのせいじゃなく、こっちの説明不足です。</p>
+<p>ここからは “ど素人前提の初期セットアップ” をゼロから、<br>
+余計な前提なしでまとめます。</p>
+<hr>
+<p>✔️ 最初に整えるべき“正しい環境”</p>
+<p>（この4つが揃えば、あなたがやってきた作業は全部スムーズに動く）</p>
+<p>① GitHub Desktop（入っている）</p>
+<p>→ これはもうOK。<br>
+→ clone や commit ができる状態。</p>
+<p>② Git（本体）← ここが抜けていた</p>
+<p>→ VS Code が Git と連携するために必要。<br>
+→ 入っていないと VS Code がファイルの変更を理解できない。</p>
+<p>ダウンロード（公式）：<br>
+<a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a><br>
+→ インストールは 全部そのままNextでOK。</p>
+<p>③ VS Code</p>
+<p>→ 編集するためのエディタ<br>
+→ Git（本体）が入ることで “追加ファイル” や “変更ファイル” が正しく表示されるようになる。</p>
+<p>④ VS Code で 正しいフォルダ（clone済みのリポジトリ） を開く</p>
+<p>これができていないと、</p>
+<ul><ul>
+<li>
+<p>GitHub Desktopで見えてるファイル</p>
+</li>
+<li>
+<p>VS Codeで見えてるファイル<br>
+がズレてしまう。</p>
+</li>
+</ul></ul>
+<p>最も確実な開き方：</p>
+<p>GitHub Desktop →<br>
+上メニュー Repository → Open in Visual Studio Code</p>
+<p>→ これだけで、VS Code が必ず “正しいフォルダ” を開く。</p>
+<hr>
+<p>✔️ この4つが揃うとこうなる</p>
+<ul><ul>
+<li>
+<p>VS Code 左側に<br>
+追加ファイルは U マーク<br>
+変更ファイルは M マーク<br>
+が付く</p>
+</li>
+<li>
+<p>Ctrl + Shift + H の「検索範囲設定」が正常に動く</p>
+</li>
+<li>
+<p>GitHub Desktop と VS Code が連携</p>
+</li>
+<li>
+<p>追加HTMLだけを抽出して一括置換できる</p>
+</li>
+<li>
+<p>画像＆動画フォルダ整理が確実になる</p>
+</li>
+</ul></ul>
+<hr>
+<p>✔️ 正直にいうと…</p>
+<p>あなたが今まで<br>
+「VS Code でファイルが見えない」<br>
+「新規HTMLだけ絞れない」<br>
+と苦戦していた理由はほぼ間違いなく：</p>
+<p>Git（本体）が入ってない状態で VS Code を使ってたため。</p>
+<p>これは“できないのが当然”の状況でした。</p>
+<hr>
+<p>✔️ 次に何をすればいいか（最短）</p>
+<p>ここだけやれば環境が完成します：</p>
+<ol>
+<li>Git（本体）をインストール</li>
+</ol>
+<p><a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;→ Next連打でOK<br>
+&nbsp;&nbsp;&nbsp;&nbsp;→ VS Code 再起動</p>
+<ol start="2">
+<li>GitHub Desktop → Repository → Open in VS Code</li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;→ 必ず clone済みのフォルダが開く</p>
+<ol start="3">
+<li>追加HTMLが U マークで見えるか確認</li>
+</ol>
+<p>ここまで行けば、<br>
+追加HTMLだけ一括置換、<br>
+assets/img や assets/mp4 の完璧運用<br>
+ができるようになります。</p>
+<br>
+<hr class="section-line">
+<h3 id="-indexhtml-の修正は">📘 index.html の修正は？ </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+&nbsp;目次追加でindex.htmlも修正したいんだけど、それも GitHub Desktop からやるの？</p>
+<br><p>🤖 チャットさん：<br>
+端的にまとめます。</p>
+<hr>
+<p>✔️ はい。index.html の修正も GitHub Desktop 経由でやるのが正しいやり方です。</p>
+<p>理由は simple：</p>
+<ul><ul>
+<li>
+<p>GitHub にあるページのソース（index.html）は “ローカルの clone フォルダ” に保存されている</p>
+</li>
+<li>
+<p>だから ローカルで index.html を編集 → 保存 → GitHub Desktop で Commit → Push</p>
+</li>
+<li>
+<p>これだけで GitHub Pages 側にも反映される</p>
+</li>
+</ul></ul>
+<p>つまり、</p>
+<hr>
+<p>✔️ 今後の HTML 更新手順はすべて統一で OK</p>
+<p>① VS Code で</p>
+<p><code>explr-gpt/index.html</code> を開く<br>
+&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+目次追加など編集<br>
+&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+保存（Ctrl+S）</p>
+<p>② GitHub Desktop</p>
+<ul><ul>
+<li>
+<p>変更ブロックに index.html（Mマーク） が出る</p>
+</li>
+<li>
+<p>Summary（必須）にコメント入れる</p>
+</li>
+<li>
+<p>Commit to main</p>
+</li>
+<li>
+<p>Push origin</p>
+</li>
+</ul></ul>
+<p>③ GitHub Pages が自動更新</p>
+<p>数秒〜十数秒で<br>
+<a href="https://55blechat.github.io/explr-gpt/?utm_source=chatgpt.com">https://55blechat.github.io/explr-gpt/</a><br>
+に反映される</p>
+<hr>
+<p>✔️ GitHub Web 上の編集はもう不要（使わないほうが安全）</p>
+<p>理由：</p>
+<ul><ul>
+<li>
+<p>Web 上で編集すると ローカルと GitHub がずれる</p>
+</li>
+<li>
+<p>VS Code と GitHub Desktop の同期が崩れる</p>
+</li>
+<li>
+<p>assets フォルダやリンク修正と相性が悪い</p>
+</li>
+</ul></ul>
+<p>なので、以後の編集は全部 “ローカル → GitHub Desktop → Push” の流れで統一。</p>
+<hr>
+<p>✔️ index.html の修正でよくある質問（先に答えます）</p>
+<p>◆ Q1：サイドバー（フォルダ一覧）で index.html が見える？</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;→ GitHub Desktop → Repository → Open in VS Code で開けば必ず見える。</p>
+<p>◆ Q2：index.html を上書きしていいの？</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;→ OK（GitHub Pages は main ブランチの index.html をそのまま使うため）。</p>
+<p>◆ Q3：複数HTMLを追加した場合も？</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;→ すべて ローカルで編集 → commit → push。</p>
+<hr>
+<p>✔️ まとめ</p>
+<p>目次追加も、デザイン変更も、HTML修正も全部 GitHub Desktop 経由。<br>
+Webから編集しないのがベスト。</p>
+<hr>
+<p>🙂 タケ：<br>
+できた。流れ、手順がつかめると便利だね。</p>
+<br>
+<br><p>🤖 チャットさん：<br>
+よかった。<br>
+ここまでの流れを一度つかむと、GitHub Pages の編集が一気にプロレベルで安定します。</p>
+<p>今のあなたの環境は：</p>
+<ul><ul>
+<li>
+<p>ローカルで VS Code 編集</p>
+</li>
+<li>
+<p>→ GitHub Desktop が自動検出</p>
+</li>
+<li>
+<p>→ Commit → Push で公開</p>
+</li>
+</ul></ul>
+<p>つまり、<br>
+Webサイトの本格的な更新フローが完成している状態。</p>
+<p>正直、この仕組みを理解できた時点で GitHub Pages 運用はもう怖くないです。<br>
+また次にやりたいことが出たらいつでも。</p>
+
+      </div>
+      <div class="md-sidebar-toc">
+                                 <h4 style="color: #dcdcdc; text-align: left; margin: 0 0 1em 40px;">091<br>GitHub Desktop</h4>        
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-フォルダ仕分けできる" class="md-toc-link">
+            <p>📘 フォルダ仕分けできる？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-リポジトリ全体" class="md-toc-link">
+            <p>📘 リポジトリ全体？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-手元のpcに-clone" class="md-toc-link">
+            <p>📘 手元のPCに clone？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-github-desktop-インストール" class="md-toc-link">
+            <p>📘 GitHub Desktop インストール</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-リンクの確認" class="md-toc-link">
+            <p>📘 リンクの確認</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-反応ないよ" class="md-toc-link">
+            <p>📘 反応ないよ</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-push" class="md-toc-link">
+            <p>📘 Push？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-リンク先のつなぎ直し" class="md-toc-link">
+            <p>📘 リンク先のつなぎ直し</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-毎回-clone-必要" class="md-toc-link">
+            <p>📘 毎回 clone 必要？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-自動認識" class="md-toc-link">
+            <p>📘 自動認識</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-追加ファイルマーク" class="md-toc-link">
+            <p>📘 追加ファイルマーク</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-前提となる設定" class="md-toc-link">
+            <p>📘 前提となる設定</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-indexhtml-の修正は" class="md-toc-link">
+            <p>📘 index.html の修正は？</p>
+
+          </a></div>
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+         <div style="padding-bottom:100px;"></div> 
+
+    </body></html>
