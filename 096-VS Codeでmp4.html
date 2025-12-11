@@ -1,0 +1,1131 @@
+<!DOCTYPE html><html><head>
+      <title>096-VS Codeでmp4</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\trypr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#969896;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#FF8C00}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#969896}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#FF8C00}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#FF8C00}.language-markup .token.tag .token.punctuation{color:#969896}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#FF8C00}.language-ruby .token.function{color:#969896}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#FF8C00}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#969896;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:8px solid #47355e
+}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+body {
+  background-color: #111 !important;
+  color: #dcdcdc !important;
+}
+a {
+  color: #8ab4f8;
+}
+/* 一般的なhrスタイル（デフォルト） */
+hr {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #444 !important;
+  margin: 1em 0 !important;
+}
+/* 特定の章区切り用 */
+hr.section-line  {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #dcdcdc !important;
+  margin: 1em 0 !important;
+}
+.markdown-preview > ul {
+  list-style: none;
+  padding-left: 0;
+}
+.md-toc-link-wrapper {
+  list-style: none !important;
+}
+
+/* ← ここから追加 */
+h1, h2, h3, h4, h5, h6,
+th, td,
+strong, em, b, i,
+blockquote,
+.markdown-preview .md-toc p,
+.markdown-preview .md-toc-link,
+.markdown-preview .md-toc-link div,
+.markdown-preview .md-toc-link p {
+  color: #dcdcdc !important;
+}
+
+blockquote {
+  background-color: #112233 !important;
+}
+
+pre, code {
+  background-color: #112233 !important;
+  color: #dcdcdc !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important; 
+  font-size: 15px !important; 
+}
+
+th, td {
+  background-color: #111 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  word-break: break-word;
+}
+
+
+/* 左サイドバー目次とその中の文字を白に */
+body[html-show-sidebar-toc] .md-sidebar-toc,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link p,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link div,
+.md-toc-link-wrapper .md-toc-link,
+.markdown-preview ul li a {
+  color: #dcdcdc !important;
+}
+
+   p {
+    margin-bottom: 0 !important;
+  }
+  ul {
+    margin-top: 0 !important;
+  }
+
+    ol li ul {
+    padding-left: 1em;  /* ←これを調整する！デフォルトより小さく */
+    margin-left: 0;
+  }
+
+.indent-wrap {
+  display: block;
+  padding-left: 1em;       /* 全体を右にずらす */
+  text-indent: -1em;       /* 1行目だけ左に戻す */
+}
+
+.indent-wrap.large {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+.indent-wrap.large2 {
+  padding-left: 2.0em;
+  text-indent: -2.0em;
+}
+
+.highlight {
+  background-color: #112233 !important;
+}
+
+
+.markdown-preview ol,
+.markdown-preview ol ol,
+.markdown-preview ul ol {
+  list-style-type: decimal !important;
+}
+
+/* 最上階のul（インデントもマーカーも消す） */
+ul {
+  list-style-type: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* ol の中だろうが ul の中だろうが全部黒丸+インデント */
+ul ul {
+  list-style-type: disc !important;
+  padding-left: 1.5em !important;
+  margin-left: 0 !important;
+}
+
+/* ▼ここからテスト用スタイル（スマホ幅確認用） */
+/* <div class="crossnote markdown-preview　test-narrow">⇒幅狭表示 */
+/* <div class="crossnote markdown-preview">⇒通常表示 */  
+.test-narrow {
+  width: 440px;
+  margin: 0 auto;
+  outline: 1px dashed red;
+}
+
+
+
+/* 横スクは親だけに任せる */
+.hscroll{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* 不要ならOK：見た目の余白としては残しても可だが、
+     スクロール幅には効かないブラウザがある */
+  /* padding-right: 12px; */
+}
+
+/* 内側に“実体のある”余白を作る → これがスクロール幅に含まれる */
+.hscroll-inner{
+  display: inline-block;    /* 中身の横幅＝スクロール幅になる */
+  padding-right: 16px;      /* ★ 末尾の見えしろを確保（値はお好みで） */
+}
+
+/* テーブル本体はスクロールさせない */
+.hscroll > .hscroll-inner > table{
+  display: inline-table;
+  table-layout: auto;
+  border-collapse: separate; /* ★ 右端の罫線が潰れにくい */
+  border-spacing: 0;         /* collapseの代わりに間隔ゼロ */
+  width: max-content;
+  max-width: none;
+  overflow: visible;         /* 子にバーを出させない */
+}
+
+/* 右端の罫線を確実に見せたい場合（任意） */
+.hscroll > .hscroll-inner > table{
+  border-right: 1px solid #444; /* 罫線が背景に溶ける場合は色調整 */
+}
+
+/* セル内は適度に折り返す（必要なら列ごとに max-width） */
+.hscroll > .hscroll-inner > table th,
+.hscroll > .hscroll-inner > table td{
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  /* 例：長文列を読みやすくしたい場合 */
+  max-width: 200px; 
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      <h2>096<br>VS Codeでmp4</h2>  
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#-html%E5%8C%96%E3%81%AA%E3%81%97%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B">📘 HTML化なしでできる？</a></li>
+<li><a href="#-%E5%88%A5%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%A7%E3%81%A7%E3%81%8D%E3%81%9F">📘 別のコマンドでできた</a></li>
+<li><a href="#-mpe-%E3%81%A7%E3%81%AF%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%8B%E3%81%A3%E3%81%9F">📘 MPE ではできなかった</a></li>
+<li><a href="#-%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B7%E3%83%96%E3%81%AA%E7%94%BB%E9%9D%A2%E8%A1%A8%E7%A4%BA%E5%B9%85">📘 レスポンシブな画面表示幅</a></li>
+<li><a href="#-%E6%9B%B8%E3%81%8D%E5%87%BA%E3%81%97%E7%94%A8%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3">📘 書き出し用アイコン</a></li>
+<li><a href="#-html%E5%8C%96%E3%81%97%E3%81%9F%E3%82%89">📘 HTML化したら</a></li>
+</ul>
+<p>注記：本記事はGPT-4o期の対話ログをもとにしています。</p>
+<hr class="section-line">
+<h3 id="-html化なしでできる">📘 HTML化なしでできる？ </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+VS Codeでのmp4はやっぱり、HTML化しないといけないんだよね。<br>
+pluginとかあるのかな？</p>
+<br><p>🤖 チャットさん：<br>
+うん、基本的に VS Code 単体では <code>.mp4</code> を直接「再生」する機能はない。<br>
+なので、MarkdownやHTMLファイル内に埋め込んでブラウザで見る、という形が主流。</p>
+<p>でも、再生できるようにする方法はいくつかあるよ！👇</p>
+<hr>
+<p>✅ 方法1：HTML化して動画埋め込み（王道）</p>
+<p>MarkdownやHTMLファイルに以下のようなタグを使って <code>.mp4</code> を埋め込む：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>video.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>640<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>これを <code>.html</code> ファイルにして 右クリック →「ブラウザで開く」 で再生できる。</p>
+<hr>
+<p>✅ 方法2：Markdown内で動画を埋め込む（拡張機能あり）</p>
+<p>Markdown標準では <code>.mp4</code> 埋め込みはサポートされていないけど、以下の拡張機能を入れると可能になることがある：</p>
+<p>🔌 拡張機能候補：</p>
+<table>
+<thead>
+<tr>
+<th>拡張機能</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Markdown Preview Enhanced</td>
+<td><code>.mp4</code> のようなローカル動画ファイルを埋め込んで再生可能。表示もきれい。</td>
+</tr>
+<tr>
+<td>Live Server</td>
+<td><code>.html</code> ファイルを即座にブラウザでプレビューできる。ローカルの <code>.mp4</code> 再生にも対応。</td>
+</tr>
+<tr>
+<td>VS Code Markdown Preview</td>
+<td>標準プレビューより高機能だが、動画サポートは限定的。</td>
+</tr>
+</tbody>
+</table><br>
+<p>✅ 方法3：VS Code 外で動画だけ確認</p>
+<ul><ul>
+<li>
+<p>単純に動画を 外部プレイヤーで開く（VLCなど）</p>
+</li>
+<li>
+<p>HTMLファイルに埋め込んでLive Serverなどで確認</p>
+</li>
+</ul></ul>
+<hr>
+<p>🔁 補足：HTML化しないといけないの？</p>
+<table>
+<thead>
+<tr>
+<th>目的</th>
+<th>HTML化必要？</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ブラウザで埋め込み再生したい</td>
+<td>✅ 必要</td>
+</tr>
+<tr>
+<td>VS Code上で動画のプレビューをしたい</td>
+<td>✅ Markdown Preview Enhanced などが必要</td>
+</tr>
+<tr>
+<td>VS Codeからローカル再生できればOK</td>
+<td>❌ エクスプローラで再生すればいい</td>
+</tr>
+</tbody>
+</table><br>
+<p>✅ まとめ：目的別おすすめ</p>
+<table>
+<thead>
+<tr>
+<th>やりたいこと</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VS Code内で <code>.mp4</code> をプレビューしたい</td>
+<td><code>Markdown Preview Enhanced</code> 拡張機能</td>
+</tr>
+<tr>
+<td>ちゃんとHTMLで整えて動画付きにしたい</td>
+<td><code>HTMLタグ＋Live Server</code></td>
+</tr>
+<tr>
+<td>ファイルの確認だけでいい</td>
+<td>エクスプローラーから再生でOK</td>
+</tr>
+</tbody>
+</table><br>
+<hr>
+<p>🙂 タケ：<br>
+Markdown Preview Enhancedもなんか種類があるでしょ？tocだったり、cssだったり。<br>
+mp4の場合どうすればいい？</p>
+<br><p>🤖 チャットさん：<br>
+そうそう、「Markdown Preview Enhanced（MPE）」 にはいろいろ機能モリモリで最初わかりにくいんだよね。<br>
+でも、<code>.mp4</code> の再生に必要なのは、シンプルで、以下だけ押さえておけばOK！</p>
+<hr>
+<p>✅ 結論：mp4再生に必要な手順（Markdown Preview Enhanced使用）</p>
+<p>🔧 前提準備</p>
+<ol>
+<li>拡張機能をインストール：<br>
+<code>Markdown Preview Enhanced</code> by Yiyi Wang ←これが正解！<br>
+VS Code のマーケットプレイスで「MPE」や「Markdown Preview Enhanced」で検索。</li>
+</ol>
+<hr>
+<p>📁 フォルダ構成（例）</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code>project-folder/
+├── sample.md
+└── video.mp4
+</code></pre><hr>
+<p>📝 sample.md</a> の中身（MPE用の記法）</p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code><span class="token title important"><span class="token punctuation">###</span> 動画テスト</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./video.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>640<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">&gt;</span></span>
+</code></pre><ul><ul>
+<li>
+<p>HTMLタグがそのまま使える！</p>
+</li>
+<li>
+<p><code>controls</code> で再生・一時停止ボタンが出る</p>
+</li>
+</ul></ul>
+<hr>
+<p>▶ 表示方法</p>
+<ol>
+<li>
+<p>Markdownファイル（例：sample.md）を開く</p>
+</li>
+<li>
+<p><code>Ctrl + Shift + V</code> ではなく、コマンドパレットから：</p>
+<pre data-role="codeBlock" data-info="pgsql" class="language-pgsql pgsql"><code>Markdown Preview Enhanced: Open Preview to the Side
+</code></pre><p>または <code>⇧ Shift + ⌘ Cmd + V</code>（Mac）／ <code>Ctrl + K, V</code>（Win）でMPEのプレビューを表示</p>
+</li>
+</ol>
+<p>👉 通常のMarkdownプレビューとは別物！</p>
+<hr>
+<p>✅ 注意点</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.mp4</code> の再生</td>
+<td>ローカルパスOK（ファイルと同じディレクトリ推奨）</td>
+</tr>
+<tr>
+<td><code>&lt;video&gt;</code> タグ必須</td>
+<td>Markdown形式（<code>![]()</code>）では動かない</td>
+</tr>
+<tr>
+<td>外部URLのmp4</td>
+<td>ブラウザによって再生できない場合あり（CORS制限など）</td>
+</tr>
+<tr>
+<td>CSSやTOC（目次）機能</td>
+<td><code>.mp4</code>再生には直接関係なし。必要に応じて併用OK</td>
+</tr>
+</tbody>
+</table><br>
+<p>✅ まとめ</p>
+<table>
+<thead>
+<tr>
+<th>やりたいこと</th>
+<th>必要なこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.mp4</code> を再生</td>
+<td><code>&lt;video src=...&gt;</code> を使う</td>
+</tr>
+<tr>
+<td>それをプレビューする</td>
+<td><code>Markdown Preview Enhanced</code> の専用プレビューを開く</td>
+</tr>
+<tr>
+<td>きれいに整えたい</td>
+<td>追加でCSSカスタマイズやTOC機能も使える（任意）</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>🙂 タケ：<br>
+素材も同じフォルダに入れたけど、あとはどうすれば？</p>
+<p><img src="assets/096/Open Preview to the Side.png" alt=""></p>
+<br>
+<p>🤖 チャットさん：<br>
+画像ありがとう！プレビューも表示されていて、一見成功しているように見えるけど、動画が再生できず「0:00」のまま止まっている状態だね。</p>
+<hr>
+<p>✅ 現状まとめ</p>
+<ul><ul>
+<li>
+<p>HTMLタグ <code>&lt;video&gt;</code> は正常に解釈されて表示されてる（＝構文的にはOK）</p>
+</li>
+<li>
+<p>ファイルパスも Markdown ファイルと <code>.mp4</code> が同じフォルダにあるので問題なさそう</p>
+</li>
+<li>
+<p>でも 再生が始まらない（真っ黒で0:00）</p>
+</li>
+</ul></ul>
+<hr>
+<p>🔍 原因候補と対処法</p>
+<p>❓1. 拡張機能が「Markdown Preview Enhanced」じゃない</p>
+<ul><ul>
+<li>
+<p>表示されているのは 標準のMarkdownプレビュー で、MPEではない可能性が高い</p>
+</li>
+<li>
+<p><code>Markdown Preview Enhanced</code> では独自のWebViewを使って再生される</p>
+</li>
+</ul></ul>
+<p>👉 対処：</p>
+<ol>
+<li>
+<p><code>Ctrl + Shift + P</code> を押して</p>
+</li>
+<li>
+<p>「Markdown Preview Enhanced: Open Preview to the Side」を選んでみて</p>
+</li>
+</ol>
+<hr>
+<p>❓2. 再生できない形式やコーデックの問題</p>
+<ul><ul>
+<li>
+<p><code>.mp4</code> といっても、コーデック（H.264/AACなど）によってはブラウザ再生できないものもある</p>
+</li>
+<li>
+<p>特に DaVinci Resolve などで書き出した <code>.mp4</code> が重い場合に起きがち</p>
+</li>
+</ul></ul>
+<p>👉 対処：</p>
+<ul><ul>
+<li>
+<p>ブラウザ（Chromeなど）で直接開いてみる：<br>
+<code>video.mp4</code> を右クリック → 「既定のブラウザで開く」<br>
+　→ 再生できなければコーデックの問題</p>
+</li>
+<li>
+<p>HandBrakeやShutter Encoderで再エンコード（推奨形式：H.264 + AAC）</p>
+</li>
+</ul></ul>
+<hr>
+<p>❓3. ファイル名に日本語や記号があると失敗する場合もある</p>
+<p>👉 ファイル名を一時的に短くして <code>video.mp4</code> にして試すと確実。</p>
+<hr>
+<p>✅ 試してみてほしい流れ</p>
+<ol>
+<li>
+<p><code>.mp4</code> を <code>video.mp4</code> にリネーム（簡易チェック用）</p>
+</li>
+<li>
+<p><code>test_mp4.md</code> の中身を以下のようにする：</p>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./video.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>640<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">&gt;</span></span>
+</code></pre><ol start="3">
+<li><code>Ctrl + Shift + P</code> →<br>
+　「Markdown Preview Enhanced: Open Preview to the Side」を実行</li>
+</ol>
+<hr>
+<p>🤖 チャットさん：</p>
+<p>これでも再生できなければ、動画ファイル自体に原因がある可能性が高いです。<br>
+変換して軽めの <code>.mp4</code> にすると改善されることが多いです。</p>
+<br>
+<hr class="section-line">
+<h3 id="-別のコマンドでできた">📘 別のコマンドでできた </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+「Markdown Preview Enhanced：Open Preview to the Side」　じゃなくて　<br>
+「Markdown：Open Locked Preview to the Side」でできたよ！どういうこと？</p>
+<p><img src="assets/096/Open Locked Preview to the Side.png" alt=""></p>
+<br>
+<br><p>🤖 チャットさん：<br>
+おお、それはナイス発見！<br>
+そしてめちゃくちゃいい質問。<br>
+「Markdown Preview Enhanced: Open Preview to the Side」ではなく<br>
+「Markdown: Open Locked Preview to the Side」で再生できた理由、ちゃんとあります。</p>
+<hr>
+<p>✅ 両者の違いまとめ</p>
+<table>
+<thead>
+<tr>
+<th>コマンド名</th>
+<th>内容</th>
+<th>使用するプレビューエンジン</th>
+<th><code>.mp4</code>再生</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Markdown Preview Enhanced: Open Preview to the Side</td>
+<td>MPE専用の拡張プレビュー。LaTeXやチャートなども可能。</td>
+<td>Markdown Preview Enhanced（拡張機能）</td>
+<td>◎ 対応（ただし拡張機能必須）</td>
+</tr>
+<tr>
+<td>Markdown: Open Locked Preview to the Side</td>
+<td>VS Code 標準のMarkdownプレビューを開く（ファイルを固定）</td>
+<td>VS Code組み込みのHTMLレンダラ</td>
+<td>◯ 動画に対応してる！</td>
+</tr>
+</tbody>
+</table><br>
+<p>✅ 「Open Locked Preview to the Side」とは？</p>
+<ul><ul>
+<li>
+<p>通常の「Markdown: Open Preview to the Side」はファイルに応じてプレビュータブが切り替わる</p>
+</li>
+<li>
+<p>「Locked」は開いたMarkdownファイルに対してプレビューを固定するバージョン</p>
+</li>
+</ul></ul>
+<p>つまり：</p>
+<ul><ul>
+<li>
+<p>違うタブを開いてもプレビューが切り替わらない</p>
+</li>
+<li>
+<p>動画などのHTMLタグが生きる環境でレンダリングされやすい（WebView固定）</p>
+</li>
+</ul></ul>
+<hr>
+<p>✅ なぜこっちは <code>.mp4</code> 再生できたのか？</p>
+<ul><ul>
+<li>
+<p>VS Codeの標準Markdownプレビューでも <code>&lt;video&gt;</code> は ある程度サポートされている</p>
+</li>
+<li>
+<p>Locked Preview では内部的にレンダリングを強化している or 安定してる</p>
+</li>
+<li>
+<p>おそらく「MPEを入れてなかった」か「MPEで表示されていなかった」から、標準側で動いた</p>
+</li>
+</ul></ul>
+<hr>
+<p>✅ つまり今の状態は…</p>
+<blockquote>
+<p>標準Markdownプレビュー（Locked版）で <code>.mp4</code> 再生に成功している！🎉</p>
+</blockquote>
+<p>それでも問題ないし、今後 <code>.md</code> で動画を使いたいだけなら十分使えます。</p>
+<hr>
+<p>🔄 MPEと比較したい場合は…</p>
+<ul><ul>
+<li>
+<p>MPE（Markdown Preview Enhanced）が本当に入っているか確認</p>
+</li>
+<li>
+<p>拡張機能 → <code>Markdown Preview Enhanced</code> を確認</p>
+</li>
+<li>
+<p>コマンドパレットで「Enhanced」とつくものが出るか見てみて</p>
+</li>
+</ul></ul>
+<hr>
+<p>✅ まとめ：君のやり方でも全然OK！</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>結論</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VS Codeで <code>.mp4</code> をMarkdownに埋めて再生したい</td>
+<td>標準プレビューでも再生できる！（Locked Previewが安定）</td>
+</tr>
+<tr>
+<td>カスタムCSSやLaTeX、チャート、PDF出力などもしたい</td>
+<td>MPE導入もあり</td>
+</tr>
+</tbody>
+</table>
+<br>
+<hr class="section-line">
+<h3 id="-mpe-ではできなかった">📘 MPE ではできなかった </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+「Markdown Preview Enhanced: Open Preview to the Side」　入ってるけどできなかった。</p>
+<br><p>🤖 チャットさん：<br>
+<code>Markdown Preview Enhanced</code>（MPE）はインストール済みだけど、<br>
+実際にはうまく <code>.mp4</code> を再生できていなかったということだね。</p>
+<hr>
+<p>✅ 結論：MPEでも <code>.mp4</code> を再生できないことがある主な理由はこれ👇</p>
+<p>🔹1. <code>&lt;video&gt;</code> タグがMPEの "Safe Mode" によってブロックされている</p>
+<p>MPEはセキュリティのため、デフォルトでHTMLタグの一部を制限してる。<br>
+<code>&lt;video&gt;</code> タグも、設定次第で無効化される。</p>
+<hr>
+<p>🛠️ 対処法：MPEのセキュリティ設定を変更して <code>&lt;video&gt;</code> を許可</p>
+<p>🔧 手順：</p>
+<ol>
+<li>
+<p><code>Ctrl + Shift + P</code> を押す</p>
+</li>
+<li>
+<p><code>Markdown Preview Enhanced: Open Settings</code> を選択</p>
+</li>
+<li>
+<p><code>settings.json</code> というファイルが開くので、以下を追記：</p>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token property">"markdown-preview-enhanced.previewTheme"</span><span class="token operator">:</span> <span class="token string">"github-light"</span><span class="token punctuation">,</span> <span class="token comment">// 任意のテーマ</span>
+<span class="token property">"markdown-preview-enhanced.enableScriptExecution"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+</code></pre><p>👉 <code>enableScriptExecution: true</code> にすることで、<code>&lt;video&gt;</code> の再生が有効になる。</p>
+<hr>
+<p>🧪 確認方法（再テスト）</p>
+<ol>
+<li><code>.md</code> ファイルに以下のように記述：</li>
+</ol>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./video.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>640<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">&gt;</span></span>
+</code></pre><ol start="2">
+<li><code>Ctrl + Shift + P</code> →<br>
+　Markdown Preview Enhanced: Open Preview to the Side を再実行</li>
+</ol>
+<hr>
+<p>✅ 補足：標準プレビュー（Locked）のほうが安定していた理由</p>
+<ul><ul>
+<li>
+<p>標準プレビューはVS Code本体のWebViewレンダリングを使っていて、HTMLタグをそのまま解釈</p>
+</li>
+<li>
+<p>MPEはカスタムレンダリング（安全性重視）なので、スクリプト・動画タグがブロックされやすい</p>
+</li>
+<li>
+<p>特に <code>&lt;script&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;video&gt;</code> などはセキュリティ警戒対象</p>
+</li>
+</ul></ul>
+<hr>
+<p>✅ 結論とおすすめ</p>
+<table>
+<thead>
+<tr>
+<th>パターン</th>
+<th>状況</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>標準プレビュー（Locked）で <code>.mp4</code> 再生OK</td>
+<td>✔ 安定・安全・手軽（おすすめ）</td>
+</tr>
+<tr>
+<td>MPEで <code>.mp4</code> 再生したい</td>
+<td>🔧 <code>enableScriptExecution: true</code> を設定する必要あり</td>
+</tr>
+<tr>
+<td>MPEなら他にも便利な機能（LaTeX, PDF出力）あり</td>
+<td>✨ 多機能派なら検討価値あり</td>
+</tr>
+</tbody>
+</table><br>
+<p>🤖 チャットさん：<br>
+今後 <code>.mp4</code> を組み込みながら Markdownを整えていくなら、「標準のLocked Preview」＋HTMLタグベースの方法が一番シンプルで安定してそう。<br>
+この方向で進める？それともMPEのパワー機能も試してみる？</p>
+<br><p>🙂 タケ：<br>
+標準のLocked Previewで行く。</p>
+<br><p>🤖 チャットさん：<br>
+了解！🎯<br>
+標準の「Locked Preview」路線で行くなら、以下の点を押さえておけば快適に使えるよ。</p>
+<hr>
+<p>✅ 君の現在のベストなワークフロー（確定版）</p>
+<p>🔁 編集と表示の切り替え：</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl + Shift + V</code></td>
+<td>Markdownファイルのプレビューを右側に表示（普通のPreview）</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + P</code> → <code>Markdown: Open Locked Preview to the Side</code></td>
+<td>プレビューを固定表示（動画にも安定対応）</td>
+</tr>
+<tr>
+<td><code>Ctrl + Tab</code></td>
+<td>編集画面とプレビュー画面をタブで切り替え</td>
+</tr>
+</tbody>
+</table><br>
+<p>📁 ファイル構成と埋め込み</p>
+<ul><ul>
+<li>
+<p><code>.md</code> ファイルと <code>.mp4</code> は同じフォルダ内が安全</p>
+</li>
+<li>
+<p>書き方はそのまま：</p>
+</li>
+</ul></ul>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./sample_video.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>640<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">&gt;</span></span>
+</code></pre><hr>
+<p>✅ HTMLタグも使えるので応用が効く！</p>
+<ul><ul>
+<li>
+<p>画像も埋め込める：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./image.png<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>400<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+<li>
+<p>改行が欲しい場合は <code>&lt;br&gt;</code>、太字や色つけなどもHTMLでOK。</p>
+</li>
+</ul></ul>
+<hr>
+<p>🔒 Locked Previewの特徴（メリット再確認）</p>
+<table>
+<thead>
+<tr>
+<th>特徴</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.mp4</code>・画像などのHTMLタグに対応</td>
+<td>◎ 問題なく表示・再生可能</td>
+</tr>
+<tr>
+<td>表示が固定される</td>
+<td>◎ 複数タブ開いても切り替わらない</td>
+</tr>
+<tr>
+<td>Markdown構文とHTMLの併用に強い</td>
+<td>◎ 自由度高い、実験しやすい</td>
+</tr>
+<tr>
+<td>CSSカスタマイズは不可</td>
+<td>△ デザインはやや素朴</td>
+</tr>
+</tbody>
+</table><br>
+<p>✍ 補足：変換・公開するなら</p>
+<ul><ul>
+<li>
+<p>NoteやWeb公開を見越しているなら、HTMLへの変換を後から行えばOK。</p>
+</li>
+<li>
+<p>Markdown to HTML変換や動画埋め込み対応テンプレートも手伝えるよ。</p>
+</li>
+</ul></ul>
+<br>
+<hr class="section-line">
+<h3 id="-レスポンシブな画面表示幅">📘 レスポンシブな画面表示幅 </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+controls width="640"⇒これは640pxで固定なの？端末による画面表示幅の変化には対応なし？</p>
+<br><p>🤖 チャットさん：<br>
+いい質問！<br>
+<code>controls width="640"</code> という指定は、文字通り「横幅を640ピクセルに固定する」指定だから、<br>
+画面の大きさ（端末幅）には対応しない、つまりレスポンシブじゃないんだ。</p>
+<hr>
+<p>✅ <code>width="640"</code> の挙動</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>表示される幅</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC画面が1000px</td>
+<td>動画は 640px固定</td>
+</tr>
+<tr>
+<td>スマホ画面が500px</td>
+<td>動画は はみ出る or 自動縮小される（がコントロールしにくい）</td>
+</tr>
+</tbody>
+</table><br>
+<p>つまり、スマホなどの狭い画面では不都合が出る可能性がある。</p>
+<hr>
+<p>✅ レスポンシブ対応したい場合</p>
+<p>🔁 ① <code>%指定</code> に変える</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./sample.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre><ul><ul>
+<li>
+<p>横幅を親要素（Markdown本文）の幅に合わせて可変</p>
+</li>
+<li>
+<p>一番シンプルでおすすめのレスポンシブ対応</p>
+</li>
+</ul></ul>
+<hr>
+<p>💡 ② <code>style</code> 属性で柔軟に</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./sample.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token unit">%</span><span class="token punctuation">;</span> <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token number">640</span><span class="token unit">px</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>
+</code></pre><ul><ul>
+<li>
+<p>画面が大きければ 最大640px</p>
+</li>
+<li>
+<p>画面が小さければ 親要素の幅にフィット</p>
+</li>
+<li>
+<p>スマホでもPCでも自然な表示</p>
+</li>
+</ul></ul>
+<hr>
+<p>✅ ③ CSSクラスを使う（HTMLファイル化した時用）</p>
+<p>Markdownだけで完結させたい場合は上の方法で十分だけど、<br>
+HTML変換を前提にするなら、クラスでスタイル指定もアリ：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./sample.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>responsive-video<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre><pre data-role="codeBlock" data-info="css" class="language-css css"><code><span class="token comment">/* HTML内に追加 */</span>
+<span class="token selector"><span class="token class">.responsive-video</span></span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token unit">%</span><span class="token punctuation">;</span>
+  <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token number">640</span><span class="token unit">px</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<p>✅ 結論：Markdown＋動画ならこれでOK！</p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./sample.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token unit">%</span><span class="token punctuation">;</span> <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token number">640</span><span class="token unit">px</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>これでスマホでもPCでも無理なく再生可能。<br>
+NoteやGitHub Pagesに貼るHTML化にもそのまま流用できるよ。</p>
+<hr>
+<p>🙂 タケ：<br>
+んじゃ、このスタイルにする。</p>
+<br><p>🤖 チャットさん：<br>
+了解！それが一番バランス良くて安心な選択だと思う👍</p>
+<hr>
+<p>✅ 採用するスタイル（決定版）</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./ファイル名.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token unit">%</span><span class="token punctuation">;</span> <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token number">640</span><span class="token unit">px</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>✅ 特徴まとめ：</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>幅</td>
+<td>親要素に合わせて可変（スマホ対応）</td>
+</tr>
+<tr>
+<td>最大幅</td>
+<td>640pxで制限（PCで見たときに大きくなりすぎない）</td>
+</tr>
+<tr>
+<td>コントロールバー</td>
+<td>あり（再生・停止・音量など）</td>
+</tr>
+<tr>
+<td>MarkdownからHTML化</td>
+<td>問題なし、そのまま使える</td>
+</tr>
+</tbody>
+</table><br>
+<p>📌 使い回し用テンプレにしておくと便利：</p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code><span class="token comment">&lt;!-- 動画埋め込みテンプレート --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./your_video.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token unit">%</span><span class="token punctuation">;</span> <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token number">640</span><span class="token unit">px</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">&gt;</span></span>
+</code></pre><hr>
+<p>🤖 チャットさん：</p>
+<p>今後、複数の <code>.md</code> に動画を貼るときはこの形で統一していけばOK。<br>
+テンプレとして覚えておくか、よければ再利用できるスニペット化の提案もできるよ。</p>
+<p>他にも表や画像など、表示を整えたい要素があれば気軽にどうぞ！</p>
+<br>
+<hr class="section-line">
+<h3 id="-書き出し用アイコン">📘 書き出し用アイコン </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+「Markdown: Open Locked Preview to the Side」でHTMLにexportしたいのに、<br>
+「Markdown Preview Enhanced: Open Preview to the Side」のような書き出し用アイコンがない。<br>
+&nbsp;&nbsp;どうすれば？</p>
+<br><p>🤖 チャットさん：<br>
+「Markdown: Open Locked Preview to the Side」＝VS Code標準プレビュー<br>
+VS Code標準プレビューには、MPEみたいな「HTML書き出しアイコン」は存在しません。<br>
+なので、書き出しはコマンドパレットから実行する必要があります。</p>
+<hr>
+<p>✅ 対応手順：Locked Previewの内容をHTMLに書き出すには？</p>
+<hr>
+<p>✅ 方法①：「Markdown PDF」拡張機能でHTML出力する（一番シンプル）</p>
+<ol>
+<li>
+<p>拡張機能パネル（左の四角アイコン）を開く</p>
+</li>
+<li>
+<p>「Markdown PDF」と検索<br>
+　→ 作者が「yzane」のやつをインストール！</p>
+</li>
+<li>
+<p><code>.md</code> ファイルを開く</p>
+</li>
+<li>
+<p><code>Ctrl + Shift + P</code> → <code>Markdown PDF: Export (html)</code> を選ぶ！</p>
+</li>
+</ol>
+<p>🔽 出力形式もいろいろある：</p>
+<ul><ul>
+<li>
+<p><code>Export (html)</code></p>
+</li>
+<li>
+<p><code>Export (pdf)</code></p>
+</li>
+<li>
+<p><code>Export (png)</code> など</p>
+</li>
+</ul></ul>
+<hr>
+<p>✅ 方法②：「ファイル → 名前を付けてHTMLとして保存」手動方式（素朴だけど確実）</p>
+<ol>
+<li>
+<p>Markdownファイルをプレビューしながら <code>Ctrl + Shift + P</code></p>
+</li>
+<li>
+<p>「Markdown: Print current document to HTML」を探す（ない場合は拡張機能が必要）</p>
+</li>
+<li>
+<p>保存先を指定 → <code>.html</code> ファイルが作られる</p>
+</li>
+</ol>
+<hr>
+<p>✅ 方法③：「Markdown Preview Enhanced」でも出力可能（こっちは別レンダラ）</p>
+<p>すでにMPE（Markdown Preview Enhanced）が入ってるなら：</p>
+<ol>
+<li>
+<p><code>Ctrl + Shift + P</code> → <code>Markdown Preview Enhanced: Export (html)</code> を選ぶ</p>
+</li>
+<li>
+<p><code>HTML</code>, <code>PDF</code>, <code>PNG</code> などが選べる</p>
+</li>
+</ol>
+<p>※ ただし、Locked Previewとは見た目が違うことがあるので注意！</p>
+<hr>
+<p>✅ 結論とおすすめ</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>おすすめアクション</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Locked Previewでそのままの見た目をHTMLにしたい</td>
+<td>Markdown PDFをインストールして Export (html)</td>
+</tr>
+<tr>
+<td>高度なカスタマイズやPDF化もしたい</td>
+<td>Markdown Preview Enhancedも視野に入れる</td>
+</tr>
+<tr>
+<td>HTMLだけでいい、見た目そこまで気にしない</td>
+<td>手動でコピペでも可、または上記機能で十分</td>
+</tr>
+</tbody>
+</table>
+<br>
+<hr class="section-line">
+<h3 id="-html化したら">📘 HTML化したら </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+「Markdown Preview Enhanced: Open Preview to the Side」で試したmp4、黒いままでもHTML化したら動画みれた。<br>
+目次も機能した。（←Markdown Preview Enhanced：Create TOC）</p>
+<br><p>🤖 チャットさん：</p>
+<p>おお〜！🎉<br>
+素晴らしい報告ありがとう、それ完璧な状態だよ！</p>
+<hr>
+<p>✅ 状況整理（大成功！）</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>状況</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MPE上での <code>.mp4</code> 再生</td>
+<td>❌（黒いまま）</td>
+<td>← これは想定通り。WebView制限 or コーデック影響あり</td>
+</tr>
+<tr>
+<td>HTML化してブラウザ表示</td>
+<td>✅ 動画再生OK！</td>
+<td>✅ <code>&lt;video&gt;</code> のタグ正しく反映されてる</td>
+</tr>
+</tbody>
+</table><br>
+<hr>
+<p>✅ なぜこうなった？（背景解説）</p>
+<ul><ul>
+<li>
+<p>MPEのプレビュー内（VS Code上のWebView）ではセキュリティやファイルパス制限で動画再生が不安定になりやすい。</p>
+</li>
+<li>
+<p>でも HTMLに書き出した時点で、タグがそのまま残るため、通常のブラウザでは問題なく再生できる。</p>
+</li>
+</ul></ul>
+<hr>
+<p>✅ つまり今後の流れはこうできる👇</p>
+<p>📝 作業ステップ（安定版）</p>
+<ol>
+<li>
+<p>Markdownファイル作成（<code>&lt;video&gt;</code> と TOC含む）</p>
+</li>
+<li>
+<p>MPEでプレビュー（TOC確認・レイアウト確認）</p>
+</li>
+<li>
+<p><code>.mp4</code> は「表示されればOK」（再生されなくても気にしない）</p>
+</li>
+<li>
+<p><code>Markdown Preview Enhanced: Export (html)</code> で HTML 書き出し</p>
+</li>
+<li>
+<p>ブラウザで <code>.html</code> を開いて動画再生と目次機能を確認！</p>
+</li>
+</ol>
+<hr>
+<p>✅ おまけ：あとでHTML公開するなら</p>
+<ul><ul>
+<li>
+<p><code>src="./動画ファイル名.mp4"</code> のままで公開するには、動画ファイルも一緒にサーバーに置く必要がある</p>
+</li>
+<li>
+<p>GitHub Pagesで公開する場合も、 <code>.html</code> と <code>.mp4</code> を同階層に置けばOK</p>
+</li>
+</ul></ul>
+<hr>
+<p>🎯 最終まとめ</p>
+<p>✅ 目次・動画・Markdown編集のバランスが取れたベスト構成が完成！<br>
+VS Code＋MPE で編集・確認 → HTML化 → ブラウザで再生、が今後の鉄板コースだね。</p>
+<p>何かこのHTMLテンプレートを「汎用化」したいとか、<br>
+GitHub Pagesやnoteに合わせた最終仕上げも手伝えるので、次のステップも気軽にどうぞ！</p>
+<br>
+<hr style="border: none !important; height: 5px !important; background-color: #dcdcdc !important;">
+
+<p>🙂 タケ：補足追記✏️<br>
+「Markdown：Open Locked Preview to the Side」<br>
+✔️mp4再生⇒VS Code内でのプレビュー再生問題なし<br>
+❌HTML化⇒面倒</p>
+<br>
+<p>「Markdown Preview Enhanced：Open Preview to the Side 」<br>
+✔️mp4再生⇒HTML化で問題なく再生<br>
+✔️HTML化⇒簡単<br>
+✔️目次作成⇒「Markdown Preview Enhanced：Create TOC」で簡単</p>
+<br>
+<p>ということで「Markdown: Open Locked Preview to the Side」ではなく<br>
+「Markdown Preview Enhanced」で進めることにしました。</p>
+
+      </div>
+      <div class="md-sidebar-toc">
+ <h4 style="color: #dcdcdc; text-align: left; margin: 0 0 1em 40px;">096<br>VS Code で mp4</h4>        
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-html化なしでできる" class="md-toc-link">
+            <p>📘 HTML化なしでできる？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-別のコマンドでできた" class="md-toc-link">
+            <p>📘 別のコマンドでできた</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-mpe-ではできなかった" class="md-toc-link">
+            <p>📘 MPE ではできなかった</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-レスポンシブな画面表示幅" class="md-toc-link">
+            <p>📘 レスポンシブな画面表示幅</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-書き出し用アイコン" class="md-toc-link">
+            <p>📘 書き出し用アイコン</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-html化したら" class="md-toc-link">
+            <p>📘 HTML化したら</p>
+
+          </a></div>
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  <div style="padding-bottom:100px;"></div>   
+    </body></html>
