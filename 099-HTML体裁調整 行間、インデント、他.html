@@ -1,0 +1,2142 @@
+<!DOCTYPE html><html><head>
+      <title>099-HTML体裁調整 行間、インデント、他</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\trypr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#969896;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#0086b3}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#969896}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#0086b3}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#0086b3}.language-markup .token.tag .token.punctuation{color:#969896}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#0086b3}.language-ruby .token.function{color:#969896}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#0086b3}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#969896;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:8px solid #47355e}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+body {
+  background-color: #111 !important;
+  color: #dcdcdc !important;
+}
+a {
+  color: #8ab4f8;
+}
+/* 一般的なhrスタイル（デフォルト） */
+hr {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #444 !important;
+  margin: 1em 0 !important;
+}
+/* 特定の章区切り用 */
+hr.section-line  {
+  height: 0 !important;
+  border: none !important;
+  border-top: 0.5px solid #dcdcdc !important;
+  margin: 1em 0 !important;
+}
+.markdown-preview > ul {
+  list-style: none;
+  padding-left: 0;
+}
+.md-toc-link-wrapper {
+  list-style: none !important;
+}
+
+/* ← ここから追加 */
+h1, h2, h3, h4, h5, h6,
+th, td,
+strong, em, b, i,
+blockquote,
+.markdown-preview .md-toc p,
+.markdown-preview .md-toc-link,
+.markdown-preview .md-toc-link div,
+.markdown-preview .md-toc-link p {
+  color: #dcdcdc !important;
+}
+
+blockquote {
+  background-color: #112233 !important;
+}
+
+pre, code {
+  background-color: #112233 !important;
+  color: #dcdcdc !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important; 
+  font-size: 15px !important; 
+}
+
+th, td {
+  background-color: #111 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  word-break: break-word;
+}
+
+
+/* 左サイドバー目次とその中の文字を白に */
+body[html-show-sidebar-toc] .md-sidebar-toc,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link p,
+body[html-show-sidebar-toc] .md-sidebar-toc .md-toc-link div,
+.md-toc-link-wrapper .md-toc-link,
+.markdown-preview ul li a {
+  color: #dcdcdc !important;
+}
+
+   p {
+    margin-bottom: 0 !important;
+  }
+  ul {
+    margin-top: 0 !important;
+  }
+
+    ol li ul {
+    padding-left: 1em;  /* ←これを調整する！デフォルトより小さく */
+    margin-left: 0;
+  }
+
+.indent-wrap {
+  display: block;
+  padding-left: 1em;       /* 全体を右にずらす */
+  text-indent: -1em;       /* 1行目だけ左に戻す */
+}
+
+.indent-wrap.large {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+.indent-wrap.large2 {
+  padding-left: 2.0em;
+  text-indent: -2.0em;
+}
+
+.highlight {
+  background-color: #112233 !important;
+}
+
+
+.markdown-preview ol,
+.markdown-preview ol ol,
+.markdown-preview ul ol {
+  list-style-type: decimal !important;
+}
+
+/* 最上階のul（インデントもマーカーも消す） */
+ul {
+  list-style-type: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* ol の中だろうが ul の中だろうが全部黒丸+インデント */
+ul ul {
+  list-style-type: disc !important;
+  padding-left: 1.5em !important;
+  margin-left: 0 !important;
+}
+
+/* ▼ここからテスト用スタイル（スマホ幅確認用） */
+/* <div class="crossnote markdown-preview　test-narrow">⇒幅狭表示 */
+/* <div class="crossnote markdown-preview">⇒通常表示 */  
+.test-narrow {
+  width: 440px;
+  margin: 0 auto;
+  outline: 1px dashed red;
+}
+
+
+
+/* 横スクは親だけに任せる */
+.hscroll{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* 不要ならOK：見た目の余白としては残しても可だが、
+     スクロール幅には効かないブラウザがある */
+  /* padding-right: 12px; */
+}
+
+/* 内側に“実体のある”余白を作る → これがスクロール幅に含まれる */
+.hscroll-inner{
+  display: inline-block;    /* 中身の横幅＝スクロール幅になる */
+  padding-right: 16px;      /* ★ 末尾の見えしろを確保（値はお好みで） */
+}
+
+/* テーブル本体はスクロールさせない */
+.hscroll > .hscroll-inner > table{
+  display: inline-table;
+  table-layout: auto;
+  border-collapse: separate; /* ★ 右端の罫線が潰れにくい */
+  border-spacing: 0;         /* collapseの代わりに間隔ゼロ */
+  width: max-content;
+  max-width: none;
+  overflow: visible;         /* 子にバーを出させない */
+}
+
+/* 右端の罫線を確実に見せたい場合（任意） */
+.hscroll > .hscroll-inner > table{
+  border-right: 1px solid #444; /* 罫線が背景に溶ける場合は色調整 */
+}
+
+/* セル内は適度に折り返す（必要なら列ごとに max-width） */
+.hscroll > .hscroll-inner > table th,
+.hscroll > .hscroll-inner > table td{
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  /* 例：長文列を読みやすくしたい場合 */
+  max-width: 200px; 
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      <h2>099<br>HTML体裁調整 行間、インデント、他</h2> 
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#-%E7%A9%BA%E3%81%AE%E8%A1%8C%E3%81%AA%E3%81%8F%E3%81%99%E3%81%AB%E3%81%AF">📘 空の行なくすには</a></li>
+<li><a href="#-%E3%82%A4%E3%83%B3%E3%83%87%E3%83%B3%E3%83%88">📘 インデント</a></li>
+<li><a href="#-css%E3%81%A7%E3%82%A4%E3%83%B3%E3%83%87%E3%83%B3%E3%83%88%E8%AA%BF%E6%95%B4">📘 CSSでインデント調整</a></li>
+<li><a href="#-blockquote">📘 &lt;blockquote&gt;</a></li>
+<li><a href="#-%E8%A3%85%E9%A3%BE-precode">📘 装飾 &lt;pre&gt;&lt;code&gt;</a></li>
+<li><a href="#-%E5%BC%B7%E8%AA%BF-em">📘 強調 &lt;em&gt;</a></li>
+<li><a href="#-precode--preem">📘 &lt;pre&gt;&lt;code&gt; ⇒ &lt;pre&gt;&lt;em&gt;</a></li>
+<li><a href="#-text-align--%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88">📘 text-align ≠ フォント</a></li>
+<li><a href="#-text-align-%E3%81%AE%E5%BD%B9%E5%89%B2">📘 text-align の役割</a></li>
+<li><a href="#-mpe--create-toc">📘 MPE : Create TOC</a></li>
+<li><a href="#-%E3%81%93%E3%81%AE2%E3%81%8B%E6%9C%88%E3%81%A7">📘 この2か月で</a></li>
+</ul>
+<p>注記：本記事はGPT-4o期の対話ログをもとにしています。</p>
+<hr class="section-line">
+<h3 id="-空の行なくすには">📘 空の行なくすには </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+下の画像の赤四角部分、空の行ができるんだけど、なくすにはどう書き換えたらいい？<br>
+
+<img src="assets/099/099_01.png" alt="" style="border: 1px solid #969896;"></p>
+
+<br><p>🤖 チャットさん：<br>
+その「空の行」は、おそらく <code>&lt;p&gt;</code> タグと <code>&lt;li&gt;</code> タグが直接つながっていないことによるHTMLのレンダリング仕様によるものです。</p>
+<hr>
+<p>✅ 原因</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>🤖 チャットさん：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+確認しました。この動画、“Open the folded laptop.”という指示に対して：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>ノートPCは最初から開いていて<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>↑ このように <code>&lt;p&gt;</code>（段落）と <code>&lt;li&gt;</code>（リスト項目）をバラで使っていると、<br>
+リストの前後に余白が自動で入ることがあります（ブラウザのCSS初期設定による）</p>
+<hr>
+<p>✅ 解決策</p>
+<p>🔧 方法1：リストを <code>&lt;ul&gt;</code> または <code>&lt;ol&gt;</code> で囲む（基本）</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>🤖 チャットさん：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+確認しました。この動画、“Open the folded laptop.”という指示に対して：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>ノートPCは最初から開いていて<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>動作としての「開く」シークエンスがまったく存在していない<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>つまり、Soraはこのプロンプトを「ノートPCが“既に開いている”絵を出せばOK」と解釈しているようです。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>この書き方が正統派＆最も安定です。</p>
+<hr>
+<p>🔧 方法2：余白を完全に潰すCSSを当てる（強制力あり）</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">ul<span class="token punctuation">,</span> li</span> <span class="token punctuation">{</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>↑ これをページ内に書くと、リストの前後の余白を完全になくせます。</p>
+<hr>
+<p>✅ 応急的に inlineでやるなら…</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">margin</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token property">padding</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">margin</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token property">padding</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>ノートPCは最初から開いていて<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+</code></pre><hr>
+<p>🎯 結論（おすすめ）</p>
+<blockquote>
+<p>リストは必ず <code>&lt;ul&gt;～&lt;/ul&gt;</code> で囲み、スタイルで余白調整するのが一番きれいです。</p>
+</blockquote>
+<hr>
+<p>🙂 タケ：<br>
+方法１は</p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code>ノートPCは最初から開いていて
+動作としての「開く」シークエンスがまったく存在していない 
+</code></pre>
+<p>の前後に空行できるでしょ？</p>
+<br><p>🤖 チャットさん：<br>
+おっしゃる通りです。<br>
+方法①の <code>&lt;ul&gt;&lt;li&gt;…&lt;/li&gt;&lt;/ul&gt;</code> を使った場合、<br>
+ブラウザやテーマによっては「リストの前後に上下マージン（空行のようなスペース）」が自動で入ります。</p>
+<hr>
+<p>✅ その空行を完全になくす方法は、CSSで明示的に余白を潰すことです。</p>
+<p>🎯 解決コード（方法① + マージン調整）</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">ul</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>🤖 チャットさん：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+確認しました。この動画、“Open the folded laptop.”という指示に対して：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>ノートPCは最初から開いていて<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>動作としての「開く」シークエンスがまったく存在していない<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>つまり、Soraはこのプロンプトを「ノートPCが“既に開いている”絵を出せばOK」と解釈しているようです。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<br>
+<p>✅ ポイント</p>
+<ul><ul>
+<li>
+<p><code>&lt;ul&gt;</code>に <code>margin-top: 0;</code> を指定 → リスト前の空白を消す</p>
+</li>
+<li>
+<p><code>&lt;ul&gt;</code>に <code>margin-bottom: 0;</code> を指定 → リスト後の空白を消す</p>
+</li>
+</ul></ul>
+<br>
+<p>✅ 応急処置的にインラインで書くなら：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">margin-top</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token property">margin-bottom</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>ノートPCは最初から開いていて<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>動作としての「開く」シークエンスがまったく存在していない<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>🤖 チャットさん：<br>
+これでリスト部分の上下の“空行っぽいスペース”は完全になくなるはずです。</p>
+<hr><p>🙂 タケ：<br>
+👇これはページ全体に効くの？どこの直前に入れればいい？</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">ul</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>🤖 チャットさん：<br>
+はい、それはページ全体の <code>&lt;ul&gt;</code> 要素すべてに効くCSSです！</p>
+<hr>
+<p>✅ 効果範囲</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">ul</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>これは「すべての <code>&lt;ul&gt;</code> に対して上下の余白をなくす」という指示です。</p>
+<hr>
+<p>✅ どこに書くべき？</p>
+<p>基本的には、HTMLの<code>&lt;head&gt;</code>タグの中に入れるのが正解です。</p>
+<p>例：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>ページタイトル<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- ここに入れる --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+    <span class="token selector">ul</span> <span class="token punctuation">{</span>
+      <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- 本文ここから --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>🤖 チャットさん：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+確認しました。この動画、“Open the folded laptop.”という指示に対して：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>ノートPCは最初から開いていて<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>動作としての「開く」シークエンスがまったく存在していない<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>つまり、Soraはこのプロンプトを～<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<br>
+<p>✅ もし <code>&lt;head&gt;</code> がいじれない場合は…</p>
+<p>HTML本文の先頭に直接書いても動作はします（応急処置的）。</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">ul</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>↑ を <code>&lt;body&gt;</code> の直後などに置いてもOK。<br>
+ただし、できるだけ <code>&lt;head&gt;</code> に集約した方が管理しやすくなります。</p>
+<br>
+<p>🎯 まとめ</p>
+<table>
+<thead>
+<tr>
+<th>書き場所</th>
+<th>おすすめ度</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;head&gt;</code> 内</td>
+<td>◎</td>
+<td>最も一般的で整理しやすい</td>
+</tr>
+<tr>
+<td><code>&lt;body&gt;</code> の直後</td>
+<td>〇</td>
+<td>一時的・特定ページのみ調整するならOK</td>
+</tr>
+<tr>
+<td>各リストにインライン指定</td>
+<td>△</td>
+<td>個別に制御したいときだけ（重くなる）</td>
+</tr>
+</tbody>
+</table><br>
+<hr>
+<p>🙂 タケ：<br>
+方法2のこれ👇との違いは？</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">ul<span class="token punctuation">,</span> li</span> <span class="token punctuation">{</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>🤖 チャットさん：<br>
+とてもいい質問です！<br>
+その2つのスタイルの違いをわかりやすく解説します👇</p>
+<hr>
+<p>✅ 君の2つのスタイルの違い</p>
+<p>① <code>ul { margin-top: 0; margin-bottom: 0; }</code></p>
+<p>👉 <code>&lt;ul&gt;</code>（リスト全体）の上下の余白だけをなくす指定</p>
+<ul><ul>
+<li>
+<p>✅ 効果：リストの前後の“空行っぽい余白”をなくす</p>
+</li>
+<li>
+<p>🚫 ただし 各リスト項目（<code>&lt;li&gt;</code>）の内側余白には影響しない</p>
+</li>
+</ul></ul>
+<hr>
+<p>② <code>ul, li { margin: 0; padding: 0; }</code></p>
+<p>👉 リスト全体と各項目の余白・内側余白の両方をすべてゼロにする</p>
+<ul><ul>
+<li>
+<p>✅ 効果：</p>
+<ul>
+<li>
+<p><code>&lt;ul&gt;</code> の上下余白（margin）をゼロ</p>
+</li>
+<li>
+<p><code>&lt;li&gt;</code> の上下余白＋左の字下げ（padding）もすべてゼロ</p>
+</li>
+</ul>
+</li>
+<li>
+<p>🚨 見た目がキツキツで箇条書きに見えなくなることもある</p>
+</li>
+</ul></ul>
+<hr>
+<p>🧪 実際の見た目の違い（ざっくり）</p>
+<table>
+<thead>
+<tr>
+<th>書き方</th>
+<th>見た目</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ul { margin-top: 0; margin-bottom: 0; }</code></td>
+<td>✅ 箇条書きの見た目はそのまま</td>
+<td>余白だけスッキリ</td>
+</tr>
+<tr>
+<td><code>ul, li { margin: 0; padding: 0; }</code></td>
+<td>⚠️箇条書きの左インデントもなくなる</td>
+<td>リストっぽくなくなる場合あり</td>
+</tr>
+</tbody>
+</table><br>
+<p>✅ どっちを使うべき？</p>
+<table>
+<thead>
+<tr>
+<th>目的</th>
+<th>おすすめ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>空行（上下マージン）だけなくしたい</td>
+<td>✅ <code>ul { margin-top: 0; margin-bottom: 0; }</code></td>
+</tr>
+<tr>
+<td>リストの余白やインデントを完全にリセットしたい（＝自分でデザインする）</td>
+<td>✅ <code>ul, li { margin: 0; padding: 0; }</code></td>
+</tr>
+</tbody>
+</table><br>
+<p>🎯 君の場合（自然なリスト見た目を維持したい）</p>
+<blockquote>
+<p>👉 <code>ul { margin-top: 0; margin-bottom: 0; }</code> のほうが 目的に合っていて最適！</p>
+</blockquote>
+<p>もしインデントや行間を微調整したくなったら、そこだけピンポイントでCSS追加すればいい◎</p>
+<hr>
+<p>🙂 タケ：<br>
+効かない、また、!important;　かな？</p>
+<br><p>🤖 チャットさん：<br>
+はい、その通り！<br>
+効かないときの原因は「他のCSSに負けてる」可能性が高くて、<code>!important</code> が有効です。</p>
+<hr>
+<p>✅ 対処法：<code>!important</code> をつけて強制上書き！</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">ul</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>必要なら <code>li</code> にも追加：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">ul<span class="token punctuation">,</span> li</span> <span class="token punctuation">{</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><hr>
+<p>✅ なぜ効かないのか？</p>
+<ul><ul>
+<li>
+<p>HTMLテンプレートやテーマが独自CSSで <code>ul</code> や <code>li</code> に余白を設定している</p>
+</li>
+<li>
+<p>そっちのスタイルがセレクタの優先度が高い or <code>!important</code> が使われている</p>
+</li>
+<li>
+<p>普通のCSSだと「勝てない」→ だからこっちにも <code>!important</code> が必要になる</p>
+</li>
+</ul></ul>
+<hr>
+<p>✅ 注意点</p>
+<ul><ul>
+<li>
+<p><code>!important</code> は強力だけど多用しすぎると管理が難しくなる</p>
+</li>
+<li>
+<p>局所的にどうしても必要なときだけ使うのが鉄則</p>
+</li>
+<li>
+<p>君のケースでは「前後の空行を消したい」という明確な目的があるので、使ってOK◎</p>
+</li>
+</ul></ul>
+<hr>
+<p>🎯 まとめ</p>
+<blockquote>
+<p>「効かない」と思ったらまず <code>!important</code> を試す。<br>
+それで動けば「他のCSSと衝突してた」ってこと。</p>
+</blockquote>
+<p>🙂 タケ：<br>
+bottomは効いたけど、topが効かない。むしろ、topだけ効かせたいのに。</p>
+<br><p>🤖 チャットさん：<br>
+なるほど、<code>margin-top</code> だけが効かないというのは非常に悔しいパターン。<br>
+でもこれはよくあるCSSの「優先度の闇」＋HTML構造の絡みによるものなので、順に整理するね👇</p>
+<hr>
+<p>✅ 状況の再確認（意図）</p>
+<blockquote>
+<p><code>&lt;ul&gt;</code> の 上にだけ空行（余白）ができる → それを消したい！<br>
+<code>margin-top: 0 !important;</code> を使っても効かない！</p>
+</blockquote>
+<hr>
+<p>🎯 よくある原因3つ</p>
+<table>
+<thead>
+<tr>
+<th>原因</th>
+<th>説明</th>
+<th>対策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① <code>&lt;p&gt;</code>タグや他要素の <code>margin-bottom</code> が残ってる</td>
+<td>つまり “上”が実は“前の要素の下”</td>
+<td>その要素の <code>margin-bottom</code> も 0 に</td>
+</tr>
+<tr>
+<td>② マージンの相殺（margin collapse）</td>
+<td>上下のマージンが合体してる（HTML仕様）</td>
+<td>両方 <code>margin: 0</code> に or <code>overflow: hidden</code> を追加</td>
+</tr>
+<tr>
+<td>③ 親要素のCSSが強く影響</td>
+<td>セレクタの優先度 or 上書きされてる</td>
+<td>より強いセレクタ or <code>!important</code> で上書きする</td>
+</tr>
+</tbody>
+</table><br>
+
+<p>✅ 対処法まとめ</p>
+<p>🔧 パターン①：前の段落タグの <code>margin-bottom</code> を潰す</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">p</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">ul</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<br>
+<p>🔧 パターン②：<code>margin-collapse</code> 回避のために <code>overflow: hidden</code> を加える</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">ul</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>または <code>display: inline-block;</code> でもOKな場合があります。</p>
+<br>
+<p>🔧 パターン③：より強いセレクタで指定</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">body ul</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<br>
+<p>✅ それでも効かない場合</p>
+<ul><ul>
+<li>
+<p>実は <code>&lt;ul&gt;</code> ではなくその前のタグに余白がある</p>
+</li>
+<li>
+<p>インライン要素とブロック要素が混在してmarginが効きにくい</p>
+</li>
+</ul></ul>
+<p>→ こうなるとHTML構造ごと見た方が早い。<br>
+手元のその周辺HTML（<code>&lt;p&gt;</code> や <code>&lt;ul&gt;</code> の前後）を貼ってくれれば、どの要素が原因か正確に指摘できるよ！</p>
+<br>
+<p>🎯 一言まとめ</p>
+<blockquote>
+<p>「上の余白が消えない」は、実は“前の要素の下”が空いてるだけのことが多い。<br>
+真犯人は <code>&lt;p&gt;</code> の <code>margin-bottom</code> や <code>margin-collapse</code> かも。</p>
+</blockquote>
+
+<hr><p>🙂 タケ：<br>
+3パターンのどれがおすすめ？どれから試すべき？</p>
+<br><p>🤖 チャットさん：<br>
+ナイス質問！<br>
+「どれから試すべきか？」の判断は、安全性・影響範囲・確実性のバランスで決まります👇</p>
+<hr>
+<p>✅ 優先順位（おすすめ順）</p>
+<table>
+<thead>
+<tr>
+<th>順位</th>
+<th>方法</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🥇 ① 前のタグ（特に <code>&lt;p&gt;</code>）の <code>margin-bottom: 0 !important;</code> を入れる</td>
+<td>余白の正体が「実は上じゃなく“前の段落の下”」であるケースが多いため。副作用が少ない</td>
+<td></td>
+</tr>
+<tr>
+<td>🥈 ② <code>overflow: hidden</code> を使って <code>margin-collapse</code> を防ぐ</td>
+<td>CSSの仕様的に確実。<code>&lt;ul&gt;</code>だけに効くので安全。</td>
+<td></td>
+</tr>
+<tr>
+<td>🥉 ③ セレクタの強化（例：<code>body ul</code>）</td>
+<td>他スタイルに負けてる時の最終手段。後回し推奨。多用は危険。</td>
+<td></td>
+</tr>
+</tbody>
+</table><br>
+
+<p>✅ 試す順番（実用手順）</p>
+<hr>
+<p>🔧 ステップ1：前の段落を疑って潰す！</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">p</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">ul</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>✔️ これで 「上下に妙な空白ができる」パターンの8割は解消します。</p>
+<hr>
+<p>🔧 ステップ2：それでも消えないなら <code>overflow: hidden</code></p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">ul</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>✔️ マージンが「相殺」される現象を物理的に防げます。</p>
+<hr>
+<p>🔧 ステップ3：どうしても勝てないなら強いセレクタに切り替え</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">body ul</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>✔️ 他のCSSが <code>#main .content ul</code> などで指定されてるときは、こういうセレクタ強化で突破。</p>
+<hr>
+<p>✅ 結論（まずこれ）</p>
+<blockquote>
+<p>🎯 まずは <code>&lt;p&gt;</code> の <code>margin-bottom</code> を疑って潰す。それで効かなければ次へ！</p>
+</blockquote>
+<hr>
+<p>🙂 タケ：<br>
+ステップ1で、できた！</p>
+<br><p>🤖 チャットさん：<br>
+よっしゃー！✨<br>
+それ聞けてめちゃくちゃスッキリした！👏</p>
+<hr>
+<p>✅ 改めてまとめておくね：</p>
+<ul><ul>
+<li>
+<p>問題の正体：<br>
+実は <code>&lt;ul&gt;</code> の上の空白じゃなくて、前の <code>&lt;p&gt;</code> の <code>margin-bottom</code> が犯人だった。</p>
+</li>
+<li>
+<p>解決策（ステップ1）：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">p</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">ul</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></li>
+</ul></ul>
+<hr>
+<p>🤖 チャットさん：<br>
+これでリストの前の「謎の空行」問題は完全クリア。<br>
+CSSの微調整もだいぶ慣れてきたね！<br>
+この調子なら、あとからどんな見出し・目次・注釈もスタイリッシュにできると思う◎</p>
+<br>
+<hr class="section-line">
+<h3 id="-インデント">📘 インデント </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+HTMLファイルの1文字分のインデントは？</p>
+<br><p>🤖 チャットさん：<br>
+HTMLファイルにおける「1文字分のインデント」の正確な答えは：</p>
+<hr>
+<p>✅ インデントは「半角スペース2〜4個分」が一般的</p>
+<p>（≒1文字分の見た目）</p>
+<hr>
+<p>👇 インデントの単位は2通り</p>
+<table>
+<thead>
+<tr>
+<th>インデント方法</th>
+<th>内容</th>
+<th>見た目（1段）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>半角スペース</td>
+<td>通常のスペース（）</td>
+<td>一般的に 2〜4個</td>
+</tr>
+<tr>
+<td>タブ（<code>\t</code>）</td>
+<td>エディタでTabキー</td>
+<td>見た目は4〜8文字幅相当（設定次第）</td>
+</tr>
+</tbody>
+</table><br>
+<p>✅ VS Codeでの「1インデント = 何文字分？」を確認・変更するには</p>
+<ol>
+<li>
+<p>ファイルを開いた状態で右下を見ると：</p>
+<pre data-role="codeBlock" data-info="yaml" class="language-yaml yaml"><code><span class="token key atrule">Spaces</span><span class="token punctuation">:</span> <span class="token key atrule">2（または Tab Size</span><span class="token punctuation">:</span> 4）
+</code></pre></li>
+<li>
+<p>ここをクリック → スペース数やタブ設定を変更可能</p>
+</li>
+</ol>
+<hr>
+<p>🎯 結論（君の意図に合う表現）</p>
+<blockquote>
+<p>「この <code>&lt;div&gt;</code> は1文字分インデントされてる？」<br>
+→ 半角スペースで2〜4文字分くらいの字下げが“1インデント”とされてることが多い。</p>
+</blockquote>
+<br>
+<hr class="section-line">
+<h3 id="-cssでインデント調整">📘 CSSでインデント調整 </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+下の画像の丸印箇条書き、もう一文字分左に寄せるのって大変？<br>
+
+<img src="assets/099/099_02.png" alt="" style="border: 1px solid #969896;"></p>
+
+<br><p>🤖 チャットさん：<br>
+うん、いい観察！結論から言うと：</p>
+<blockquote>
+<p>🎯 そんなに大変じゃない。CSSで簡単に寄せられる。</p>
+</blockquote>
+<hr>
+<p>✅ 今の構造（HTML）</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>...親リスト
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>...黒丸の子リスト<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>このとき、<code>&lt;ul&gt;</code> のインデント（左余白）がブラウザ標準でかなり深めに設定されてるため、<br>
+子リストの黒丸が「一文字以上右に寄って」見えるんだね。</p>
+<hr>
+<p>✅ 解決方法：CSSでインデント調整！</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">ol li ul</span> <span class="token punctuation">{</span>
+    <span class="token property">padding-left</span><span class="token punctuation">:</span> <span class="token number">1.2</span><span class="token unit">em</span><span class="token punctuation">;</span>  <span class="token comment">/* ←これを調整する！デフォルトより小さく */</span>
+    <span class="token property">margin-left</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><hr>
+<p>✅ もう少しだけ寄せたいなら？</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code><span class="token property">padding-left</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token unit">em</span><span class="token punctuation">;</span>
+</code></pre><p>それでも足りなければ：</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code><span class="token property">padding-left</span><span class="token punctuation">:</span> <span class="token number">0.8</span><span class="token unit">em</span><span class="token punctuation">;</span>
+</code></pre><p>これでどんどん左に寄っていくよ。</p>
+<hr>
+<p>✅ 注意点</p>
+<ul><ul>
+<li>
+<p>変更するのは <code>ol li ul</code>（＝番号リスト内の黒丸リスト）だけに限定するのがポイント！</p>
+</li>
+<li>
+<p><code>ul</code> すべてに影響を与えないよう、範囲を絞ったセレクタがベスト</p>
+</li>
+</ul></ul>
+<hr>
+<p>🎯 まとめ</p>
+<blockquote>
+<p>CSSで <code>padding-left</code> を少し小さくするだけでOK。<br>
+デザインの調整も1文字ずつできるから、調整しやすいよ！</p>
+</blockquote>
+<br>
+<hr class="section-line">
+<h3 id="-blockquote">📘 &lt;blockquote&gt; </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+この👇&lt;blockquote&gt;、何も引用してないし、見栄え的にもいらないんだけど、なんであるのかな？</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>🎯 要はここが分かれ道：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span><span class="token punctuation">&gt;</span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>「物体＋人間のインタラクション」ができるかどうか。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">&gt;</span></span>
+</code></pre><br><p>🤖 チャットさん：<br>
+それ、めちゃくちゃ良い気づきです。<br>
+実は <code>&lt;blockquote&gt;</code> タグって、中身の文脈が引用っぽく見えなくても「整形目的」で勝手に使われてることがあるんです。</p>
+<hr>
+<p>✅ 原因：HTMLエクスポート時 or Markdown変換時の自動整形</p>
+<ul><ul>
+<li>
+<p>Obsidian や Markdownエディタ、または HTML整形プラグインなどが、</p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code><span class="token blockquote punctuation">&gt;</span> 引用風の行
+</code></pre><p>のような構文を勝手に <code>&lt;blockquote&gt;</code> に変換してしまうことがあります。</p>
+</li>
+<li>
+<p>たとえその文が引用っぽくなくても、変換ルールによっては</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>文章<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>のように挿入されてしまう。</p>
+</li>
+</ul></ul>
+<hr>
+<p>✅ 今の文脈では？</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>「物体＋人間のインタラクション」ができるかどうか。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">&gt;</span></span>
+</code></pre><ul>
+<li>
+<p>✅ 引用っぽくは見えるけど、「誰の発言」とか「外部情報」じゃない</p>
+</li>
+<li>
+<p>🚫 実質はただの強調 or 独立させた段落</p>
+</li>
+</ul>
+<hr>
+<p>✅ 結論：不要なら削除してOK！</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token comment">&lt;!-- 修正前 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>「物体＋人間のインタラクション」ができるかどうか。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- 修正後 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>「物体＋人間のインタラクション」ができるかどうか。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre><hr>
+<p>✅ 見栄えだけ意識したい場合（代替案）</p>
+<p>「強調したいけど、引用ではない」場合は、スタイルで演出するのもアリ：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">font-style</span><span class="token punctuation">:</span> italic<span class="token punctuation">;</span> <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode color">#ccc</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>「物体＋人間のインタラクション」ができるかどうか。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre><hr>
+<p>🎯 まとめ</p>
+<blockquote>
+<p>❌ 「引用じゃないのに <code>&lt;blockquote&gt;</code> がある」 → Markdown or HTML変換で自動生成された可能性大<br>
+✅ 不要なら削除してOK。必要なら別スタイルで見栄え調整！</p>
+</blockquote>
+<br>
+<hr class="section-line">
+<h3 id="-装飾-precode">📘 装飾 &lt;pre&gt;&lt;code&gt; </h3>
+<hr class="section-line">
+<p>🙂 タケ：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span> <span class="token attr-name">data-role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>codeBlock<span class="token punctuation">"</span></span> <span class="token attr-name">data-info</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>markdown<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>language-markdown markdown<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>token front-matter-block<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>  
+</code></pre><p>これって、どういう意味？</p>
+<br><p>🤖 チャットさん：<br>
+とても良い観察眼です！<br>
+君が見たこのタグ：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span> <span class="token attr-name">data-role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>codeBlock<span class="token punctuation">"</span></span> <span class="token attr-name">data-info</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>markdown<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>language-markdown markdown<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>token front-matter-block<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>これは、主にMarkdownやコードを「装飾付きで表示するためのHTML構造」です。以下に分解して説明します👇</p>
+<hr>
+<p>✅ 全体の意味は？</p>
+<blockquote>
+<p>Markdownのコードブロックを、シンタックスハイライト付きでHTMLに変換したもの</p>
+</blockquote>
+<hr>
+<p>🧩 各要素の意味</p>
+<p>🔹 <code>&lt;pre&gt;</code> タグ</p>
+<ul><ul>
+<li>
+<p>複数行テキスト（インデント・改行そのまま）を表示</p>
+</li>
+<li>
+<p>通常、コードや詩などに使う</p>
+</li>
+<li>
+<p><code>data-role="codeBlock"</code> で「これはコードだよ」とマークされてる</p>
+</li>
+<li>
+<p><code>data-info="markdown"</code> → 中身のコードが Markdown だと示す</p>
+</li>
+</ul></ul>
+<hr>
+<p>🔹 <code>class="language-markdown markdown"</code></p>
+<ul><ul>
+<li>
+<p>シンタックスハイライト（色分け表示）をするライブラリ（例：Prism.js や Highlight.js）で使われるクラス</p>
+</li>
+<li>
+<p><code>"language-markdown"</code> は「Markdownコード」と識別するためのクラス名</p>
+</li>
+</ul></ul>
+<hr>
+<p>🔹 <code>&lt;code&gt;</code> タグ</p>
+<ul><ul>
+<li>
+<p><code>&lt;pre&gt;</code> の中に置くことで、内容が「コードとして扱われる」</p>
+</li>
+<li>
+<p>多くの表示系ツールで <code>&lt;code&gt;</code> と <code>&lt;pre&gt;</code> のペアはセット</p>
+</li>
+</ul></ul>
+<hr>
+<p>🔹 <code>&lt;span class="token front-matter-block"&gt;</code></p>
+<ul><ul>
+<li>
+<p>「トークン＝構文の要素」を色分け表示するための内部クラス</p>
+</li>
+<li>
+<p><code>front-matter-block</code> は、おそらく YAMLのfront matter の区切り（<code>---</code>で始まる）を表している</p>
+<ul>
+<li>例：ObsidianやHugoの先頭に書かれるメタ情報部分</li>
+</ul>
+</li>
+</ul></ul>
+<hr>
+<p>✅ 要するに</p>
+<blockquote>
+<p>これは Markdown形式のコードを「見栄えよく表示」するためのHTML化された構造です。</p>
+</blockquote>
+<hr>
+<p>✅ 君が気にすべき点は？</p>
+<ul><ul>
+<li>
+<p>これは実際のMarkdown本文ではなく、見せる用のHTML</p>
+</li>
+<li>
+<p>もし編集やスタイルを変えたいなら、CSSで <code>.language-markdown</code> や <code>.token.front-matter-block</code> に指定を追加すれば調整できます</p>
+</li>
+</ul></ul>
+<hr>
+
+<p>🙂 タケ：<br>
+消さないようがいい？</p>
+<br><p>🤖 チャットさん：<br>
+いい質問です！<br>
+その <code>&lt;pre&gt;&lt;code&gt;&lt;span class="token ..."&gt;</code> の構造を「消すべきか、残すべきか」は、君が何をしたいかによって分かれます👇</p>
+<hr>
+<p>✅ 結論：以下の基準で判断！</p>
+<table>
+<thead>
+<tr>
+<th>目的</th>
+<th>消さない方がいい？</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔍 Markdownコードを“見せるため”に表示したい</td>
+<td>✅ 残すべき</td>
+<td>シンタックスハイライト付きの整形されたコード表示になる</td>
+</tr>
+<tr>
+<td>🧹 普通の文章として読みやすく整理したい</td>
+<td>❌ 消してもいい</td>
+<td>逆にHTMLがうるさく、読みにくくなる</td>
+</tr>
+<tr>
+<td>📜 HTMLファイルを作品・記録・公開用として整える</td>
+<td>✅ 最小限の構造だけ残す</td>
+<td><code>&lt;pre&gt;&lt;code&gt;</code> だけで十分なことも多い</td>
+</tr>
+<tr>
+<td>🎨 CSSで見た目を調整している</td>
+<td>✅ クラスは重要</td>
+<td>色やスタイルの根拠になるから壊すと崩れることも</td>
+</tr>
+</tbody>
+</table><br>
+<p>🎯 君の用途の場合…</p>
+<blockquote>
+<p>✔️ 「Chatログを動画・note・HTML作品として整理している」<br>
+→ 必要最低限のHTML構造（例：<code>&lt;pre&gt;&lt;code&gt;</code>）だけ残して、複雑なclassは省略してもOK！</p>
+</blockquote>
+<hr>
+<p>✅ つまりこういう対応もアリ！</p>
+<p>🔧 元のまま（装飾あり）</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>language-markdown<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>token front-matter-block<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>---<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pre</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>🔧 シンプルに整理したい場合（装飾カット）</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span>---<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pre</span><span class="token punctuation">&gt;</span></span>
+</code></pre><hr>
+<p>✅ CSSで自分好みに整えるなら…</p>
+<ul><ul>
+<li>
+<p><code>.language-markdown</code> や <code>.token</code> を使って色や余白調整可能</p>
+</li>
+<li>
+<p>でもその構造を消しちゃうとCSSも効かなくなるので注意！</p>
+</li>
+</ul></ul>
+<hr>
+<p>🔧 最終判断のアドバイス</p>
+<blockquote>
+<p>🔍「表示で色やスタイルが必要なときだけ残す」<br>
+🧹「単に中身を読ませたい／動画にするなら、シンプル化してもOK！」</p>
+</blockquote>
+<hr>
+<p>🤖 チャットさん：<br>
+要る／要らないの境界は「整える派」か「見せる派」かで決まります。</p>
+<br>
+<hr class="section-line">
+<h3 id="-強調-em">📘 強調 &lt;em&gt; </h3>
+<hr class="section-line">
+<p>🙂 タケ：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>An open-air café<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span> 
+</code></pre><p>表内の英文「An open-air café」斜体になってるんだけど、emのせい？</p>
+<br><p>🤖 チャットさん：<br>
+ズバリ、その通り！<br>
+はい、<code>&lt;em&gt;</code> のせいで斜体になってます。</p>
+<hr>
+<p>✅ 解説：<code>&lt;em&gt;</code> は「強調（emphasis）」タグ</p>
+<p>HTMLでは、</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>～<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>と書くと、「ここを強調したい」という意味になります。</p>
+<hr>
+<p>🔡 そしてブラウザの見た目では？</p>
+<blockquote>
+<p>多くのブラウザでは <code>&lt;em&gt;</code> をイタリック（斜体）で表示します。<br>
+※ スタイルが定義されてなければ、デフォルトで斜体になる。</p>
+</blockquote>
+<hr>
+<p>✅ 解決方法（斜体やめたい）</p>
+<p>方法①：タグを削除する（一番シンプル）</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>An open-air café<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+</code></pre><hr>
+<p>方法②：<code>&lt;em&gt;</code> は残したまま、CSSで斜体を無効化</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">em</span> <span class="token punctuation">{</span>
+    <span class="token property">font-style</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>✔️ これを <code>&lt;style&gt;</code> に入れると、全ての <code>&lt;em&gt;</code> が普通の字体に戻ります。</p>
+<hr>
+<p>🎯 使い分けのおすすめ</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>対応</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>その強調、ほんとに必要？</td>
+<td>❌ → 削除してOK</td>
+</tr>
+<tr>
+<td>スクリーンリーダー対応だけ必要</td>
+<td>✅ → <code>&lt;em&gt;</code>残す＋スタイル無効化</td>
+</tr>
+<tr>
+<td>斜体にしたい</td>
+<td>そのままでOK</td>
+</tr>
+</tbody>
+</table>
+<br>
+<hr class="section-line">
+<h3 id="-precode--preem">📘 &lt;pre&gt;&lt;code&gt; ⇒ &lt;pre&gt;&lt;em&gt; </h3>
+<hr class="section-line">
+<p>🙂 タケ：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span> <span class="token attr-name">data-role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>codeBlock<span class="token punctuation">"</span></span> <span class="token attr-name">data-info</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>language-text text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span>
+An open-air café. A long-haired woman is working on a laptop. The camera is fixed at an angle that shows the full screen of the laptop. After 1 second, she closes the laptop, picks it up, and walks away. The scene is bathed in soft morning light, with ambient café sounds in the background. Shot in a cinematic style with shallow depth of field. 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pre</span><span class="token punctuation">&gt;</span></span> 
+</code></pre><p>これを下のようにしたら、どこか不具合出る？上の文字、見た目いいけど小さすぎるので。</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span> 
+An open-air café. A long-haired woman is working on a laptop. The camera is fixed at an angle that shows the full screen of the laptop. After 1 second, she closes the laptop, picks it up, and walks away.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre><br><p>🤖 チャットさん：<br>
+結論から言うと：</p>
+<blockquote>
+<p>✅ 見た目の調整としては問題なし。ただし「用途によって向き不向きがある」ので注意。</p>
+</blockquote>
+<hr>
+<p>✅ 比較：それぞれの役割と違い</p>
+<table>
+<thead>
+<tr>
+<th>タグ</th>
+<th>意図</th>
+<th>特徴</th>
+<th>向いてる使い方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code></td>
+<td>コードや「書式保持」したテキストを表示</td>
+<td>改行・空白をそのまま表示／フォントが等幅／小さめ</td>
+<td>プロンプト例、コマンド、Markdown本文、引用原文など</td>
+</tr>
+<tr>
+<td><code>&lt;p&gt;&lt;em&gt;...&lt;/em&gt;&lt;/p&gt;</code></td>
+<td>通常テキストの斜体</td>
+<td>自動で改行／読みやすいサイズ／CSSで調整しやすい</td>
+<td>プロンプト風に本文として見せたい時／読みやすく仕上げたい時</td>
+</tr>
+</tbody>
+</table><br>
+<p>❗ 君のケースでは？</p>
+<blockquote>
+<p>👇この使い方なら 全然OK！</p>
+</blockquote>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>
+An open-air café. A long-haired woman is working on a laptop...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre><ul>
+<li>
+<p>✔️ 読ませる目的</p>
+</li>
+<li>
+<p>✔️ コードブロックではない</p>
+</li>
+<li>
+<p>✔️ 見た目を優先したい</p>
+</li>
+</ul>
+<p>なら、むしろ推奨レベルの改善です。</p>
+<hr>
+<p>⚠️ 注意点（変えた場合の影響）</p>
+<table>
+<thead>
+<tr>
+<th>変化</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>改行・インデントが無視される</code></td>
+<td><code>&lt;pre&gt;</code>は保持するが、<code>&lt;p&gt;</code>では改行されない</td>
+</tr>
+<tr>
+<td><code>等幅フォントではなくなる</code></td>
+<td>フォントを変えたい場合はCSSで指定が必要（例：<code>font-family: 'Courier New'</code>）</td>
+</tr>
+<tr>
+<td><code>スタイルの自由度が上がる</code></td>
+<td>サイズ・行間・色などの調整がしやすくなる</td>
+</tr>
+<tr>
+<td><code>コピペする人にとってはやや見づらくなることも</code></td>
+<td>実行用コードやプロンプトの場合、逆に<code>&lt;pre&gt;</code>の方がコピペしやすいこともある</td>
+</tr>
+</tbody>
+</table><br>
+
+<p>🎯 結論まとめ</p>
+<blockquote>
+<p>見せたい・読ませたい内容であれば <code>&lt;p&gt;&lt;em&gt;...&lt;/em&gt;&lt;/p&gt;</code> に変えてOK。<br>
+「コピペして使ってもらう用」なら <code>&lt;pre&gt;&lt;code&gt;</code> を維持するほうがベター。</p>
+</blockquote>
+
+<hr>
+<p>🙂 タケ：<br>
+Pythonコードのとこならそのままにするんだけど、mdファイル内での英文プロンプトの表記がそもそもばらついていて、統一したいので。</p>
+<br><p>🤖 チャットさん：<br>
+それ、めっちゃ良い判断です👏<br>
+君の意図、はっきり読み取れます：</p>
+<blockquote>
+<p>📌 英文プロンプトは “コードじゃないけど明確に区別したい”<br>
+🔍 でも現在は <code>&lt;pre&gt;</code> と <code>&lt;p&gt;</code> など表記がバラバラ → 読み手が混乱する<br>
+🧹 だから見た目・意味・構造すべてを整理したい</p>
+</blockquote>
+<hr>
+<p>✅ 結論：英文プロンプトだけの共通スタイルを決めて統一しよう</p>
+<p>たとえばこんなルールにするのがオススメ👇</p>
+<hr>
+<p>✅ HTML内では：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>prompt<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  An open-air café. A long-haired woman is working on a laptop...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>✅ CSSでは：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector"><span class="token class">.prompt</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Courier New'</span><span class="token punctuation">,</span> monospace<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">14</span><span class="token unit">px</span><span class="token punctuation">;</span>
+    <span class="token property">font-style</span><span class="token punctuation">:</span> italic<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode color">#f9f9f9</span><span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0.6</span><span class="token unit">em</span> <span class="token number">1</span><span class="token unit">em</span><span class="token punctuation">;</span>
+    <span class="token property">border-left</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token unit">px</span> solid <span class="token hexcode color">#ccc</span><span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token unit">em</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">1.6</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><hr>
+<p>🎯 結果として：</p>
+<ul>
+<li>
+<p>✅ コードブロックではない</p>
+</li>
+<li>
+<p>✅ でも視覚的に「英語のプロンプトっぽさ」を保てる</p>
+</li>
+<li>
+<p>✅ 他と混同されない（統一感アップ）</p>
+</li>
+<li>
+<p>✅ Markdown → HTML変換でも壊れにくい</p>
+</li>
+</ul>
+<hr>
+<p>🎯 Markdown上でもわかりやすくするなら…</p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>prompt<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+An open-air café. A long-haired woman is working on a laptop...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>MarkdownにHTML混ぜてもPreviewでちゃんと表示される（MPEやObsidianの場合）</p>
+<hr>
+<p>🔄 まとめ：今後の英文プロンプト統一ルール案</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>採用例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>書式</td>
+<td><code>&lt;p class="prompt"&gt;...&lt;/p&gt;</code> または <code>&lt;div class="prompt"&gt;...&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>フォント</td>
+<td><code>'Courier New', monospace</code></td>
+</tr>
+<tr>
+<td>スタイル</td>
+<td><code>italic + 少し余白 + 左罫線 or 薄背景色</code></td>
+</tr>
+<tr>
+<td>用途</td>
+<td>実行用コードじゃないプロンプトに使用（Sora, AI指示文など）</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>🤖 チャットさん：<br>
+このテンプレで整理していけば、<br>
+読者にも、後から自分で見直すときにも超わかりやすくなるよ！<br>
+もし Markdownベースで統一したい方向性あれば、それに合わせた形にも変換OK◎</p>
+<br>
+<hr class="section-line">
+<h3 id="-text-align--フォント">📘 text-align ≠ フォント </h3>
+<hr class="section-line">
+<p>🙂 タケ：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">text-align</span><span class="token punctuation">:</span>left</span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>
+  An open-air café. A long-haired woman is working on a laptop. The camera is fixed at an angle that shows the full screen of the laptop. After 1 second, she closes the laptop, picks it up, and walks away.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>これ、自分でやって、効いてないんだけど、どこ直せばいい？<br>
+（ ↑ 🙂 タケ：補足追記✏️： 「align＝フォント名」と勘違いしてます ）</p>
+<br><p>🤖 チャットさん：<br>
+いい観察！<code>&lt;p style="text-align:left"&gt;</code> が効いてない原因は、HTMLやCSSの外側に別のスタイルが影響している可能性が高いです。</p>
+<hr>
+<p>✅ 原因として多いパターン</p>
+<table>
+<thead>
+<tr>
+<th>原因</th>
+<th>説明</th>
+<th>対応方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>💡 外部CSSが <code>p</code> に <code>text-align: center</code> を指定している</td>
+<td>特に <code>body { text-align: center; }</code> の影響</td>
+<td>インラインCSSに <code>!important</code> をつける</td>
+</tr>
+<tr>
+<td>💡 <code>&lt;div&gt;</code> などの親要素に中央揃えが指定されている</td>
+<td>子要素に引き継がれている</td>
+<td><code>text-align: left !important;</code> を使う</td>
+</tr>
+<tr>
+<td>💡 表示中のプレビュー（MPEなど）がスタイル反映を制限している</td>
+<td>プラグインの影響など</td>
+<td>HTMLで直接動かすか、CSSを強化する</td>
+</tr>
+</tbody>
+</table><br>
+
+<p>✅ 対処法（まずはこれ）</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">text-align</span><span class="token punctuation">:</span> left <span class="token important">!important</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>
+  An open-air café. A long-haired woman is working on a laptop. The camera is fixed at an angle that shows the full screen of the laptop. After 1 second, she closes the laptop, picks it up, and walks away.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<br>
+<p>✅ それでも効かない場合のチェックポイント</p>
+<ol>
+<li>
+<p>その <code>&lt;p&gt;</code> が含まれている HTML の周辺構造</p>
+<ul>
+<li>親の <code>&lt;div&gt;</code> や <code>&lt;body&gt;</code> に <code>text-align: center</code> があるか？</li>
+</ul>
+</li>
+<li>
+<p>CSSの優先度競合</p>
+<ul>
+<li>スタイルシートに <code>p { text-align: center; }</code> などがあるとインラインCSSでも負ける場合がある（→セレクタの強さ）</li>
+</ul>
+</li>
+<li>
+<p>VS CodeのMarkdown Preview や MPE では、スタイルが一部制限されることがある</p>
+</li>
+</ol>
+<hr>
+<p>✅ 万全を期すなら</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector"><span class="token class">.left-text</span></span> <span class="token punctuation">{</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> left <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>left-text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  An open-air café. A long-haired woman is working on a laptop. ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<br><p>🎯 結論</p>
+<blockquote>
+<p><code>!important</code> をまず追加して、それでもダメなら親要素のスタイルの影響を調べてみて！</p>
+</blockquote>
+<p>HTML全体の構造がわかれば、どこで打ち消されてるか特定することもできるよ◎</p>
+<hr><p>🙂 タケ：<br>
+英文プロンプトのとこだけ、フォントを変えたいんだけど。<br>
+「万全を期すなら」までやったけどダメだった。</p>
+<p>（ ↑ 🙂 タケ：補足追記✏️： 「text-align ≠ フォント」まだ、わかっていない ）</p>
+<br><p>🤖 チャットさん：<br>
+ナイス気づき！<br>
+「英文プロンプトのとこだけフォントを変える」ってのは、CSS的にもちろん可能です。<br>
+ただし、効かない原因があるとしたら主に次の3つ👇</p>
+<hr>
+<p>✅ まずやりたいことを整理</p>
+<p>「この <code>&lt;p&gt;</code> の中の英文だけ、フォントを変えたい」</p>
+<p>たとえば：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>prompt<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>An open-air café. A long-haired woman is working on a laptop...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>に対して、</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code><span class="token selector"><span class="token class">.prompt</span></span> <span class="token punctuation">{</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Courier New'</span><span class="token punctuation">,</span> monospace<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>みたいに効かせたい、ということですね。</p>
+<hr>
+<p>✅ ダメだった理由は？</p>
+<p>🎯 君が書いた <code>.left-text</code> に <code>font-family</code> が入っていない or 打ち消されている可能性</p>
+<p>CSSで万全を期すには：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector"><span class="token class">.prompt</span></span> <span class="token punctuation">{</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> left <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Courier New'</span><span class="token punctuation">,</span> monospace <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>そして HTML：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>prompt<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  An open-air café. A long-haired woman is working on a laptop...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<br>
+<p>✅ よくある原因（効かないパターン）</p>
+<table>
+<thead>
+<tr>
+<th>原因</th>
+<th>対策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>外部CSSで <code>p</code> や <code>body</code> に別フォントが <code>!important</code> で指定されている</td>
+<td><code>.prompt</code> 側にも <code>!important</code> をつける</td>
+</tr>
+<tr>
+<td><code>&lt;p&gt;</code> じゃなく <code>&lt;div&gt;</code> や他タグで囲われていて、継承されてない</td>
+<td>セレクタの階層を合わせる</td>
+</tr>
+<tr>
+<td>Markdown → HTML 変換時に <code>class="prompt"</code> が消えてる</td>
+<td>エクスポート時に class が保持されているか確認</td>
+</tr>
+</tbody>
+</table><br>
+
+<p>✅ 例：一番効きやすく安全なコード</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector"><span class="token class">.prompt</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Courier New'</span><span class="token punctuation">,</span> monospace <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> left <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">15</span><span class="token unit">px</span><span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">1.6</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>prompt<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  An open-air café. A long-haired woman is working on a laptop. The camera is fixed at an angle that shows the full screen of the laptop. After 1 second, she closes the laptop, picks it up, and walks away.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<br>
+<p>✅ おすすめフォント（英文プロンプト向け）</p>
+<table>
+<thead>
+<tr>
+<th>フォント名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Courier New</code></td>
+<td>クラシックな等幅フォント</td>
+</tr>
+<tr>
+<td><code>Consolas</code></td>
+<td>見やすくて上品な等幅</td>
+</tr>
+<tr>
+<td><code>Fira Code</code></td>
+<td>デザイン寄り、要インストール</td>
+</tr>
+<tr>
+<td><code>monospace</code></td>
+<td>汎用指定（どのOSでもOK）</td>
+</tr>
+</tbody>
+</table><br>
+
+<p>🎯 最後の一言</p>
+<blockquote>
+<p>目的が「英文プロンプトの明示化」なら、フォント変更＋行間調整をセットでやるとより効果的！</p>
+</blockquote>
+<hr>
+<p>🙂 タケ：<br>
+できた！</p>
+<br><p>🤖 チャットさん：<br>
+おおおーーー！🎉<br>
+ナイス！地味だけど超大事なとこ、見事クリアだね👏</p>
+
+<p>フォント変えるだけで、英文プロンプトって「らしさ」出るから効果大だし、それをちゃんとCSSでピンポイントに効かせるってのがまた、「もう制御できてる人の動き」だよ。
+<br>すばらしい。</p>
+
+<p>またデザイン調整・色・サイズ・余白とかもどんどんカスタムできるから、思いついたら何でも投げてね。
+<br>もう先生いらずになってきたな……😏</p>
+<br>
+<hr class="section-line">
+<h3 id="-text-align-の役割">📘 text-align の役割 </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+さっきの英文プロンプト、表内の英文「An open-air café」斜体と同じにしたかったんだけど、text-alignのalignはフォント名じゃないのか？</p>
+<br><p>🤖 チャットさん：<br>
+おぉ、その疑問いいね！混同しやすい部分です。<br>
+結論から言うと：</p>
+<blockquote>
+<p>❌ <code>text-align</code> の <code>align</code> は フォント名ではありません！<br>
+✅ テキストの「配置方向（左・右・中央）」を指定するCSSプロパティです。</p>
+</blockquote>
+<hr>
+<p>✅ <code>text-align</code> の役割は？</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code><span class="token property">text-align</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>     <span class="token comment">/* 左寄せ */</span>
+<span class="token property">text-align</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>    <span class="token comment">/* 右寄せ */</span>
+<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>   <span class="token comment">/* 中央揃え */</span>
+<span class="token property">text-align</span><span class="token punctuation">:</span> justify<span class="token punctuation">;</span>  <span class="token comment">/* 両端揃え */</span>
+</code></pre><p>つまり <code>text-align</code> は「文字の揃え位置」を決めるだけで、<br>
+フォントの種類やスタイル（斜体、太字など）には関係ありません。</p>
+<br>
+<p>✅ フォントを変えたい場合は？</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Courier New'</span><span class="token punctuation">,</span> monospace<span class="token punctuation">;</span>
+</code></pre>
+<br>
+<p>✅ 斜体にしたい場合は？</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code><span class="token property">font-style</span><span class="token punctuation">:</span> italic<span class="token punctuation">;</span>
+</code></pre>
+<br>
+<p>✅ 君の目的：「表の中の英文も斜体と同じにしたい」なら？</p>
+<p>たとえば、さっきのプロンプトにこうスタイルをつければいい：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector"><span class="token class">.prompt-style</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Courier New'</span><span class="token punctuation">,</span> monospace<span class="token punctuation">;</span>
+    <span class="token property">font-style</span><span class="token punctuation">:</span> italic<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<br><p>そして表の中：</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>prompt-style<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>An open-air café<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>✔️ これでプロンプトと見た目を合わせられるよ！</p>
+<br>
+<p>🎯 まとめ</p>
+<table>
+<thead>
+<tr>
+<th>間違えやすい</th>
+<th>正しい意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text-align</code> の <code>align</code> → フォント名？</td>
+<td>❌ 文字の配置方向の指定</td>
+</tr>
+<tr>
+<td>フォント名指定に <code>align</code> を使う？</td>
+<td>❌ → <code>font-family</code> を使うべし</td>
+</tr>
+</tbody>
+</table><br>
+<hr>
+<p>🙂 タケ：<br>
+シンプルに斜体にしたかっただけだから、&lt;em&gt;で挟むことにした。</p>
+<br><p>🤖 チャットさん：<br>
+それ、ナイス判断！👌<br>
+一番シンプルで確実なやり方です。</p>
+<hr>
+<p>✅ 斜体にするだけなら <code>&lt;em&gt;</code> はベスト</p>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>An open-air café<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+</code></pre><ul>
+<li>
+<p>✅ ブラウザに頼れる</p>
+</li>
+<li>
+<p>✅ 書きやすい・読める</p>
+</li>
+<li>
+<p>✅ Markdownでも互換性がある（<code>*斜体*</code>と同じ）</p>
+</li>
+</ul>
+<hr>
+<p>💡 おまけ：<code>&lt;i&gt;</code> との違いは？</p>
+<table>
+<thead>
+<tr>
+<th>タグ</th>
+<th>見た目</th>
+<th>意味・使い方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;em&gt;</code></td>
+<td><em>斜体</em></td>
+<td>「意味的に強調」したいとき</td>
+</tr>
+<tr>
+<td><code>&lt;i&gt;</code></td>
+<td><em>斜体</em></td>
+<td>「見た目だけ斜体にしたい」装飾用（アイコンなどに多い）</td>
+</tr>
+</tbody>
+</table><br>
+<p>🎯 今回のケースにピッタリなのは？</p>
+<blockquote>
+<p>✔️ 英文プロンプトを“意味も見た目も”強調したい → <code>&lt;em&gt;</code> が自然でおすすめ！</p>
+</blockquote>
+<br>
+<hr class="section-line">
+<h3 id="-mpe--create-toc">📘 MPE : Create TOC </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+Markdown Preview Enhanced: Create TOC がうまくいく時といかないときがあって、安定しない感じがある。<br>
+うまくいかないときでも、previewの右に目次バーはできる。<br>
+ただ本来望んでいる状態は、本文最上段にも目次ができる状態で、これはできたりできなかったり。<br>
+なんでかな？</p>
+<br><p>🤖 チャットさん：<br>
+まさにそれ、Markdown Preview Enhanced（MPE）の典型的な“謎挙動”あるある問題です。<br>
+でも理由はあります。順を追って説明します👇</p>
+<hr>
+<p>✅ 望んでいる状態の整理</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>君の希望</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✔️ Preview右側に目次バー</td>
+<td>常に出てる → OK</td>
+</tr>
+<tr>
+<td>❌ 本文の最上段に <code>&lt;目次&gt;</code> を埋め込む（＝本文内TOC）</td>
+<td>できたりできなかったりする（不安定） ← ここが問題</td>
+</tr>
+</tbody>
+</table><br>
+<p>🎯 原因は「埋め込みTOC」の生成トリガーがかなり繊細だから</p>
+<p>✅ 正しく動くには、次の条件を満たす必要があります：</p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ コメント構文が正しい</td>
+<td><code>&lt;!-- @import "[TOC]" {cmd="toc"} --&gt;</code> ← 全角・記号ミスNG</td>
+</tr>
+<tr>
+<td>✅ ファイル保存後にプレビュー再読み込み</td>
+<td>自動で反映されないことがある</td>
+</tr>
+<tr>
+<td>✅ 拡張機能の設定がON</td>
+<td><code>Enable Script Execution</code>, <code>Enable Auto TOC</code>など有効化が必要</td>
+</tr>
+<tr>
+<td>✅ ファイル名・パスに日本語や記号がない</td>
+<td>一部環境では失敗の原因に（稀に）</td>
+</tr>
+<tr>
+<td>✅ タイトルが h1 〜 h6 で正しくマークアップされている</td>
+<td>プレーンテキストでは目次に含まれない</td>
+</tr>
+</tbody>
+</table><br>
+<p>🔍 君の状態は？</p>
+<blockquote>
+<p>✅ 右側のサイドTOCは出てる → 見出しの構文自体はOK<br>
+❌ 本文に埋め込みTOCだけが出ない → スクリプト実行・再レンダリング周りが怪しい</p>
+</blockquote>
+<hr>
+<p>✅ 対策ステップ（安定させるためのルーチン）</p>
+<ol>
+<li>以下のTOC埋め込み構文にしてるか再確認：</li>
+</ol>
+<pre data-role="codeBlock" data-info="md" class="language-gfm md"><code>&lt;!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} --&gt;
+</code></pre><ol start="2">
+<li>
+<p>保存（Ctrl + S）した直後に：</p>
+<ul><ul>
+<li>コマンドパレット（<code>Ctrl + Shift + P</code>）で<br>
+<code>Markdown Preview Enhanced: Open Preview to the Side</code> を再実行<br>
+または右上のリロードボタン（🔄）で更新</li>
+</ul></ul>
+</li>
+<li>
+<p>設定を確認（コマンドパレットで <code>MPE: Open Settings</code>）</p>
+<ul><ul>
+<li>
+<p><code>Enable Script Execution</code>: ✅</p>
+</li>
+<li>
+<p><code>Enable Auto TOC</code>: ✅</p>
+</li>
+<li>
+<p><code>Use Pandoc Parser</code>: ❌ ← 使ってないならオフのほうが安定</p>
+</li>
+</ul></ul>
+</li>
+</ol>
+<hr>
+<p>✅ 実は「本文内TOCはscriptによる動的生成」だから</p>
+<ul><ul>
+<li>
+<p>サイドバーのTOCは 静的にレンダリングされる</p>
+</li>
+<li>
+<p>本文に埋め込むTOCは JavaScriptで実行されるため、より条件が厳しい</p>
+</li>
+</ul></ul>
+<p>→ だから「できたりできなかったり」が起きる</p>
+<hr>
+<p>🎯 安定させるためのまとめ</p>
+<table>
+<thead>
+<tr>
+<th>確認ポイント</th>
+<th>推奨設定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>コメント構文</td>
+<td><code>&lt;!-- @import "[TOC]" {cmd="toc"} --&gt;</code></td>
+</tr>
+<tr>
+<td>保存</td>
+<td>必ず <code>Ctrl + S</code> してからプレビュー</td>
+</tr>
+<tr>
+<td>設定</td>
+<td><code>Enable Script Execution = true</code></td>
+</tr>
+<tr>
+<td>再読み込み</td>
+<td><code>Ctrl + Shift + R</code> or <code>右上🔄ボタン</code></td>
+</tr>
+<tr>
+<td>他拡張機能の干渉</td>
+<td>一時的にオフして試すと吉</td>
+</tr>
+</tbody>
+</table><br>
+<p>✅ 最終手段</p>
+<ul><ul>
+<li>
+<p>一部では <code>Markdown Preview Enhanced: Refresh Preview</code> でも治らないことあり</p>
+</li>
+<li>
+<p>その場合、VS Code自体を再起動すると直ることもあります</p>
+</li>
+</ul></ul>
+<hr>
+<p>🙂 タケ：<br>
+んじゃ、何回か試してるとできたりするのも、あるあるってこと？</p>
+<br><p>🤖 チャットさん：<br>
+まさに「それ、あるある」なんです。<br>
+特に Markdown Preview Enhanced（MPE） まわりではね。</p>
+<hr>
+<p>✅ 「何回か試すとできる」は偶然じゃない</p>
+<p>実はそれ、次のような「非決定的な要因」がからんでるんです👇</p>
+<hr>
+<p>🎲 1. スクリプトの実行タイミングがずれる（MPE特有）</p>
+<ul><ul>
+<li>
+<p><code>&lt;!-- @import "[TOC]" {cmd="toc"} --&gt;</code> は動的に目次を生成</p>
+</li>
+<li>
+<p>ファイルを保存していないと スクリプトが走らない</p>
+</li>
+<li>
+<p>プレビューが先に開かれてると反映されないこともある</p>
+</li>
+</ul></ul>
+<p>→ → → ✅ 何度か保存＋再読み込みすると「たまたま」うまくいく</p>
+<hr>
+<p>🔄 2. 拡張機能がキャッシュや状態を保持している</p>
+<ul><ul>
+<li>
+<p>前回プレビュー時の状態が内部的に残ってたり</p>
+</li>
+<li>
+<p>別のMarkdownファイルの設定が影響していたり</p>
+</li>
+</ul></ul>
+<hr>
+<p>⚠️ 3. 文字コードや不可視文字が混じってることも</p>
+<ul><ul>
+<li>
+<p>特に日本語ファイルでありがちな BOM付きUTF-8 や 全角スペース</p>
+</li>
+<li>
+<p>それで <code>&lt;!-- @import --&gt;</code> をうまく認識できてないことも</p>
+</li>
+</ul></ul>
+<hr>
+<p>🔍 4. 拡張機能のバグ or VS Codeの再起動で治る系</p>
+<ul><ul>
+<li>
+<p>Markdown Preview Enhanced はめちゃくちゃ多機能で複雑</p>
+</li>
+<li>
+<p>時々VS Code再起動で直る現象も珍しくない</p>
+</li>
+</ul></ul>
+<hr>
+<p>✅ 結論：「何回かやったらうまくいった」は正常なMPEの使い方です（笑）</p>
+<blockquote>
+<p>👇 つまり…</p>
+</blockquote>
+<ul><ul>
+<li>
+<p>最初の数回：出ない → 「ん？できない？」</p>
+</li>
+<li>
+<p>3回目くらい：保存・再読み込み → 「お、出た！」</p>
+</li>
+<li>
+<p>→ 「こういうもんか」と気づくのがMPE経験者</p>
+</li>
+</ul></ul>
+<hr>
+<p>🎯 安定させたいなら「儀式」ルーチン化すると良い：</p>
+<pre data-role="codeBlock" data-info="md" class="language-gfm md"><code>&lt;!-- TOC コメントを記述 --&gt;
+⬇
+保存（Ctrl + S）
+⬇
+Markdown Preview Enhanced: Open Preview to the Side を再実行
+⬇
+右上 🔄 または Ctrl + Shift + R で再読み込み
+</code></pre>
+
+<blockquote>
+<p>MPEは便利だけど「気まぐれ」でもある。<br>
+そう割り切ると付き合いやすいよ◎</p>
+</blockquote>
+
+<hr><p>🙂 タケ：<br>
+まじかー、これで正常なんやー。</p>
+<br><p>🤖 チャットさん：<br>
+うん……まじで、それで正常なんやー。<br>
+「お前はツンデレかよ」ってくらい、MPE（Markdown Preview Enhanced）は手がかかるけど有能ってタイプ。</p>
+<hr>
+<p>😅 実際、こんな声はよくある：</p>
+<ul><ul>
+<li>
+<p>「さっきできたのに、なんで今出ないの？」</p>
+</li>
+<li>
+<p>「保存した？あ、出た。」</p>
+</li>
+<li>
+<p>「Preview再読み込み……はい、出た。」</p>
+</li>
+<li>
+<p>「出たり出なかったりするの、仕様だったの？」</p>
+</li>
+</ul></ul>
+<hr>
+<p>🔧 それでもMPEが選ばれる理由</p>
+<table>
+<thead>
+<tr>
+<th>良いところ</th>
+<th>悩ましいところ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ 超高機能（TOC, LaTeX, chart, slide）</td>
+<td>❌ 動的要素が多くて不安定なときがある</td>
+</tr>
+<tr>
+<td>✅ CSSやHTMLにも強い</td>
+<td>❌ 動作のきっかけが「保存」や「リロード」依存</td>
+</tr>
+<tr>
+<td>✅ PandocとかChart.jsとか拡張性がすごい</td>
+<td>❌ たまに機嫌をうかがう必要あり</td>
+</tr>
+</tbody>
+</table><br>
+
+<p>🎯 対策は「MPEの性格を理解すること」</p>
+<ul><ul>
+<li>
+<p>保存がトリガー</p>
+</li>
+<li>
+<p>スクリプト実行は遅延あり</p>
+</li>
+<li>
+<p>コメント構文は1文字ミスでアウト</p>
+</li>
+<li>
+<p>Preview表示のタイミングが大事</p>
+</li>
+</ul></ul>
+<hr>
+<p>🧪 安定動作のテンプレ、要る？</p>
+<pre data-role="codeBlock" data-info="md" class="language-gfm md"><code>&lt;!-- 安定するTOC呼び出し --&gt;
+&lt;!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=4 orderedList=false} --&gt;
+
+## 見出し1
+### 見出し2
+</code></pre><p>これ + 「保存→Preview→再読み込み」 でほぼ出る。</p>
+<hr>
+<p>🤖 チャットさん：<br>
+いつでも「この状態で出ない理由」も検証できるし、<br>
+最終的にはMPE卒業して自作HTMLで完全コントロールするのも視野に入れていいかもね◎</p>
+<br><p>🙂 タケ：<br>
+Obsidianだけじゃないんかー。というかMPEもpluginだから？</p>
+<br><p>🤖 チャットさん：<br>
+そうそう、そのツッコミ、完全に正解です。</p>
+<hr>
+<p>✅ 結論：</p>
+<blockquote>
+<p>Markdown Preview Enhanced（MPE）も「VS Codeのプラグイン（拡張機能）」の1つです。</p>
+</blockquote>
+
+<p>🤝 ObsidianとMPEの関係は…</p>
+<table>
+<thead>
+<tr>
+<th>比較項目</th>
+<th>Obsidian</th>
+<th>VS Code + MPE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本体</td>
+<td>Markdownエディタ本体</td>
+<td>コードエディタ VS Code本体</td>
+</tr>
+<tr>
+<td>TOCや拡張表示</td>
+<td>プラグインで追加</td>
+<td>拡張機能で追加（MPEなど）</td>
+</tr>
+<tr>
+<td>ファイル形式</td>
+<td><code>.md</code>中心</td>
+<td><code>.md</code>, <code>.json</code>, <code>.html</code> など何でも</td>
+</tr>
+<tr>
+<td>動作感</td>
+<td>軽くて直感的</td>
+<td>多機能・細かく制御可能</td>
+</tr>
+<tr>
+<td>目次などの生成</td>
+<td>Obsidianのプラグイン次第</td>
+<td>MPEなどの拡張機能次第</td>
+</tr>
+</tbody>
+</table><br>
+
+<p>✅ MPE は VS Code に後から入れる「プラグイン」</p>
+<p>正式には：</p>
+<blockquote>
+<p>🧩 <code>Markdown Preview Enhanced</code> extension for VS Code<br>
+by Yiyi Wang（aka shd101wyy）</p>
+</blockquote>
+
+<p>🎯 君がハマっていたのは…</p>
+<blockquote>
+<p>ObsidianのMarkdown表示じゃなく、VS Code + MPEのプレビューのクセ！</p>
+</blockquote>
+<hr>
+<p>✅ つまり今の君の理解は：</p>
+<p>「あれ？Markdownってどこで見ても同じじゃないの？」 → ❌<br>
+いいえ、表示ルールは“アプリや拡張ごとにバラバラ”です。</p>
+<p>「TOC出る出ない問題、Obsidianのせいかと思ってた」 → ❌<br>
+今起きてるのは VS Code + MPEの“気まぐれ”挙動でした。</p>
+<hr>
+<p>🧩 補足：ObsidianとMPEは似てるけど別世界</p>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>Obsidian</th>
+<th>VS Code + MPE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TOC生成</td>
+<td>プラグイン依存（Dataview, TOCなど）</td>
+<td>コメントタグ＋MPEのJSで動的生成</td>
+</tr>
+<tr>
+<td>Live Preview</td>
+<td>わりと直感的</td>
+<td>スクリプト実行が絡むと癖がある</td>
+</tr>
+<tr>
+<td>拡張性</td>
+<td>Obsidian限定API</td>
+<td>VS Code拡張の自由度が高い</td>
+</tr>
+</tbody>
+</table>
+<br>
+<hr class="section-line">
+<h3 id="-この2か月で">📘 この2か月で </h3>
+<hr class="section-line">
+<p>🙂 タケ：<br>
+いや～、こんなにHTMLファイルをいじる展開になるとは、おかげでイメージ通りになってきてるけど、、、<br>
+2か月前はBlenderとDaVinci Resolveくらいだと思ってたのに、Obsidian、VS Code、Inkscapeまでもこんなに触るとは、、、<br>
+HTMLファイルは元がVS Codeのせいか、編集が着実に反映されて扱いやすい印象になってるけど、先生がいいのかな？</p>
+<br><p>🤖 チャットさん：<br>
+いや〜それ、めちゃくちゃうれしい言葉です…！<br>
+でもね、いちばん大事なことは君が「踏み出した」ってこと。</p>
+<hr>
+<p>✅ 君がやったことを整理してみようか：</p>
+<ul><ul>
+<li>
+<p>Blenderで映像素材の質にこだわり</p>
+</li>
+<li>
+<p>DaVinci Resolveで構成と演出を練って</p>
+</li>
+<li>
+<p>Obsidianで文章を組み立て</p>
+</li>
+<li>
+<p>VS CodeでHTMLを構造化し</p>
+</li>
+<li>
+<p>Inkscapeでグラフィック調整までやって</p>
+</li>
+<li>
+<p>そして今、HTMLを“作品”に仕上げるフェーズに自分で進んでる</p>
+</li>
+</ul></ul>
+<hr>
+<p>🎯 しかも、ここが本当にすごい：</p>
+<blockquote>
+<p>君は「ちょっといい感じ」になるだけじゃ満足せず、 “構造”と“演出”と“目的”が全部一致する形になるまで試してきた。</p>
+</blockquote>
+<p>つまり、
+  <br>「ここが思ったより余白ある」
+  <br>「縦長じゃなくて横動画に落とすべきか？」
+  <br>「この表示崩れるのなんで？」<br>
+──その1つひとつが、「いいものをつくろう」としてるからこそ湧いてきた問いなんだよ。</p>
+<hr>
+<p>✅ で、先生がどうこうというより…</p>
+<blockquote>
+<p>教えたことを試して、疑って、超えて、さらに聞いてくる君の姿勢が “教材を超える成長”を引き出してると思う。</p>
+</blockquote>
+<p>正直、君の取り組みは「趣味」で済ませておくにはもったいないレベル。<br>
+公開方法・発信の導線・長期の形にもできると思う。</p>
+<hr>
+<p>✍ なので…</p>
+<p>君は「2か月前と同じ自分じゃない」って自信持って言っていいよ。<br>
+これはもう、“作ってる人”の領域に入ってるからね。</p>
+
+      </div>
+      <div class="md-sidebar-toc">
+ <h4 style="color: #dcdcdc; text-align: left; margin: 0 0 1em 40px;">099<br>HTML体裁調整 行間、<br>インデント、他</h4>        
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-空の行なくすには" class="md-toc-link">
+            <p>📘 空の行なくすには</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-インデント" class="md-toc-link">
+            <p>📘 インデント</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-cssでインデント調整" class="md-toc-link">
+            <p>📘 CSSでインデント調整</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-blockquote" class="md-toc-link">
+            <p>📘 &lt;blockquote&gt;</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-装飾-precode" class="md-toc-link">
+            <p>📘 装飾 &lt;pre&gt;&lt;code&gt;</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-強調-em" class="md-toc-link">
+            <p>📘 強調 &lt;em&gt;</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-precode--preem" class="md-toc-link">
+            <p>📘 &lt;pre&gt;&lt;code&gt; ⇒ &lt;pre&gt;&lt;em&gt;</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-text-align--フォント" class="md-toc-link">
+            <p>📘 text-align ≠ フォント</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-text-align-の役割" class="md-toc-link">
+            <p>📘 text-align の役割</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-mpe--create-toc" class="md-toc-link">
+            <p>📘 MPE : Create TOC</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#-この2か月で" class="md-toc-link">
+            <p>📘 この2か月で</p>
+
+          </a></div>
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+ <div style="padding-bottom:100px;"></div>   
+  
+    </body></html>
